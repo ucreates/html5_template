@@ -1,0 +1,1070 @@
+@charset "UTF-8";
+
+/*markup setting*/
+*{
+    font-style: normal;
+    font-weight: normal;
+    font-size : 100%;
+}
+
+body {
+    background-color:white;
+    font-family: 'Century Gothic',sans-serif;
+    overflow:scroll;
+    -webkit-overflow-scrolling:touch;
+}
+
+div {
+    color:#4e454a;
+}
+
+a {
+    color:#53BFE2;
+}
+
+iframe {
+    width:100%;border:none;
+}
+
+/*header*/
+header .header-area {
+    border-bottom:solid 2px #53BFE2;
+}
+
+header ul {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+header ul li {
+    display:table-cell;
+    text-align:center;
+    border-left:solid 1px lightgray;
+}
+
+header ul li a {
+    text-decoration:none;
+}
+
+/*article*/
+article .search-text-box {
+    border:solid 1px lightgray;
+    border-radius:5px;
+    width:95%;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-left:2%;
+    text-align: left;
+}
+
+article .search-button {
+    border:solid 1px lightgray;
+    border-radius:5px;
+    width:90%;
+    padding-top:5%;
+    padding-bottom:5%;
+    color:white;
+    font-weight:bold;
+    background-color:#EDBE4F;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*article baloon-menu*/
+article #baloon-menu ul {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+article #baloon-menu ul li {
+    position:relative;
+    display:table-cell;
+    text-align:center;
+    width:20%;
+}
+
+article #baloon-menu ul li .baloon-area {
+    border-radius:5px;
+    border:solid 1px lightgray;
+    width:90%;
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+article #baloon-menu ul li .baloon-area-middle-list {
+    position:relative;
+    display:table-cell;
+    text-align:center;
+    width:33%;
+}
+
+article #baloon-menu ul li div.baloon-area-middle {
+    border-radius:5px;
+    border:solid 1px lightgray;
+    width:90%;
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+article #baloon-menu ul li .baloon-triangle {
+    position:absolute;
+    top:100%;
+    left:42%;
+    width:0px;
+    border-top:solid lightgray 8px;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+}
+
+/*article search-detail-menu*/
+article #search-detail-menu .large-menu{
+    border-bottom:solid 1px lightgray;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-repeat:no-repeat;
+    background-size:auto 40%;
+    background-position:98% 50%;
+}
+
+article #search-detail-menu .small-menu {
+    border-bottom:solid 1px lightgray;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-repeat:no-repeat;
+    background-size:auto 40%;
+    background-position:96% 50%;
+}
+
+article #search-detail-menu span.large-menu-title-badge {
+    border:solid 1px lightgray;
+    padding:1%;
+    margin-left:3%;
+    margin-right:2%;
+}
+
+article #search-detail-menu span.small-menu-title-badge {
+    border:solid 1px lightgray;
+    padding:2%;
+    margin-left:6%;
+    margin-right:4%;
+}
+
+article #search-detail-menu span.small-menu-title-badge2 {
+    border:solid 1px lightgray;
+    padding:2% 4%;
+    margin-left:6%;
+    margin-right:4%;
+}
+
+article #search-detail-menu div.search-detail-title {
+    position:relative;
+    background-color:#e5e5e5;
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left:2%;
+    font-weight:bold;
+}
+
+article #search-detail-menu div.search-detail-menu-close-button {
+    position:absolute;
+    top:15%;
+    left:90%;
+    background-color:white;
+    padding:1% 2%;
+    font-size:1em;
+    color:lightgray;
+}
+
+article #search-detail-menu #category-search-button {
+    border:solid 1px lightgray;
+    border-radius:5px;
+    width:100%;
+    padding-top:2%;
+    padding-bottom:2%;
+    color:white;
+    font-weight:bold;
+    background-color:#EDBE4F;
+    border:none;
+}
+
+/*article area-category-list*/
+article #area-category-list div.button {
+    width:90%;
+    background-color:lightgray;
+    margin-left:0;
+    margin-right:auto;
+    padding-top:20%;
+    padding-bottom:20%;
+    text-align:center;
+    border:solid 2px black;
+}
+
+article #area-category-list div.button.hokkaido {
+    background-color:lightgray;
+    border:solid 2px black;
+}
+
+article #area-category-list div.button.tohoku {
+    background-color:lightgray;
+    border:solid 2px black;
+}
+
+article #area-category-list div.button.tyubu {
+    background-color:lightgray;
+    border:solid 2px black;
+}
+
+/*article tour-list-header*/
+article #tour-list-header .hokkaido-under-line {
+    border-bottom:solid 2px #53BFE2;
+}
+
+article #tour-list-header .hokkaido.odd {
+    background-color:#53BFE2;
+    border-top:solid 1px #53BFE2;
+    border-left:solid 1px #53BFE2;
+    border-right:solid 1px #53BFE2;
+    color:white;
+}
+
+article #tour-list-header .hokkaido.even {
+    background-color:white;
+    border-top:solid 1px #53BFE2;
+    border-left:solid 1px #53BFE2;
+    border-right:solid 1px #53BFE2;
+    color:#53BFE2;
+}
+
+article #tour-list-header .tohoku-under-line {
+    border-bottom:solid 2px #6666FF;
+}
+
+article #tour-list-header .tohoku.odd {
+    background-color:#6666FF;
+    border-top:solid 1px #6666FF;
+    border-left:solid 1px #6666FF;
+    border-right:solid 1px #6666FF;
+    color:white;
+}
+
+article #tour-list-header .tohoku.even {
+    background-color:white;
+    border-top:solid 1px #6666FF;
+    border-left:solid 1px #6666FF;
+    border-right:solid 1px #6666FF;
+    color:#6666FF;
+}
+
+article #tour-list-header .kanto-under-line {
+    border-bottom:solid 2px #00B988;
+}
+
+article #tour-list-header .kanto.odd {
+    background-color:#00B988;
+    border-top:solid 1px #00B988;
+    border-left:solid 1px #00B988;
+    border-right:solid 1px #00B988;
+    color:white;
+}
+
+article #tour-list-header .kanto.even {
+    background-color:white;
+    border-top:solid 1px #00B988;
+    border-left:solid 1px #00B988;
+    border-right:solid 1px #00B988;
+    color:#00B988;
+}
+
+article #tour-list-header .kansai-under-line {
+    border-bottom:solid 2px #EDBE4F;
+}
+
+article #tour-list-header .kansai.odd {
+    background-color:#EDBE4F;
+    border-top:solid 1px #EDBE4F;
+    border-left:solid 1px #EDBE4F;
+    border-right:solid 1px #EDBE4F;
+    color:white;
+}
+
+article #tour-list-header .kansai.even {
+    background-color:white;
+    border-top:solid 1px #EDBE4F;
+    border-left:solid 1px #EDBE4F;
+    border-right:solid 1px #EDBE4F;
+    color:#EDBE4F;
+}
+
+article #tour-list-header .tyubu-under-line {
+    border-bottom:solid 2px #FF66CC;
+}
+
+article #tour-list-header .tyubu.odd {
+    background-color:#FF6699;
+    border-top:solid 1px #FF6699;
+    border-left:solid 1px #FF6699;
+    border-right:solid 1px #FF6699;
+    color:white;
+}
+
+article #tour-list-header .tyubu.even {
+    background-color:white;
+    border-top:solid 1px #FF6699;
+    border-left:solid 1px #FF6699;
+    border-right:solid 1px #FF6699;
+    color:#FF6699;
+}
+
+article #tour-list-header .chugoku-under-line {
+    border-bottom:solid 2px #CC99FF;
+}
+
+article #tour-list-header .chugoku.odd {
+    background-color:#CC99FF;
+    border-top:solid 1px #CC99FF;
+    border-left:solid 1px #CC99FF;
+    border-right:solid 1px #CC99FF;
+    color:white;
+}
+
+article #tour-list-header .chugoku.even {
+    background-color:white;
+    border-top:solid 1px #CC99FF;
+    border-left:solid 1px #CC99FF;
+    border-right:solid 1px #CC99FF;
+    color:#CC99FF;
+}
+
+article #tour-list-header .kyusyu-under-line {
+    border-bottom:solid 2px red;
+}
+
+article #tour-list-header .kyusyu.odd {
+    background-color:red;
+    border-top:solid 1px red;
+    border-left:solid 1px red;
+    border-right:solid 1px red;
+    color:white;
+}
+
+article #tour-list-header .kyusyu.even {
+    background-color:white;
+    border-top:solid 1px red;
+    border-left:solid 1px red;
+    border-right:solid 1px red;
+    color:red;
+}
+
+/*article tour-list-contents*/
+article #tour-list-contents .contents-area {
+    border:solid 2px #EDBE4F;
+}
+
+article #tour-list-contents .contents-area.hokkaido {
+    border:solid 2px #53BFE2;
+}
+
+article #tour-list-contents .contents-area.tohoku {
+    border:solid 2px #6666FF;
+}
+
+article #tour-list-contents .contents-area.kanto {
+    border:solid 2px #00B988;
+}
+
+article #tour-list-contents .contents-area.tyubu {
+    border:solid 2px #FF6699;
+}
+
+article #tour-list-contents .contents-area.kyusyu {
+    border:solid 2px red;
+}
+
+article #tour-list-contents .max-badge {
+    position:absolute;
+    top:-30%;
+    left:-15%;
+    border-radius:100%;
+    width:25px;
+    background-color:#EDBE4F;
+    padding:2px 1px;
+    color:white;
+    font-size:0.5em;
+    text-align:center;
+}
+
+article #tour-list-contents .max-price {
+    color:#EA5080;
+}
+
+article #tour-list-contents .coupon-get-area {
+    background-color:#EDBE4F;
+    color:white;
+}
+
+article #tour-list-contents .coupon-get-area.hokkaido {
+    background-color:#53BFE2;
+    color:white;
+}
+
+article #tour-list-contents .coupon-get-area.tohoku {
+    background-color:#6666FF;
+    color:white;
+}
+
+article #tour-list-contents .coupon-get-area.kanto {
+    background-color:#00B988;
+    color:white;
+}
+
+article #tour-list-contents .coupon-get-area.tyubu {
+    background-color:#FF6699;
+    color:white;
+}
+
+article #tour-list-contents .coupon-get-area.kyusyu {
+    background-color:red;
+    color:white;
+}
+
+article #tour-list-contents div.dotted-line {
+    border-bottom:dotted 2px #EA5080;
+}
+
+/*article search-traffick-menu*/
+article #search-traffick-menu .header-area {
+    background-color:#EDBE4F;
+}
+
+article #search-traffick-menu .header-title-area {
+    padding-left:2%;
+    color:white;
+}
+
+article #search-traffick-menu .category-area {
+    background-color:#FFCC99;
+    border:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-title-area {
+    padding-left:2%;
+}
+
+article #search-traffick-menu .category-contents-left-area {
+    border-left:solid 1px #EDBE4F;
+    
+}
+
+article #search-traffick-menu .category-contents-right-area {
+    border-right:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-contents-search-button-right-area {
+    border-right:solid 1px #EDBE4F;border-top:solid 1px #EDBE4F;border-bottom:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-contents-search-button-center-area {
+    border-top:solid 1px #EDBE4F;border-bottom:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-contents-search-button-left-area {
+    border-left:solid 1px #EDBE4F;border-top:solid 1px #EDBE4F;border-bottom:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-search-button-area {
+    border:solid 1px #EDBE4F;
+}
+
+article #search-traffick-menu .category-search-button {
+    background-color:#EDBE4F;
+    width:50%;
+    padding-top:2%;
+    padding-bottom:2%;
+    text-align:center;
+    border-radius:5px;
+    font-size:0.8em;
+    color:white;
+}
+
+article #search-traffick-menu .category-search-button.right {
+    margin-left:auto;
+    margin-right:0;
+}
+
+article #search-traffick-menu .category-search-button.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+article #search-traffick-menu .category-search-button.left {
+    margin-left:0;
+    margin-right:auto;
+}
+
+article select {
+    width:50%;
+    appearance:button;
+    -webkit-appearance:button;
+    -moz-appearance: button;
+    background: none;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-size:auto 50%;
+    background-position:98% 50%;
+    background-repeat:no-repeat;
+    cursor: pointer;
+    vertical-align: middle;
+    padding-left:5%;
+    box-sizing:border-box;
+    border:solid 1px #EDBE4F;
+    font-size:0.5em;
+}
+
+/*article search-detail-contents*/
+article #search-detail-contents a{
+    color:#53BFE2;
+    font-size:0.8em;
+    text-decoration: none;
+}
+
+article #search-detail-contents .contents-area{
+    background-color:white;
+    border:solid 1px lightgray;
+}
+
+article #search-detail-contents .clip-icon{
+    position:absolute;
+    top:0%;
+    left:90%;
+}
+
+article #search-detail-contents ul {
+    width:100%;
+    display:table;
+    table-layout:fixed;
+    list-style:none;
+}
+
+article #search-detail-contents ul li {
+    display:table-cell;
+    text-align:center;
+    color:gold;
+}
+
+article #search-detail-contents .focus-text {
+    color:#EA5080;
+}
+
+article #search-detail-contents #introduction-area {
+    border-bottom:solid 1px lightgray;
+}
+
+article #search-detail-contents #tag-area {
+    border-bottom:solid 1px lightgray;
+}
+
+article #search-detail-contents #tag-area .tag {
+    position:relative;
+    padding:1% 3%;
+    border:solid 1px lightgray;
+    margin-right:1%;
+}
+
+article #search-detail-contents #tag-area .tag-mark {
+    position:absolute;
+    top:25%;
+    left:-2%;
+    height:50%;
+    border-left:solid 4px #53BFE2;
+}
+
+article #search-detail-contents .detail-guide-button {
+    width:90%;
+    padding:1% 3%;
+    text-align:center;
+    border-radius:5px;
+    background-color:#EDBE4F;
+    margin-left:auto;
+    margin-right:auto;
+    color:white;
+}
+
+article span.pager-badge {
+    text-align:center;
+    padding:1% 2%;
+    border-radius:5px;
+    background-color:#53BFE2;
+    color:white;
+    z-index:10;
+}
+
+article span.pager-badge.prev {
+    text-align:center;
+    padding:1% 2%;
+    margin-right:2%;
+    border-radius:5px;
+    background-color:#53BFE2;
+    color:white;
+    z-index:10;
+}
+
+article span.pager-badge.next {
+    text-align:center;
+    padding:1% 2%;
+    margin-left:2%;
+    border-radius:5px;
+    background-color:#53BFE2;
+    color:white;
+    z-index:10;
+}
+
+/*article contents-list*/
+#contents-list {
+    border-top:solid 1px lightgray;
+    border-bottom:solid 1px lightgray;
+}
+
+#contents-list .menu-item {
+    padding-top:5%;
+    padding-bottom:5%;
+    background-image: url(../img/menu_arrow_icon.png);
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: auto 20%;
+    border-bottom:solid 1px lightgray;
+}
+
+#contents-list .menu-item-blank {
+    padding-top:5%;
+    padding-bottom:5%;
+    padding-left:2%;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: auto 20%;
+    border-bottom:solid 1px lightgray;
+}
+
+#contents-list .menu-item.with-center-line {
+    border-right:solid 1px lightgray;
+}
+
+#contents-list .menu-item-image {
+    border-bottom:solid 1px lightgray;
+}
+
+#contents-list .menu-item-border-top {
+    border-top:solid 5px #00aced;
+}
+
+#contents-list .item-name {
+    position:absolute;
+    bottom:10%;
+    left:0%;
+    color:#ffffff;
+}
+
+article #contents-list .item-area {
+    border-top:solid 5px #00aced;
+    border-radius:5px;
+    padding-bottom:1%;
+    background-color:white;
+}
+
+#contents-list .menu-button {
+    padding:1% 2%;
+    background-color:lightgray;
+    color:white;
+    position:absolute;
+    top:25%;
+    left:90%;
+    font-size:1em;
+    text-align:center;
+    vertical-align:middle;
+    border-radius:5px;
+}
+
+/*article service-detail-info*/
+article #service-detail-info .introduction-area {
+    border-bottom:solid 1px lightgray;
+}
+
+article #service-detail-info span.service-tag {
+    background-color:#53BFE2;
+    padding:3% 5%;
+    color:white;
+    border-radius:2px;
+}
+
+article #service-detail-info span.focus-text {
+    color:#EA5080;
+    padding:2%;
+    vertical-align:middle;
+}
+
+article #service-detail-info .large-button {
+    padding-top:3%;
+    padding-bottom:3%;
+    width:90%;
+    text-align:center;
+    background-color:#EA5080;
+    font-size:0.5em;
+    border-radius:5px;
+    border:solid 1px gray;
+}
+
+article #service-detail-info .small-button {
+    padding-top:6%;
+    padding-bottom:7%;
+    width:90%;
+    text-align:center;
+    font-size:0.5em;
+    border-radius:5px;
+    border:solid 1px gray;
+}
+
+article #service-detail-info .small-button.mail {
+    background-color:#53BFE2;
+}
+
+article #service-detail-info .small-button.line {
+    background-color:#00B988;
+}
+
+article #service-detail-info .under-button-text-area {
+    padding-top:3%;
+    color:white;
+}
+
+/*article reccomend-service-list*/
+article #reccomend-service-list #contents-area {
+    background-color:white;
+    border:solid 1px lightgray;
+}
+
+article #reccomend-service-list #tag-area {
+    position:relative;
+    padding:1% 3%;
+    border:solid 1px lightgray;
+    margin-right:1%;
+}
+
+article #reccomend-service-list #tag-area .mark {
+    position:absolute;
+    top:25%;
+    left:-2%;
+    height:50%;
+    border-left:solid 4px #53BFE2;
+}
+
+article #reccomend-service-list #contents-area #summary-area {
+    background-image:url(../img/menu_arrow_icon.png);
+    background-repeat:no-repeat;
+    background-position:95% 50%;
+    background-size:auto 30%;
+}
+
+article #reccomend-service-list .focus-text {
+    color:#EA5080;
+}
+
+/*article service-detail-info-header*/
+article #service-detail-info-header span.service-tag {
+    background-color:#53BFE2;
+    padding:6% 7%;
+    color:white;
+    border-radius:2px;
+}
+
+article #service-detail-info-header ul {
+    width:100%;
+    display:table;
+    table-layout:fixed;
+    list-style:none;
+}
+
+article #service-detail-info-header ul li {
+    display:table-cell;
+    text-align:center;
+    color:gold;
+}
+
+article #service-detail-info-header .focus-text {
+    color:#EA5080;
+}
+
+/*article area-search*/
+article #area-search div.link-button {
+    padding:1% 3%;
+    background-color:#bfbfbf;
+    border-radius:5px;
+    color:white;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-size:auto 50%;
+    background-repeat:no-repeat;
+    background-position:10% 50%;
+    padding-left:5%;
+}
+
+article #area-search div.link-button.hokkaido {
+    position:absolute;
+    top:5%;
+    left:80%;
+}
+
+article #area-search div.link-button.tohoku {
+    position:absolute;
+    top:30%;
+    left:80%;
+}
+
+article #area-search div.link-button.hokuriku {
+    position:absolute;
+    top:35%;
+    left:60%;
+}
+
+article #area-search div.link-button.tyubu {
+    position:absolute;
+    top:55%;
+    left:60%;
+}
+
+article #area-search div.link-button.kanto {
+    position:absolute;
+    top:65%;
+    left:80%;
+}
+
+article #area-search div.link-button.kansai {
+    position:absolute;
+    top:65%;
+    left:45%;
+}
+
+article #area-search div.link-button.chugoku {
+    position:absolute;
+    top:65%;
+    left:25%;
+}
+
+article #area-search div.link-button.shikoku {
+    position:absolute;
+    top:80%;
+    left:25%;
+}
+
+article #area-search div.link-button.kyusyu {
+    position:absolute;
+    top:75%;
+    left:3%;
+}
+
+article #area-search div.link-button.okinawa {
+    position:absolute;
+    top:20%;
+    left:10%;
+}
+
+article #topix-header-large {
+    border:solid 2px lightgray;
+}
+
+article #topix-header-small #header-area {
+    background-color:#53BFE2;
+}
+
+article #topix-header-small #header-title-area {
+    color:white;
+}
+
+article #topix-header-small #triangle {
+    position:absolute;
+top:100%;
+left:5%;
+width:0px;
+border-top:solid #53BFE2 16px;
+border-left:10px solid transparent;
+}
+
+article #focus-travel-plan .tag {
+    font-size:0.8em;
+color:white;
+padding:4% 6%;
+background-color:#53BFE2;
+border-radius:3px;
+}
+
+article #login-form .input-auth-info-text {
+    width:100%;
+    border-radius:5px;
+    border:solid 1px lightgray;
+    height:150%;
+}
+
+article #login-form .login-button {
+    width:100%;
+    color:#ffffff;
+    border-radius:5px;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-right:1%;
+    background-color:#EDBE4F;
+    text-align:center;
+}
+
+article #login-form .support-link {
+    width:96%;
+    color:#EDBE4F;
+    padding-right:5%;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-size:auto 50%;
+    background-repeat:no-repeat;
+    background-position:100% 50%;
+}
+
+article #login-form .fb-sign-in-area {
+    border-top:solid 1px lightgray;
+    border-bottom:solid 1px lightgray;
+}
+
+article #login-form .twitter-sign-in-area {
+    border-bottom:solid 1px lightgray;
+}
+
+article #login-form .google-sign-in-area {
+    border-bottom:solid 1px lightgray;
+}
+
+article #login-form . {
+    border-bottom:solid 1px lightgray;
+}
+
+article #login-form .sns-login-statement-area1 {
+    width:96%;
+    padding-right:5%;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-size:auto 65%;
+    background-repeat:no-repeat;
+    background-position:100% 50%;
+    font-size:0.8em;
+}
+
+article #login-form .sns-login-statement-area2 {
+    width:96%;
+    padding-right:5%;
+    background-image:url(../img/menu_arrow_icon.png);
+    background-size:auto 40%;
+    background-repeat:no-repeat;
+    background-position:100% 50%;
+    font-size:0.8em;
+}
+
+article #login-form .sns-login-statement-area2-sub-statement {
+    color:#EDBE4F;
+    font-size:0.5em;
+}
+
+article #information-list ul {
+    list-style:none;
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+article #information-list li {
+    position:relative;
+}
+
+article #information-list li span.navi{
+    position:absolute;
+    top:32%;
+    border:7px solid #deb887;
+    border-color:transparent;
+    border-left-color:#deb887;
+}        
+
+article #information-list .information-statement {
+    padding-left:3%;
+}
+
+article #information-list .information-date {
+    position:absolute;
+    top:25%;
+    right:0%;
+    text-align:left;
+}
+
+article #information-list .notice-area {
+    border:solid 1px lightgray;
+}
+
+article #register-form .input-info-text {
+    width:90%;
+    border-radius:5px;
+    border:solid 1px lightgray;
+    height:75%;
+}
+
+article #register-form .input-info-name-text {
+    width:30%;
+    border-radius:5px;
+    border:solid 1px lightgray;
+    height:75%;
+    margin-left:3%;
+    margin-right:3%;
+}
+
+article #register-form .register-button {
+    width:90%;
+    color:#ffffff;
+    border-radius:5px;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-right:1%;
+    background-color:#EDBE4F;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+article #register-form .table-header {
+    background-color:#EA5080;
+}
+
+article #register-form .table-header span {
+    color:white;
+}
+
+article #register-form-submit span {
+    color:#EA5080;
+}
+
+article #search-detail-condition .large-category-header {
+    background-color:#EDBE4F;color:white;
+}
+
+article #search-detail-condition .middle-category-header {
+    background-color:lightgray;color:white;
+}
+
+article #search-detail-condition select.large {
+    width:95%;
+}
+
+/*footer*/
+footer #copyright {
+    background-color:#e5e5e5;
+    border-top:solid 2px #53BFE2;
+}

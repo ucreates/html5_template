@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/ui.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <style>
+        <!--
+        // -->
+        </style>
+        <script type="text/javascript">
+        <!--
+            $(function() {
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        配色
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <a href="http://webcolourdata.com/profile/138931">
+                            http://webcolourdata.com/profile/138931
+                            </a>
+                        </div>
+                        <div>
+                            メニューアイコン:#4e454a
+                        </div>
+                        <div>
+                            コンテンツアイコン:#d3d3d3
+                        </div>
+                        <div>
+                            文字:#4e454a
+                        </div>
+                        <div>
+                            基調色:#00aced
+                        </div>
+                        <div>
+                            背景色:#fffafa
+                        </div>
+                        <div>
+                            ヘッダー/フッターアクティブ#f7f6f5
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        デフォルトテーブル
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            コンテンツ
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ヘッダー
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <img src="./img/logo.png" width=65%>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="#">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_header2014_reserve.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="#">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_header2014_member.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="#">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_header2014_signin.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        バナー
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width10"></div>
+                    <div class="cell width80">
+                        <img src="http://rurubu.travel/images/special/h281_460_90.png" width=100%>
+                    </div>
+                    <div class="cell width10"></div>
+                </div>
+            </div>
+        </article>
+        トピックスヘッダー(大)
+        <article>
+            <div id="topix-header-large" class="table width100">
+                <div class="row">
+                    <div class="cell width10">
+                        <img src="http://opt.jtb.co.jp/wl/002/images/top/ic_keyword.png" width=100%>
+                    </div>
+                    <div class="cell width5">
+                    </div>
+                    <div class="cell width85 font header4 inline-left">
+                        タイトル
+                    </div>
+                </div>
+            </div>
+        </article>
+        トピックスヘッダー(小1)
+        <article>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            ヘッダータイトル
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        トピックスヘッダー(小2)
+        <article>
+            <div id="topix-header-small" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        ヘッダータイトル
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        注目の観光プラン
+        <article>
+            <div id="focus-travel-plan" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="http://opt.jtb.co.jp/img/products/TN000200/1/2015040244b.jpg" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        Go !ボックス
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <input type="text" class="search-text-box">
+                        <input type="submit" class="search-button" value="Go !">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニュー(吹き出し×5)
+        <article>
+            <div id="baloon-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_tour.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内宿泊
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                                <li>
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_tour.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内ツアー
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                                <li>
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_airline.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内宿泊
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>                                    
+                                </li>
+                                <li>
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_rentacar.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            レンタカー
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>                                    
+                                </li>
+                                <li>
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_tourismplan.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            観光プラン
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニュー(吹き出し×3)
+        <article>
+            <div id="baloon-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <ul>
+                                <li class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_tour.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内宿泊
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_tour.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内ツアー
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="https://mobile.rurubu.travel/sp/parts/common/img/ic_nav2014_airline.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内宿泊
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニュー(詳細Go !)
+        <article>
+            <div id="search-detail-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 large-menu padding-top-middle padding-bottom-middle">
+                                        <span class="large-menu-title-badge">宿泊地</span>
+                                        現在地周辺
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge">利用日</span>
+                                        指定なし
+                                    </div>
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge2">泊数</span>
+                                        指定なし
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge2">人数</span>
+                                        指定なし
+                                    </div>
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge">部屋数</span>
+                                        指定なし
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        詳細Go !
+        <article>
+            <div id="search-detail-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div class="search-detail-title">
+                            食事、部屋、料金、こだわり条件
+                            <div class="search-detail-menu-close-button">
+                                +
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        Go !ボタン(大)
+        <article>
+            <div id="search-detail-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <input type="submit" value="Go !">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニュー(エリア)
+        <article>
+            <div id="area-category-list" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width25">
+                                        <div class="button hokkaido">
+                                            北海道
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button hokkaido">
+                                            東北
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button tohoku">
+                                            首都圏
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button tyubu">
+                                            甲信越
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100 padding-top-small">
+                                <div class="row">
+                                    <div class="cell width25">
+                                        <div class="button hokkaido">
+                                            北海道
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button hokkaido">
+                                            東北
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button tohoku">
+                                            首都圏
+                                        </div>
+                                    </div>
+                                    <div class="cell width25">
+                                        <div class="button tyubu">
+                                            甲信越
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        アイコン
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div class="stay-badge">
+                            宿泊
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div class="tour-badge">
+                            ツア-
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ツアーリストヘッダー
+        <article>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 hokkaido-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido odd">
+                                        北
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido even">
+                                        海
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido odd">
+                                        道
+                                    </div>
+                                    <div class="cell width70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 tohoku-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tohoku odd">
+                                        東
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tohoku even">
+                                        北
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 kanto-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kanto odd">
+                                        関
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kanto even">
+                                        東
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 kansai-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kansai odd">
+                                        関
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kansai even">
+                                        西
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 tyubu-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu odd">
+                                        中
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu even">
+                                        部
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 tyubu-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu odd">
+                                        北
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu even">
+                                        陸
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95" style="border-bottom:solid 2px red;">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kyusyu odd">
+                                        九
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kyusyu even">
+                                        州
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            
+        </article>
+        ツアーリスト
+        <article>
+            <div id="tour-list-contents" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="http://strage-on-the-web.net/upload/pix/data/63e652447746afc5798b089e4a010760.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header6 inline-center">
+                                        盛岡(岩手県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="http://strage-on-the-web.net/upload/pix/data/63e652447746afc5798b089e4a010760.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header6 inline-center">
+                                        盛岡(岩手県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="http://strage-on-the-web.net/upload/pix/data/63e652447746afc5798b089e4a010760.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header6 inline-center">
+                                        盛岡(岩手県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        Go !コンポーネント
+        <article>
+            <div id="search-traffick-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                    <div>
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width100 header-area round-top-area padding-top-small padding-bottom-small">
+                                    <div class="font header6 header-title-area">
+                                        航空券をスピードGo !
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                    <div class="category-title-area">
+                                        出発日時:
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                    <select size="1">
+                                        <option>9/17(木)</option>
+                                        <option>9/18(金)</option>
+                                        <option>9/19(土)</option>
+                                    </select>
+                                </div>
+                                <div class="cell width10"></div>
+                                <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                    <select size="1">
+                                        <option>時間指定なし</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                    <div class="category-title-area">
+                                        出発・到着空港：
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                    <select size="1">
+                                        <option>9/17(木)</option>
+                                        <option>9/18(金)</option>
+                                        <option>9/19(土)</option>
+                                    </select>
+                                </div>
+                                <div class="cell width10"></div>
+                                <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                    <select size="1">
+                                        <option>時間指定なし</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width45 category-contents-search-button-left-area padding-top-middle padding-bottom-middle">
+                                    <div class="category-search-button right">
+                                        JALでGo !
+                                    </div>
+                                </div>
+                                <div class="cell width10 category-contents-search-button-center-area"></div>
+                                <div class="cell width45 category-contents-search-button-right-area padding-top-middle padding-bottom-middle">
+                                    <div class="category-search-button left">
+                                        JALでGo !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cell width2-5"></div>
+            </div>
+        </div>                
+        </article>        
+        トピックスヘッダー(小)
+        <article>
+            <div id="topix-header-small" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width60 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            ヘッダータイトル
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width35">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ページャー(他から持ってくる)     
+        検索結果一覧
+        <article style="background-color:lightgray;padding-top:5%;padding-bottom:5%;">
+            <div id="search-detail-contents" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="#">
+                                            東京ステーションホテル
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="http://dom.jtb.co.jp/yado/photo2/m/4/4011047/40110471000000206.jpg" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニューリスト1
+        <article>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line font middle">
+                                        <div>
+                                            コンテンツタイトル1-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル1-2
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル2-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル2-2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル3
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル5
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        メニューリスト2
+        <article>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 relative menu-item-blank font middle">
+                                        コンテンツタイトル1
+                                        <div class="menu-button">
+                                            +
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 relative menu-item-blank font middle">
+                                        住所・アクセス・駐車場情報
+                                        <div class="menu-button">
+                                            +
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        宿泊施設詳細情報
+        <article>
+            <div id="service-detail-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <img src="http://dom.jtb.co.jp/yado/photo2/XL/4/4092A01/4092A011000000081.jpg" width=100%>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 introduction-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font middle">
+                                        ＜◯◯駅西口から約６００Ｍ＞△△沿いの心地良い街に立地、ＪＲ線で××や▫︎▫︎も乗換え無しと交通至便！★電車が見えるお部屋も受付開始★
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 introduction-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="cell width45">
+                                    <span class="service-tag font small">料金</span>
+                                    <span class="focus-text font header6">4,112</span>
+                                    <span class="font middle">円～</span>
+                                </div>
+                                <div class="cell width10"></div>
+                                <div class="cell width45">
+                                    <span class="service-tag font small">ポイント</span>          
+                                    <span class="focus-text font middle">最大</span>
+                                    <span class="font middle">1%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="cell width50">
+                                    <div class="large-button">
+                                        <div>
+                                            <img src="http://mobile.rurubu.travel/sp/A04/11/1101/110103/4092A01/parts/detail/img/ic_hotelbutton_favorite.png" width=15%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            お気に入りの宿へ追加
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell width25">
+                                    <div class="small-button mail">
+                                        <div>
+                                            <img src="http://mobile.rurubu.travel/sp/A04/11/1101/110103/4092A01/parts/detail/img/ic_hotelbutton_mail.png" width=52%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            メールで共有
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell width25">
+                                    <div class="small-button line">
+                                        <div>
+                                            <img src="http://mobile.rurubu.travel/sp/A04/11/1101/110103/4092A01/parts/detail/img/ic_hotelbutton_line.png" width=26%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            LINEで共有
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        宿泊施設関連メニュー
+        <article style="background-color:gray;padding-top:3%;padding-bottom:3%">
+            <div id="reccomend-service-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="contents-area" class="cell width95 round-area padding-top-small padding-bottom-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div id="summary-area" class="table width100 padding-top-middle padding-bottom-middle">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width20">
+                                        <img src="http://mobile.rurubu.travel/sp/parts/common/img/NoPhoto198_149.gif" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width65 inline-left-top">
+                                        <div class="font header4 padding-bottom-large">
+                                            宿泊プラン名
+                                        </div>
+                                        <div class="font middle">
+                                            <span class="focus-text font header5">4,112</span>〜<span class="focus-text font header5">7,144</span>円
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="reccomend-service-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="contents-area" class="cell width95 round-area padding-top-small padding-bottom-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div id="summary-area" class="table width100 padding-top-middle padding-bottom-middle">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width20">
+                                        <img src="http://mobile.rurubu.travel/sp/parts/common/img/NoPhoto198_149.gif" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width65 inline-left-top">
+                                        <div class="font header4 padding-bottom-large">
+                                            宿泊プラン名
+                                        </div>
+                                        <div class="font middle">
+                                            <span class="focus-text font header5">4,112</span>〜<span class="focus-text font header5">7,144</span>円
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニューリスト詳細
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                        <div class="margin-top-small margin-bottom-small">
+                            <p class="font header6">
+                                住所
+                            </p>
+                            <p class="font middle">
+                                東京都江東区有明３－６－６
+                            </p>
+                        </div>
+                        <div class="margin-top-small margin-bottom-small">
+                            <p class="font header6">
+                                駐車場
+                            </p>
+                            <p class="font middle">
+                                あり
+                            </p>
+                            <p class="font middle">
+                                駐車場の種類 屋内／屋外
+                            </p>
+                            <p class="font middle">
+                                制限 あり(高さ1.55m／横幅1.85m／長さ5.0m)
+                            </p>
+                            <p class="font middle">
+                                収容台数 90台(乗用車)
+                            </p>
+                            <p class="font middle">
+                                料金 有料
+                            </p>
+                            <p class="font middle">
+                                その他 利用時間要確認
+                            </p>
+                        </div>
+                        <div class="margin-top-small margin-bottom-small">
+                            <p class="font header6">
+                                アクセス
+                            </p>
+                            <p class="font middle">
+                                ■自動車利用
+                            </p>
+                            <p class="font middle">
+                                首都高速湾岸線高速有明出口から約５分
+                            </p>
+                            <p class="font middle">
+                                ■電車利用
+                            </p>
+                            <p class="font middle">
+                                私鉄りんかい線国際展示場駅→徒歩約３分
+                            </p>
+                        </div>
+                        <div class="margin-top-small margin-bottom-small">
+                            <p class="font header6">
+                                送迎
+                            </p>
+                            <p class="font middle">
+                                なし
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        宿泊施設詳細情報ステータス
+        <article>
+            <div id="service-detail-info-header" class="table width100 padding-top-small padding-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 inline-center">
+                        <span class="service-tag font small">クチコミ</span>
+                    </div>
+                    <div class="cell width20 inline-center">
+                        <ul class="font small">
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ☆
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="cell width60">
+                        <div style="">
+                            <span class="focus-text font header6 indent-left">4.0</span>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ログインメニュー
+        <article>
+            <div id="service-detail-info-header" class="table width100 padding-top-small padding-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 inline-left font small">
+                        <span class="service-tag">◯◯様</span>
+                    </div>
+                    <div class="cell width80 font small">
+                        <span class="focus-text font header7 indent-left">100</span>pt
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        エリアGo !
+        <article>
+            <div id="area-search" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area relative">
+                        <img src="./img/map.png" width=100%>
+                        <div class="link-button hokkaido font small">
+                            北海道
+                        </div>
+                        <div class="link-button tohoku font small">
+                            東北
+                        </div>
+                        <div class="link-button hokuriku font small">
+                            北陸
+                        </div>
+                        <div class="link-button tyubu font small">
+                            中部
+                        </div>
+                        <div class="link-button kanto font small">
+                            関東
+                        </div>
+                        <div class="link-button kansai font small">
+                            関西
+                        </div>
+                        <div class="link-button chugoku font small">
+                            中国
+                        </div>
+                        <div class="link-button shikoku font small">
+                            四国
+                        </div>
+                        <div class="link-button kyusyu font small">
+                            九州
+                        </div>
+                        <div class="link-button okinawa font small">
+                            沖縄
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-top-small padding-bottom-small inline-center">
+                        <span class="pager-badge font small prev">prev</span>
+                        <span class="pager-badge font small">1</span>
+                        <span class="pager-badge font small">2</span>
+                        <span class="pager-badge font small">3</span>
+                        <span class="pager-badge font small">4</span>
+                        <span class="pager-badge font small">5</span>
+                        <span class="pager-badge font small">…</span>
+                        <span class="pager-badge font small next">next</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        フッター
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line font middle">
+                                        <div>
+                                            コンテンツタイトル1-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル1-2
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル2-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル2-2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル3
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル5
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        フッター/コピーライト
+        <footer>
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

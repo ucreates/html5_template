@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onSearchClick = function () {
+                    location.href = "../search/inn.html"        
+                };
+                $(".search-button").click(onSearchClick);
+                $(".category-search-button").click(onSearchClick);
+            
+                var onDetailClick = function() {
+                    location.href = "../detail/inn.html"   
+                }
+                $(".detail-guide-button").click(onDetailClick);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        
+        <article>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            検索
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        キーワードから探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width75 inline-left">
+                        <input type="text" class="search-text-box">
+                    </div>
+                    <div class="cell width20 inline-center">
+                        <div class="search-button">
+                            Go !
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        条件から探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-traffick-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 header-area round-top-area padding-top-small padding-bottom-small">
+                                        <div class="font header6 header-title-area">
+                                            旅館・ホテルをスピード検索
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            出発日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            帰着日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            都道府県・エリア
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                            <option>北海道</option>
+                                            <option>青森</option>
+                                            <option>岩手</option>
+                                            <option>秋田</option>
+                                            <option>宮城</option>
+                                            <option>福島</option>
+                                            <option>山形</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            部屋数
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 category-contents-left-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width40 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width30 category-contents-right-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5 category-contents-search-button-left-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                    <div class="cell width90 category-contents-search-button-center-area padding-top-middle padding-bottom-middle">
+                                        <div id="search-hotel" class="category-search-button center">
+                                            Go !
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 category-contents-search-button-right-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            検索結果一覧
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-bottom-small inline-center">
+                        <span class="pager-badge font small prev">prev</span>
+                        <span class="pager-badge font small">1</span>
+                        <span class="pager-badge font small">2</span>
+                        <span class="pager-badge font small">3</span>
+                        <span class="pager-badge font small">4</span>
+                        <span class="pager-badge font small">5</span>
+                        <span class="pager-badge font small">…</span>
+                        <span class="pager-badge font small next">next</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-contents" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="../detail/inn.html">
+                                            ◯◯INN
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="../img/hotel.png" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-contents" class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="../detail/inn.html">
+                                            ◯◯INN
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="../img/hotel.png" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-contents" class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="../detail/inn.html">
+                                            ◯◯INN
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="../img/hotel.png" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-contents" class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="../detail/inn.html">
+                                            ◯◯INN
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="../img/hotel.png" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-contents" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 relative font large padding-top-small padding-bottom-small">
+                                        <a href="../detail/inn.html">
+                                            ◯◯INN
+                                        </a>
+                                        <img class="clip-icon" src="../img/clip_icon.png" width=10% height=auto>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-small padding-bottom-small">
+                                        [東京駅周辺]
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        <img src="../img/hotel.png" width=100%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width65 inline-left-top">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width50">
+                                                                        <ul>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ★
+                                                                            </li>
+                                                                            <li>
+                                                                                ☆
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="cell width50 focus-text font header5 indent-left">
+                                                                        4.8
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font header5 focus-text">
+                                                                            15,000
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            円〜
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width100">
+                                                                        <span class="font middle">
+                                                                            ポイント最大
+                                                                        </span>
+                                                                        <span class="font header5 focus-text">
+                                                                            5
+                                                                        </span>
+                                                                        <span class="font middle">
+                                                                            %
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="introduction-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        東京駅丸の内駅舎と共に蘇った唯一無二の名門ホテル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div id="tag-area" class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            一泊朝食付き
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ツイン
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            禁煙
+                                        </span>
+                                        <span class="tag font small">
+                                            <div class="tag-mark"></div>
+                                            ポイント最大1%
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-middle padding-bottom-small" >
+                                        <div class="detail-guide-button">
+                                            詳細はこちら
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-bottom-small inline-center">
+                        <span class="pager-badge font small prev">prev</span>
+                        <span class="pager-badge font small">1</span>
+                        <span class="pager-badge font small">2</span>
+                        <span class="pager-badge font small">3</span>
+                        <span class="pager-badge font small">4</span>
+                        <span class="pager-badge font small">5</span>
+                        <span class="pager-badge font small">…</span>
+                        <span class="pager-badge font small next">next</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル3
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル3
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル5
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            メニュータイトル6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>        
+    </body>
+</html> 

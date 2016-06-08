@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/*font*/
+.font.small {
+    font-size:0.5em;
+}
+
+.font.middle {
+    font-size:0.8em;
+}
+
+.font.large {
+    font-size:1.1em;
+}
+
+.font.header1 {
+    font-size:2em;
+    font-weight:bold;
+}
+
+.font.header2 {
+    font-size:1.7em;
+    font-weight:bold;
+}
+
+.font.header3 {
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.font.header4 {
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+.font.header5 {
+    font-size:1.0em;
+    font-weight:bold;
+}
+
+.font.header6 {
+    font-size:0.8em;
+    font-weight:bold;
+}
+
+.font.header7 {
+    font-size:0.6em;
+    font-weight:bold;
+}

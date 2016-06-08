@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onSearchClick = function () {
+                    var id = $(this).attr("id");
+                    var link = null;
+                    if (id === "search-hotel") {
+                        link = "../search/inn.html";
+                    } else if (id === "search-rentacar") {
+                        link = "../search/car.html";
+                    } else if (id === "search-airplane") {
+                        link = "../search/airplane.html";
+                    }
+                    location.href = link;        
+                };
+                $(".category-search-button").click(onSearchClick);
+                $("#baloon-menu ul li").click(onSearchClick);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        
+        <article>
+            <div id="service-detail-info-header" class="table width100 padding-top-small padding-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 inline-left font small">
+                        <span class="service-tag">◯◯様</span>
+                    </div>
+                    <div class="cell width10 font small">
+                        
+                        <span class="focus-text font header7 indent-left">100</span>pt
+                    </div>
+                    <div class="cell width30 font small">
+                    </div>
+                    <div class="cell width20 inline-center font small">
+                        <a href="#">
+                            会員メニュー
+                        </a>
+                    </div>
+                    <div class="cell width20 inline-center font small">
+                        <a href="#">
+                            ポイントの交換
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            マイページ
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        予約の確認・変更はこちら
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="baloon-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <ul>
+                                <li id="search-hotel" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="../img/menu_hotel_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            旅館・ホテル
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="search-airplane" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="../img/menu_airplane_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            航空券
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="search-rentacar" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="../img/menu_car_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            レンタカー
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        お知らせ
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="information-list" class="table width100 margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area notice-area">
+                        <ul>
+                            <li>
+                                <span class="navi"></span>
+                                <span class="information-statement font small">
+                                    お知らせ1。本日◯◯を更新しました。
+                                </span>
+                                <span class="information-date font small">
+                                    2015/08/17
+                                </span>
+                            </li>
+                            <li>
+                                <span class="navi"></span>
+                                <span class="information-statement font small">
+                                    お知らせ2。本日◯◯を更新しました。
+                                </span>
+                                <span class="information-date font small">
+                                    2015/08/17
+                                </span>
+                            </li>
+                            <li>
+                                <span class="navi"></span>
+                                <span class="information-statement font small">
+                                    お知らせ3。本日◯◯を更新しました。
+                                </span>
+                                <span class="information-date font small">
+                                    2015/08/17
+                                </span>
+                            </li>
+                            <li>
+                                <span class="navi"></span>
+                                <span class="information-statement font small">
+                                    お知らせ4。本日◯◯を更新しました。
+                                </span>
+                                <span class="information-date font small">
+                                    2015/08/17
+                                </span>
+                            </li>
+                            <li>
+                                <span class="navi"></span>
+                                <span class="information-statement font small">
+                                    お知らせ5。本日◯◯を更新しました。
+                                </span>
+                                <span class="information-date font small">
+                                    2015/08/17
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            検索
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        旅館・ホテルを検索する
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-traffick-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 header-area round-top-area padding-top-small padding-bottom-small">
+                                        <div class="font header6 header-title-area">
+                                            旅館・ホテルをスピード検索
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            出発日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            帰着日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            都道府県・エリア
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                            <option>北海道</option>
+                                            <option>青森</option>
+                                            <option>岩手</option>
+                                            <option>秋田</option>
+                                            <option>宮城</option>
+                                            <option>福島</option>
+                                            <option>山形</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            部屋数
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 category-contents-left-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width40 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width30 category-contents-right-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5 category-contents-search-button-left-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                    <div class="cell width90 category-contents-search-button-center-area padding-top-middle padding-bottom-middle">
+                                        <div id="search-hotel" class="category-search-button center">
+                                            Go !
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 category-contents-search-button-right-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        航空券を検索する
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-traffick-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 header-area round-top-area padding-top-small padding-bottom-small">
+                                        <div class="font header6 header-title-area">
+                                            航空券をスピード検索
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            出発日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            帰着日時:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>9/17(木)</option>
+                                            <option>9/18(金)</option>
+                                            <option>9/19(土)</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>時間指定なし</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            往路:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>東京</option>
+                                            <option>大阪</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>東京</option>
+                                            <option>大阪</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            復路:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>東京</option>
+                                            <option>大阪</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>東京</option>
+                                            <option>大阪</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            人数
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 category-contents-left-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width40 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width30 category-contents-right-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-search-button-left-area padding-top-middle padding-bottom-middle">
+                                        <div id="search-airplane" class="category-search-button right">
+                                            JALでGo !
+                                        </div>
+                                    </div>
+                                    <div class="cell width10 category-contents-search-button-center-area"></div>
+                                    <div class="cell width45 category-contents-search-button-right-area padding-top-middle padding-bottom-middle">
+                                        <div id="search-airplane" class="category-search-button left">
+                                            ANAでGo !
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        レンタカーを検索する
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-traffick-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 header-area round-top-area padding-top-small padding-bottom-small">
+                                        <div class="font header6 header-title-area">
+                                            レンタカーをスピード検索
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            都道府県・エリア・詳細エリア
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5 category-contents-left-area"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                            <option>北海道</option>
+                                            <option>青森</option>
+                                            <option>岩手</option>
+                                            <option>秋田</option>
+                                            <option>宮城</option>
+                                            <option>福島</option>
+                                            <option>山形</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                            <option>どこか</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>指定なし</option>
+                                            <option>どこかの詳細</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5 category-contents-right-area"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            台数・クラス・禁煙/喫煙
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5 category-contents-left-area"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>乗用車</option>
+                                            <option>ハイブリッド</option>
+                                            <option>ミニバン・ワゴン</option>
+                                            <option>RV</option>
+                                            <option>バン</option>
+                                            <option>その他</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 padding-top-middle padding-bottom-middle inline-center">
+                                        <select size="1">
+                                            <option>禁煙</option>
+                                            <option>喫煙</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width2-5 category-contents-right-area"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font small category-area padding-top-small padding-bottom-small">
+                                        <div class="category-title-area">
+                                            トランスミッション/駆動輪
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width45 category-contents-left-area padding-top-middle padding-bottom-middle inline-right">
+                                        <select size="1">
+                                            <option>AT車</option>
+                                            <option>MT車</option>
+                                        </select>
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width45 category-contents-right-area padding-top-middle padding-bottom-middle inline-left">
+                                        <select size="1">
+                                            <option>希望なし</option>
+                                            <option>4WD</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5 category-contents-search-button-left-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                    <div class="cell width90 category-contents-search-button-center-area padding-top-middle padding-bottom-middle">
+                                        <div id="search-rentacar" class="category-search-button center">
+                                            Go !
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 category-contents-search-button-right-area padding-top-middle padding-bottom-middle">
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-middle">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            旅行業約款
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            旅行条件書
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            ご利用案内
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            プライバシー
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            サイトマップ
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            ヘルプ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

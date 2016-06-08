@@ -1,0 +1,1135 @@
+/*default setting*/
+body,article,header,footer {
+    background-color:#242424;
+    color:#ffffff;
+    font-family:"游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+}
+
+body {
+    overflow: scroll;
+}
+
+/*common components*/
+div .contents{
+    background-color:#9e6d41;
+}
+
+a.decoration-link {
+    text-decoration:none;
+    color: #deb887;
+}
+
+/*header*/
+header div.fixed-menu-area {
+    background-color:#433d32;
+    position:fixed;
+    z-index:11;
+}
+
+header ul.menu-list {
+    position:relative;
+    display:table;
+    table-layout:fixed;
+    width:100%;
+    height:100%;
+    list-style:none;
+    padding:0;
+    margin:0;
+   
+}
+
+header li.menu {
+    display:table-cell;
+    width:20%;
+    background-color:#9e6d41;
+}
+
+header div.menu-item {
+    padding-bottom:10%;
+    background-color:transparent;
+    border-bottom:solid 0.1em #ffffff;
+    text-align:center;
+    width:100%;
+}
+header div.menu-item.item1 {
+    height:100%;
+}
+
+header div.menu-item.item1:after{
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:110%;
+    left:0%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item.item2 {
+}
+
+header div.menu-item.item2:after{
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:110%;
+    left:20%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item.item3 {
+}
+
+header div.menu-item.item3:after{
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:110%;
+    left:40%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item.item4 {
+}
+
+header div.menu-item.item4:after{
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:110%;
+    left:60%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item.item5 {
+}
+
+header div.menu-item.item5:after{
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:110%;
+    left:80%;
+    width:20%;
+    height:0.4em;
+}
+
+header li.menu-hover {
+    display:table-cell;
+    width:20%;
+    background-color:#714e2f;
+}
+
+header div.menu-item-hover {
+    padding-bottom:10%;
+    background-color:#714e2f;
+    border-bottom:solid 0.1em #000000;
+    text-align:center;
+    width:100%;
+}
+
+header div.menu-item-hover.item1 {
+}
+
+header div.menu-item-hover.item1:after{
+    content:"";
+    background-color:#9e6d41;
+    position: absolute;
+    top:110%;
+    left:0%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item-hover.item2 {
+}
+
+header div.menu-item-hover.item2:after{
+    content:"";
+    background-color:#9e6d41;
+    position: absolute;
+    top:110%;
+    left:20%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item-hover.item3 {
+}
+
+header div.menu-item-hover.item3:after{
+    content:"";
+    background-color:#9e6d41;
+    position: absolute;
+    top:110%;
+    left:40%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item-hover.item4 {
+}
+
+header div.menu-item-hover.item4:after{
+    content:"";
+    background-color:#9e6d41;
+    position: absolute;
+    top:110%;
+    left:60%;
+    width:20%;
+    height:0.4em;
+}
+
+header div.menu-item-hover.item5 {
+}
+
+header div.menu-item-hover.item5:after{
+    content:"";
+    background-color:#9e6d41;
+    position: absolute;
+    top:110%;
+    left:80%;
+    width:20%;
+    height:0.4em;
+}
+
+/*article components*/
+article .padding-top-header {
+    padding-top:13%;
+}
+
+article div.article-theme-header {
+    background-color:#9e6d41;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;    
+    text-align:center;
+}
+
+article .article-header-cell {
+    background-color:#9e6d41;
+}
+
+article .article-header {
+    padding-left:8%;
+    background:transparent url(../img/article_header_icon.png) no-repeat scroll 2% 50%;
+    background-size: 4% auto;
+    position:relative;
+}
+
+article .article-header:after {
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:90%;
+    left:0%;
+    width:100%;
+    height:0.2em;
+}
+
+article #caution ul {
+    list-style: none;
+}
+
+/*index article*/
+#index-article .logo-area {
+    position:absolute;
+    top:4%;
+    left:2%;
+    width:40%;
+    height:30%;
+    background-color:#9e6d41;
+    padding-top:3%;
+    text-align:center;
+    vertical-align: middle;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;    
+    z-index:10;
+}
+
+#index-article .padding-top-header {
+    padding-top:12%;
+}
+
+#index-article div.facebook-icon-area {
+    position:absolute;
+    top:76%;
+    right:14%;
+    width:10%;   
+    z-index:10;
+}
+
+#index-article div.twitter-icon-area {
+    position:absolute;
+    top:76%;
+    right:2%;
+    width:10%;   
+    z-index:10;
+}
+
+#index-article #food-menu-list ul {
+    list-style: none;
+}
+
+#index-article #food-menu-list .steak-menu-bg {
+    width:100%;
+    background:transparent url(../img/steak_menu_bg.png) no-repeat scroll 0% 40%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #food-menu-list .humburg-steak-menu-bg {
+    width:100%;
+    background:transparent url(../img/humburg-steak-menu.png) no-repeat scroll 0% 50%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #food-menu-list .stew-menu-bg {
+    width:100%;
+    background:transparent url(../img/stew_menu.png) no-repeat scroll 0% 50%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #food-menu-list .side-dish-salad-menu-bg {
+    width:100%;
+    background:transparent url(../img/sidedish_menu.png) no-repeat scroll 0% 50%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #food-menu-list .dessert-drink-menu-bg {
+    width:100%;
+    background:transparent url(../img/dessert_menu.png) no-repeat scroll 0% 50%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #food-menu-list .menu-item-filter {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,9e6d41+100&amp;
+0+-1,0+0,1+60 */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) -1%, rgba(255,255,255,0) 0%, rgba(179,102,102,1) 60%, rgba(128,0,0,1) 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(-1%,rgba(255,255,255,0)), color-stop(0%,rgba(255,255,255,0)), color-stop(60%,rgba(179,102,102,1)), color-stop(100%,rgba(128,0,0,1)));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#9e6d41',GradientType=1 );
+ /* IE6-9 */
+}
+
+#index-article #food-menu-list .upper-statement {
+    margin-left:auto;
+    margin-right:0;
+    text-align:left;
+    border-bottom:solid 0.1em;
+    width:50%;
+    background-color:transparent;
+    
+}
+
+#index-article #food-menu-list .downer-statement {
+    margin-left:auto;
+    margin-right:0;
+    text-align:left;
+    width:50%;
+    background-color:transparent;
+}
+
+#index-article #location-list ul {
+    list-style: none;
+}
+
+#index-article #location-list .location-bg {
+    background:transparent url(../img/location_menu.png) no-repeat scroll 5% 50%;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+    background-size: 100% auto;
+}
+
+#index-article #location-list .menu-item-filter {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,9e6d41+100&amp;
+0+-1,0+0,1+60 */
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) -1%, rgba(255,255,255,0) 0%, rgba(179,102,102,1) 60%, rgba(128,0,0,1) 100%);
+ /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(-1%,rgba(255,255,255,0)), color-stop(0%,rgba(255,255,255,0)), color-stop(60%,rgba(179,102,102,1)), color-stop(100%,rgba(128,0,0,1)));
+ /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* IE10+ */
+    background: linear-gradient(to right,  rgba(255,255,255,0) -1%,rgba(255,255,255,0) 0%,rgba(179,102,102,1) 60%,rgba(128,0,0,1) 100%);
+ /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#9e6d41',GradientType=1 );
+ /* IE6-9 */
+}
+
+#index-article #location-list .upper-statement {
+    margin-left:auto;
+    margin-right:0;
+    text-align:left;
+    border-bottom:solid 0.1em;
+    width:45%;
+    background-color:transparent;
+    
+}
+
+#index-article #location-list .downer-statement {
+    margin-left:auto;
+    margin-right:0;
+    text-align:left;
+    width:45%;
+    background-color:transparent;
+}
+
+#index-article #information-list ul {
+    list-style:none;
+}
+
+#index-article #information-list li {
+    position:relative;
+}
+
+#index-article #information-list li span.navi{
+    position:absolute;
+    top:32%;
+    border:7px solid #deb887;
+    border-color:transparent;
+    border-left-color:#deb887;
+}        
+
+#index-article #information-list .information-statement {
+    padding-left:3%;
+}
+
+#index-article #information-list .information-date {
+    position:absolute;
+    top:25%;
+    right:0%;
+    text-align:left;
+}
+
+#index-article #location-contents .menu-ranking {
+    background-color:#deb887;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+}
+
+#index-article #location-contents .menu-ranking-header-outline {
+    filter:dropshadow(color=#85a76c,offX= 0,offY=-1)
+    dropshadow(color=#85a76c,offX= 1,offY= 0)
+    dropshadow(color=#85a76c,offX= 0,offY= 1)
+    dropshadow(color=#85a76c,offX=-1,offY= 0);
+
+    -webkit-text-stroke-color: #ffffff;
+
+    text-shadow: #85a76c 1px 1px 0px, #85a76c -1px 1px 0px,
+                 #85a76c 1px -1px 0px, #85a76c -1px -1px 0px;
+   
+}
+
+#index-article #location-contents .original-menu {
+    background-color:#deb887;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+}
+
+#index-article #location-contents .original-menu-header-outline {
+    filter:dropshadow(color=#85a76c,offX= 0,offY=-1)
+    dropshadow(color=#85a76c,offX= 1,offY= 0)
+    dropshadow(color=#85a76c,offX= 0,offY= 1)
+    dropshadow(color=#85a76c,offX=-1,offY= 0);
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: #85a76c 1px 1px 0px, #85a76c -1px 1px 0px,
+                 #85a76c 1px -1px 0px, #85a76c -1px -1px 0px;
+   
+}
+
+#index-article #location-contents .staff-recommend {
+    background-color:#deb887;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;    
+}
+
+#index-article #location-contents .staff-recommend-header-outline {
+    filter:dropshadow(color=#85a76c,offX= 0,offY=-1)
+    dropshadow(color=#85a76c,offX= 1,offY= 0)
+    dropshadow(color=#85a76c,offX= 0,offY= 1)
+    dropshadow(color=#85a76c,offX=-1,offY= 0);
+    -webkit-text-stroke-color: #ffffff;
+    text-shadow: #85a76c 1px 1px 0px, #85a76c -1px 1px 0px,
+                 #85a76c 1px -1px 0px, #85a76c -1px -1px 0px;
+   
+}
+
+/*location article*/
+#location-article .information-table-border {
+    border-bottom:solid 0.2em #bbbbbb;
+}
+
+/*footer*/
+footer div.menu-area {
+    background-color:#433d32;
+}
+
+footer #copy-right {
+    border-top:solid 0.1em #ffffff;
+}
+footer #copy-right:before {
+    content:"";
+    background-color:#714e2f;
+    position: absolute;
+    top:-20%;
+    left:0%;
+    width:100%;
+    height:0.4em;
+}
+
+/*location list article*/
+#location-list-article .location-map {
+    background-image: url("../img/map.png");
+    background-position:0% 100%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position:relative;
+    padding-top:35%;
+    padding-bottom:35%;
+}
+
+#location-list-article .location-map #tokyo-01 {
+    position:absolute;
+    top:54%;
+    left:20%;
+    background-color:transparent;
+    width:10%;
+    height:11%;
+}
+
+#location-list-article .location-map #tokyo-02 {
+    position:absolute;
+    top:57%;
+    left:30%;
+    background-color:transparent;
+    width:10%;
+    height:7%;
+}
+
+#location-list-article .location-map #tokyo-03 {
+    position:absolute;
+    top:60%;
+    left:34%;
+    background-color:transparent;
+    width:10%;
+    height:7%;
+}
+
+#location-list-article .location-map #tokyo-04 {
+    position:absolute;
+    top:59%;
+    left:44%;
+    background-color:transparent;
+    width:10%;
+    height:7%;
+}
+
+#location-list-article .location-map #tokyo-05 {
+    position:absolute;
+    top:58%;
+    left:50%;
+    background-color:transparent;
+    width:10%;
+    height:11%;
+}
+
+#location-list-article .location-map #tokyo-06 {
+    position:absolute;
+    top:63%;
+    left:58%;
+    background-color:transparent;
+    width:10%;
+    height:9%;
+}
+
+#location-list-article .location-map #saitama-01 {
+    position:absolute;
+    top:46%;
+    left:10%;
+    background-color:transparent;
+    width:16%;
+    height:11%;
+}
+
+#location-list-article .location-map #saitama-02 {
+    position:absolute;
+    top:38%;
+    left:25%;
+    background-color:transparent;
+    width:15%;
+    height:19%;
+}
+
+#location-list-article .location-map #saitama-03 {
+    position:absolute;
+    top:41%;
+    left:40%;
+    background-color:transparent;
+    width:15%;
+    height:18%;
+}
+
+#location-list-article .location-map #saitama-04 {
+    position:absolute;
+    top:45%;
+    left:55%;
+    background-color:transparent;
+    width:5%;
+    height:15%;
+}
+
+#location-list-article .location-map #kanagawa-01 {
+    position:absolute;
+    top:72%;
+    left:21%;
+    background-color:transparent;
+    width:10%;
+    height:15%;
+}
+
+#location-list-article .location-map #kanagawa-02 {
+    position:absolute;
+    top:65%;
+    left:25%;
+    background-color:transparent;
+    width:10%;
+    height:7%;
+}
+
+#location-list-article .location-map #kanagawa-03 {
+    position:absolute;
+    top:70%;
+    left:31%;
+    background-color:transparent;
+    width:10%;
+    height:12%;
+}
+
+#location-list-article .location-map #kanagawa-04 {
+    position:absolute;
+    top:67%;
+    left:31%;
+    background-color:transparent;
+    width:12%;
+    height:4%;
+}
+
+#location-list-article .location-map #kanagawa-05 {
+    position:absolute;
+    top:71%;
+    left:41%;
+    background-color:transparent;
+    width:10%;
+    height:8%;
+}
+
+#location-list-article .location-map #kanagawa-06 {
+    position:absolute;
+    top:79%;
+    left:43%;
+    background-color:transparent;
+    width:12%;
+    height:8%;
+}
+
+#location-list-article .location-map #kanagawa-07 {
+    position:absolute;
+    top:66%;
+    left:43%;
+    background-color:transparent;
+    width:8%;
+    height:8%;
+}
+
+#location-list-article .location-map #kanagawa-08 {
+    position:absolute;
+    top:68%;
+    left:50%;
+    background-color:transparent;
+    width:7%;
+    height:8%;
+}
+
+#location-list-article .location-map #chiba-01 {
+    position:absolute;
+    top:57%;
+    left:61%;
+    background-color:transparent;
+    width:29%;
+    height:8%;
+}
+
+#location-list-article .location-map #chiba-02 {
+    position:absolute;
+    top:65%;
+    left:66%;
+    background-color:transparent;
+    width:15%;
+    height:8%;
+}
+
+#location-list-article .location-map #chiba-03 {
+    position:absolute;
+    top:65%;
+    left:80%;
+    background-color:transparent;
+    width:4%;
+    height:8%;
+}
+
+#location-list-article .location-map #chiba-04 {
+    position:absolute;
+    top:65%;
+    left:83%;
+    background-color:transparent;
+    width:4%;
+    height:4%;
+}
+
+#location-list-article .location-map #chiba-05 {
+    position:absolute;
+    top:73%;
+    left:61%;
+    background-color:transparent;
+    width:21%;
+    height:15%;
+}
+
+#location-list-article .location-map #chiba-06 {
+    position:absolute;
+    top:76%;
+    left:57%;
+    background-color:transparent;
+    width:7%;
+    height:16%;
+}
+
+#location-list-article .location-map #chiba-07 {
+    position:absolute;
+    top:86%;
+    left:64%;
+    background-color:transparent;
+    width:7%;
+    height:5%;
+}
+
+#location-list-article .location-map #chiba-08 {
+    position:absolute;
+    top:92%;
+    left:54%;
+    background-color:transparent;
+    width:10%;
+    height:5%;
+}
+
+#location-list-article .location-map #chiba-09 {
+    position:absolute;
+    top:48%;
+    left:57%;
+    background-color:transparent;
+    width:2%;
+    height:4%;
+}
+
+#location-list-article .location-map #chiba-10 {
+    position:absolute;
+    top:49%;
+    left:58%;
+    background-color:transparent;
+    width:2%;
+    height:4%;
+}
+
+#location-list-article .location-map #chiba-11 {
+    position:absolute;
+    top:51%;
+    left:59%;
+    background-color:transparent;
+    width:4%;
+    height:4%;
+}
+
+#location-list-article .location-map #chiba-12 {
+    position:absolute;
+    top:53%;
+    left:60%;
+    background-color:transparent;
+    width:4%;
+    height:6%;
+}
+
+#location-list-article .location-map #chiba-13 {
+    position:absolute;
+    top:54%;
+    left:63%;
+    background-color:transparent;
+    width:4%;
+    height:6%;
+}
+
+#location-list-article .location-map #chiba-14 {
+    position:absolute;
+    top:55%;
+    left:67%;
+    background-color:transparent;
+    width:4%;
+    height:3%;
+}
+
+#location-list-article .location-map #chiba-15 {
+    position:absolute;
+    top:56%;
+    left:72%;
+    background-color:transparent;
+    width:20%;
+    height:3%;
+}
+
+#location-list-article .location-map #chiba-16 {
+    position:absolute;
+    top:54%;
+    left:77%;
+    background-color:transparent;
+    width:13%;
+    height:3%;
+}
+
+#location-list-article .location-map #chiba-17 {
+    position:absolute;
+    top:52%;
+    left:84%;
+    background-color:transparent;
+    width:3%;
+    height:3%;
+}
+
+#location-list-article .location-map #chiba-18 {
+    position:absolute;
+    top:58%;
+    left:90%;
+    background-color:transparent;
+    width:3%;
+    height:6%;
+}
+
+#location-list-article .location-map #chiba-19 {
+    position:absolute;
+    top:58%;
+    left:93%;
+    background-color:transparent;
+    width:3%;
+    height:5%;
+}
+
+#location-list-article .location-map #chiba-20 {
+    position:absolute;
+    top:60%;
+    left:96%;
+    background-color:transparent;
+    width:4%;
+    height:3%;
+}
+
+#location-list-article .location-map #ibaraki-01 {
+    position:absolute;
+    top:10%;
+    left:75%;
+    background-color:transparent;
+    width:23%;
+    height:8%;
+}
+
+#location-list-article .location-map #ibaraki-02 {
+    position:absolute;
+    top:18%;
+    left:75%;
+    background-color:transparent;
+    width:20%;
+    height:8%;
+}
+
+#location-list-article .location-map #ibaraki-03 {
+    position:absolute;
+    top:26%;
+    left:74%;
+    background-color:transparent;
+    width:17%;
+    height:8%;
+}
+
+#location-list-article .location-map #ibaraki-04 {
+    position:absolute;
+    top:34%;
+    left:60%;
+    background-color:transparent;
+    width:29%;
+    height:8%;
+}
+
+#location-list-article .location-map #ibaraki-05 {
+    position:absolute;
+    top:32%;
+    left:66%;
+    background-color:transparent;
+    width:8%;
+    height:3%;
+}
+
+#location-list-article .location-map #ibaraki-06 {
+    position:absolute;
+    top:40%;
+    left:53%;
+    background-color:transparent;
+    width:8%;
+    height:6%;
+}
+
+#location-list-article .location-map #ibaraki-07 {
+    position:absolute;
+    top:36%;
+    left:57%;
+    background-color:transparent;
+    width:8%;
+    height:6%;
+}
+
+#location-list-article .location-map #ibaraki-08 {
+    position:absolute;
+    top:40%;
+    left:60%;
+    background-color:transparent;
+    width:29%;
+    height:12%;
+}
+
+#location-list-article .location-map #ibaraki-09 {
+    position:absolute;
+    top:45%;
+    left:57%;
+    background-color:transparent;
+    width:8%;
+    height:6%;
+}
+
+#location-list-article .location-map #ibaraki-10 {
+    position:absolute;
+    top:50%;
+    left:60%;
+    background-color:transparent;
+    width:25%;
+    height:3%;
+}
+
+#location-list-article .location-map #ibaraki-11 {
+    position:absolute;
+    top:53%;
+    left:64%;
+    background-color:transparent;
+    width:17%;
+    height:3%;
+}
+
+#location-list-article .location-map #ibaraki-12 {
+    position:absolute;
+    top:45%;
+    left:89%;
+    background-color:transparent;
+    width:2%;
+    height:10%;
+}
+
+#location-list-article .location-map #ibaraki-13 {
+    position:absolute;
+    top:50%;
+    left:91%;
+    background-color:transparent;
+    width:2%;
+    height:6%;
+}
+
+#location-list-article .location-map #ibaraki-14 {
+    position:absolute;
+    top:53%;
+    left:93%;
+    background-color:transparent;
+    width:2%;
+    height:6%;
+}
+
+#location-list-article .location-map #ibaraki-15 {
+    position:absolute;
+    top:55%;
+    left:95%;
+    background-color:transparent;
+    width:2%;
+    height:4%;
+}
+
+#location-list-article .location-map #ibaraki-16 {
+    position:absolute;
+    top:57%;
+    left:96%;
+    background-color:transparent;
+    width:2%;
+    height:4%;
+}
+
+#location-list-article .location-map #ibaraki-17 {
+    position:absolute;
+    top:59%;
+    left:96%;
+    background-color:transparent;
+    width:4%;
+    height:2%;
+}
+
+#location-list-article .location-map #gumma-01 {
+    position:absolute;
+    top:20%;
+    left:0%;
+    background-color:transparent;
+    width:40%;
+    height:12%;
+}
+
+#location-list-article .location-map #gumma-02 {
+    position:absolute;
+    top:4%;
+    left:17%;
+    background-color:transparent;
+    width:23%;
+    height:16%;
+}
+
+#location-list-article .location-map #gumma-03 {
+    position:absolute;
+    top:17%;
+    left:0%;
+    background-color:transparent;
+    width:17%;
+    height:3%;
+}
+
+#location-list-article .location-map #gumma-04 {
+    position:absolute;
+    top:32%;
+    left:10%;
+    background-color:transparent;
+    width:29%;
+    height:6%;
+}
+
+#location-list-article .location-map #gumma-05 {
+    position:absolute;
+    top:32%;
+    left:7%;
+    background-color:transparent;
+    width:22%;
+    height:12%;
+}
+
+#location-list-article .location-map #gumma-06 {
+    position:absolute;
+    top:44%;
+    left:7%;
+    background-color:transparent;
+    width:15%;
+    height:5%;
+}
+
+#location-list-article .location-map #gumma-07 {
+    position:absolute;
+    top:37%;
+    left:39%;
+    background-color:transparent;
+    width:13%;
+    height:5%;
+}
+
+#location-list-article .location-map #tochigi-01 {
+    position:absolute;
+    top:0%;
+    left:40%;
+    background-color:transparent;
+    width:35%;
+    height:30%;
+}
+
+#location-list-article .location-map #tochigi-02 {
+    position:absolute;
+    top:30%;
+    left:40%;
+    background-color:transparent;
+    width:20%;
+    height:10%;
+}
+
+#location-list-article .location-map #tochigi-03 {
+    position:absolute;
+    top:30%;
+    left:60%;
+    background-color:transparent;
+    width:13%;
+    height:5%;
+}
+
+#location-list-article #location-list ul {
+    list-style: none;
+}
+
+#location-list-article #location-list .location-info-border {
+    border-bottom:solid 1px #ffffff;
+}
+
+/*contact article*/
+#contact-article .input-text {
+    width:80%;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;    
+    border:solid 1px #aaaaaa;
+}
+#contact-article .input-submit {
+    width:20%;
+    height:120%;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;    
+    border:solid 0.1em #000000;
+    background-color: #ffffff;
+}

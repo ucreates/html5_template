@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>フリーマーケットDemoサイト</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/ui.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onHeaderMenuClick = function() {
+                    var id = $(this).attr("id");
+                    var nextUrl = null;
+                    if (id === "login") {
+                        nextUrl = "./auth/login.html";
+                    } else if(id === "search") {
+                        nextUrl = "./search/index.html";
+                    } else if(id === "exhibit") {
+                        nextUrl = "./exhibit/index.html";
+                    } else if(id === "cart") {
+                        nextUrl = "./cart.html";
+                    } else if(id === "search") {
+                        nextUrl = "./search/index.html";
+                    } else if(id === "like") {
+                        nextUrl = "./like/index.html";
+                    }
+                    location.href = nextUrl;
+                };
+                $("header #menu ul li").click(onHeaderMenuClick);
+
+                var onCloseButtonClick = function (event) {
+                    var hideAreaId = event.data.id;
+                    console.log(hideAreaId);
+                    $(hideAreaId).fadeOut(500);
+                };
+                $("#cart-item1 .close-button").bind("click",{id:"#cart-item1"},onCloseButtonClick);
+                $("#cart-item2 .close-button").bind("click",{id:"#cart-item2"},onCloseButtonClick);
+                $("#cart-item3 .close-button").bind("click",{id:"#cart-item3"},onCloseButtonClick);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 contents round-bottom-left-area inline-center">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" width=70%>
+                        </a>
+                    </div>
+                    <div class="cell width15 contents">
+                    </div>
+                    <div id="menu" class="cell width65 contents round-bottom-right-area">
+                        <ul>
+                            <li id="login">
+                                <div class="inline-center">
+                                    <img src="./img/member_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Login
+                                </div>
+                            </li>
+                            <li id="search">
+                                <div class="inline-center">
+                                    <img src="./img/search_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Search
+                                </div>
+                            </li>
+                            <li id="exhibit">
+                                <div class="inline-center">
+                                    <img src="./img/exhibit_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Exhibit
+                                </div>
+                            </li>
+                            <li id="cart" class="active">
+                                <div class="inline-center">
+                                    <img src="./img/cart_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Cart
+                                </div>
+                                <div class="amount-badge">0</div>
+                            </li>
+                            <li id="like">
+                                <div class="inline-center">
+                                    <img src="./img/like_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Like
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </header>
+        <article id="cart-article" class="padding-top-small">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="caution-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-small font header5">
+                                        カート内の商品につきまして
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <hr>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-small padding-bottom-middle font small">
+                                        <div>
+                                            カート内の商品はカート追加後120分間確保されます。
+                                        </div>
+                                        <div>
+                                            ログイン後に「注文手続きへ」をクリックすると確保された商品のご購入をすることができます。
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="cart-item1" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-product-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        x点&nbsp;¥xxxx
+                                                    </div>
+                                                    <div class="cell width60"></div>
+                                                    <div class="cell width10">
+                                                        <div class="close-button">
+                                                            ×
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width30 border inline-center">
+                                                        <a href="./item/detail.html">
+                                                            <img src="./img/cart_item_sample.png" height=100%>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right">
+                                                            MEN XXXXXX
+                                                        </div>
+                                                        <div class="padding-top-middle inline-right indent-right">
+                                                            ¥x,xxx
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            カラー
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            COLOR NAME
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            サイズ
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            XX
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            股下/裄丈
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            --
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            数量
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border padding-top-small padding-bottom-small">
+                                                        <div class="inline-right indent-right">
+                                                            <input type="text" maxlength=1 style="width:10%;">
+                                                            <a class="normal-button">変更</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="cart-item2" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-product-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        x点&nbsp;¥xxxx
+                                                    </div>
+                                                    <div class="cell width60"></div>
+                                                    <div class="cell width10">
+                                                        <div class="close-button">
+                                                            ×
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width30 border inline-center">
+                                                        <a href="./item/detail.html">
+                                                            <img src="./img/cart_item_sample.png" height=100%>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right">
+                                                            MEN XXXXXX
+                                                        </div>
+                                                        <div class="padding-top-middle inline-right indent-right">
+                                                            ¥x,xxx
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            カラー
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            COLOR NAME
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            サイズ
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            XX
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            股下/裄丈
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            --
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            数量
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border padding-top-small padding-bottom-small">
+                                                        <div class="inline-right indent-right">
+                                                            <input type="text" maxlength=1 style="width:10%;">
+                                                            <a class="normal-button">変更</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="cart-item3" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-product-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        x点&nbsp;¥xxxx
+                                                    </div>
+                                                    <div class="cell width60"></div>
+                                                    <div class="cell width10">
+                                                        <div class="close-button">
+                                                            ×
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width30 border inline-center">
+                                                        <a href="./item/detail.html">
+                                                            <img src="./img/cart_item_sample.png" height=100%>
+                                                        </a>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right">
+                                                            MEN XXXXXX
+                                                        </div>
+                                                        <div class="padding-top-middle inline-right indent-right">
+                                                            ¥x,xxx
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            カラー
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            COLOR NAME
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            サイズ
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            XX
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            股下/裄丈
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            --
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            数量
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border padding-top-small padding-bottom-small">
+                                                        <div class="inline-right indent-right">
+                                                            <input type="text" maxlength=1 style="width:10%;">
+                                                            <a class="normal-button">変更</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="cart-caution" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="caution-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small padding-top-middle padding-bottom-middle">
+                                        <div class="indent-left">
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        日時配送の場合、1回の商品合計税抜金額が5,000円以上の場合は、送料（450円+税）が無料になります。
+                                                    </div>
+                                                    <div>
+                                                        ゆうパケットの場合、1回の商品合計税抜金額が5,000円以上の場合は、送料（250円+税）が無料になります。
+                                                    </div>
+                                                    <div>
+                                                    ※補正料・ギフト料は商品合計金額には含まれません                                        
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    カートに入れた商品の価格は、まとめ買い価格の方がお得な場合などに、自動で最も安い価格が適用されます。
+                                                </li>
+                                                <li>
+                                                    返品について：まとめ買いした場合のご返品については金額が変更する場合がありますので、ご注意ください。
+                                                </li>
+                                                <li>
+                                                    <div class="bold-caution">
+                                                    ご注文の発送状況が「発送の準備をしています」という表示になりますと、それ以降のお客様都合によるキャンセルの場合に、別途キャンセル料を頂戴する場合がございます。
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>                                            
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area blank-area">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="menu" class="cell width95">
+                        <ul>
+                            <li class="login">
+                                <div>
+                                    ログイン
+                                </div>
+                            </li>
+                            <li class="register">
+                                <div>
+                                    会員登録
+                                </div>
+                            </li>
+                            <li class="purchase-history">
+                                <div>
+                                    履歴
+                                </div>
+                            </li>
+                            <li class="information">
+                                <div>
+                                    ご利用ガイド
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="copyright" class="cell width95 font header7 inline-center padding-top-middle padding-bottom-middle">
+                        COPYRIGHT (C) ◯◯ CO., LTD. ALL RIGHTS RESERVED.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

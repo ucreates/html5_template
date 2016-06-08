@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/ui.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onClick = function () {
+                    var id = null;
+                    if($(this).hasClass("hokkaido")) {
+                        id = "#tour-hokkaido";
+                    } else if($(this).hasClass("tohoku")) {
+                        id = "#tour-tohoku";   
+                    } else if($(this).hasClass("kanto")) {
+                        id = "#tour-kanto";   
+                    } else if($(this).hasClass("hokuriku")) {
+                        id = "#tour-hokuriku";   
+                    } else if($(this).hasClass("kyusyu")) {
+                        id = "#tour-kyusyu";   
+                    }
+                    var target = $(id);
+                    if (undefined === target.offset()) {
+                        return;
+                    }
+                    var position = target.offset().top;
+                    $("html, body").animate({scrollTop:position}, 500, "swing");                    
+                };
+            
+                $(".link-button.hokkaido").click(onClick);
+                $(".link-button.tohoku").click(onClick);
+                $(".link-button.kanto").click(onClick);
+                $(".link-button.hokuriku").click(onClick);
+                $(".link-button.kyusyu").click(onClick);
+                
+                var onSearchClick = function () {
+                    location.href = "./search/inn.html"        
+                };
+            
+                $(".search-button").click(onSearchClick);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            ツアーを検索
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        キーワードで探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width75 inline-left">
+                        <input type="text" class="search-text-box">
+                    </div>
+                    <div class="cell width20 inline-center">
+                        <div class="search-button">
+                            Go !
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle  margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        行きたい場所から探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="area-search" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area relative">
+                        <img src="./img/map.png" width=100%>
+                        <div class="link-button hokkaido font small">
+                            北海道
+                        </div>
+                        <div class="link-button tohoku font small">
+                            東北
+                        </div>
+                        <div class="link-button hokuriku font small">
+                            北陸
+                        </div>
+                        <div class="link-button tyubu font small">
+                            中部
+                        </div>
+                        <div class="link-button kanto font small">
+                            関東
+                        </div>
+                        <div class="link-button kansai font small">
+                            関西
+                        </div>
+                        <div class="link-button chugoku font small">
+                            中国
+                        </div>
+                        <div class="link-button shikoku font small">
+                            四国
+                        </div>
+                        <div class="link-button kyusyu font small">
+                            九州
+                        </div>
+                        <div class="link-button okinawa font small">
+                            沖縄
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            オススメツアーはコチラ！
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-header" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="tour-hokkaido" class="cell width95 hokkaido-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido odd">
+                                        北
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido even">
+                                        海
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center hokkaido odd">
+                                        道
+                                    </div>
+                                    <div class="cell width70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_01.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        札幌(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_02.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        小樽(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        函館(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_04.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        釧路(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_05.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        室蘭(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area hokkaido">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokkaido_06.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        富良野(北海道)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area hokkaido padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-header" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="tour-tohoku" class="cell width95 tohoku-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tohoku odd">
+                                        東
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tohoku even">
+                                        北
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_01.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        青森(青森県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_02.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        盛岡(岩手県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        秋田(秋田県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_04.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        仙台(宮城県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_05.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        会津(福島県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tohoku">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_tohoku_06.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        蔵王(山形県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tohoku padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-header" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="tour-kanto" class="cell width95 kanto-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kanto odd">
+                                        関
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kanto even">
+                                        東
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_01.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        東京(東京都)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_02.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        鎌倉(神奈川県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        大宮(埼玉県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_04.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        成田(千葉県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_05.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        大洗(茨城県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kanto">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kanto_06.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        草津(群馬県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kanto padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>                        
+            <div id="tour-list-header" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="tour-hokuriku" class="cell width95 tyubu-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu odd">
+                                        北
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center tyubu even">
+                                        陸
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_01.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        富山(富山県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_02.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        魚津(富山県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        金沢(石川県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_04.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        輪島 (石川県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_05.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        あわら(福井県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area tyubu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_hokuriku_06.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        越前海岸(福井県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area tyubu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-header" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="tour-kyusyu" class="cell width95 kyusyu-under-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kyusyu odd">
+                                        九
+                                    </div>
+                                    <div class="cell width10 padding-top-small padding-bottom-small inline-center kyusyu even">
+                                        州
+                                    </div>
+                                    <div class="cell width80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_01.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        熊本(熊本県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_02.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        佐世保(長崎県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        小倉(福岡県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="tour-list-contents" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_03.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        湯布院(大分県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_05.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        鹿児島(鹿児島県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-top-small contents-area kyusyu">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <img src="./img/tour_kyusyu_06.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 padding-top-small font header7 inline-center">
+                                        宮崎(宮崎県)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <div>
+                                            <div class="table width100 dotted-line">
+                                                <div class="row">
+                                                    <div class="cell width100 relative inline-right">
+                                                        <div class="max-badge">
+                                                            最大
+                                                        </div>
+                                                        <span class="font header6 max-price">
+                                                            20,000
+                                                        </span>
+                                                        <span class="font small">
+                                                            円相当の
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 font small inline-right">
+                                        (最大半額)
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 coupon-get-area kyusyu padding-top-middle padding-bottom-middle inline-center font middle">
+                                        クーポンをGet !
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            旅行業約款
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            旅行条件書
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            ご利用案内
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            プライバシー
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            サイトマップ
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            ヘルプ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

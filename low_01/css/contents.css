@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/*deafult sytle*/
+*{
+    font-style: normal;
+    font-weight: normal;
+    font-size : 100%;
+}
+
+div {
+    font-family:'Kozuka Mincho Pro', 'Kozuka Mincho Std', '小塚明朝 Pro R', '小塚明朝 Std R', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro W3','ＭＳ Ｐ明朝','MS PMincho', Georgia, Times, Baskerville, Palatino, serif;
+    color:#6f6f6f;
+}
+
+/*common components*/
+ul.recommend-list {
+    width:100%;
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+li.recommend-list-element {
+    background:transparent url(http://strage-on-the-web.net/upload/pix/data/33ff1a8023a3a68d2f5e8d3af77fc6ad.png) no-repeat scroll 1% 50%;     padding-left:7%;
+    color:#6f6f6f;
+}
+
+div.topics-header {
+    font-weight:bold;
+    background-color:#eeeeee;
+    border-top:solid 0.1em;
+    border-bottom:solid 0.1em;
+    padding-top:1%;
+    padding-bottom:1%;   
+}
+
+div.qa-area {
+    padding-left:3%;
+    padding-bottom:5%;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    background-color:#eeeeee;   
+}
+
+div.qa-header-area {
+    width:95%;
+    text-align:center;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    background-color:#dddddd;
+    margin-top:5%;
+    padding-top:2%;
+    padding-bottom:2%;   
+}
+
+div.qa-contents-area {
+    width:92%;   
+}
+
+div.qa-next-detail-area {
+    width:92%;
+    padding-bottom:5%;
+    border-bottom:dotted 0.1em;   
+}
+
+*.qa-next-detail-button {
+    font-size:0.9em;
+    padding:2%;
+    border:solid 1px #eeeeee;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    background-color:#3399CC;
+    color:#ffffff;   
+    text-decoration: none;
+}
+
+div.contact-area {
+    border:solid 6px #ff0000;   
+}
+
+
+div.table-header {
+    background-color:#eeeeee;
+}
+
+div.table-matrix-cell-header {
+    background-color:#dddddd;
+}
+
+/*index article*/
+#index-article ul.menu-list {
+    width:95%;
+    list-style:none;
+}
+
+#index-article li.menu-list-element {
+    border-bottom:solid 0.1em;
+    padding-top:2%;
+    padding-bottom:2%;
+    background-color:#d7c8a5;
+}
+
+#index-article a.menu-list-element-open {
+    padding-top:2.5%;
+    padding-bottom:2.5%;
+    background:transparent url(../img/circle_arrow_open.png) no-repeat scroll 95% 50%;
+    background-size:7%;
+    display:block;
+}
+
+#index-article a.menu-list-element-close {
+    padding-top:2.5%;
+    padding-bottom:2.5%;
+    background:transparent url(../img/circle_arrow_close.png) no-repeat scroll 95% 50%;
+    background-size:7%;
+    display:block;
+}
+
+#index-article ul.child-menu-list {
+    width:95%;
+    list-style:none;
+    display:none;
+}
+
+#index-article li.child-menu-list-element {
+    background:transparent url(../img/double_arrow.png) no-repeat scroll 1% 65%;
+    padding-left:5%;
+}
+
+#index-article a.child-menu-list-element-link {
+    text-decoration:none;
+    color: #6f6f6f;
+}
+
+/*detail article*/
+#detail-article ul.merit-list {
+    padding-left:6%;
+}
+
+/*footer*/
+footer div.office-area {
+    border-top:dotted 0.1em;
+    border-bottom:dotted 0.1em;   
+}
+
+footer div.address-area {
+    border-bottom:dotted 0.1em;
+}
+

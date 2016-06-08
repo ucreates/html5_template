@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        
+        <article>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            成田・名古屋・関西発 ◯◯ タイプA
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="service-detail-info-header" class="table width100 padding-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 inline-left">
+                        <span class="service-tag font small">クチコミ</span>
+                    </div>
+                    <div class="cell width20 inline-center">
+                        <ul class="font small">
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ★
+                            </li>
+                            <li>
+                                ☆
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="cell width60">
+                        <div>
+                            <span class="focus-text font header6 indent-left">4.0</span>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="service-detail-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <img src="../img/airplane_detail.png" width=100%>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 introduction-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 font middle">
+                                        早期割引航空券5 現地変更可
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 introduction-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="cell width45">
+                                    <span class="service-tag font small">料金</span>
+                                    <span class="focus-text font header6">130,000</span>
+                                    <span class="font middle">円～</span>
+                                </div>
+                                <div class="cell width10"></div>
+                                <div class="cell width45">
+                                    <span class="service-tag font small">ポイント</span>          
+                                    <span class="focus-text font middle">最大</span>
+                                    <span class="font middle">12%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="cell width50">
+                                    <div class="large-button">
+                                        <div>
+                                            <img src="../img/heart_icon.png" width=15%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            お気に入りの宿へ追加
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell width25">
+                                    <div class="small-button mail">
+                                        <div>
+                                            <img src="../img/mail_icon.png" width=31%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            メールで共有
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cell width25">
+                                    <div class="small-button line">
+                                        <div>
+                                            <img src="../img/line_icon.png" width=31%>
+                                        </div>
+                                        <div class="under-button-text-area font header6">
+                                            LINEで共有
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 introduction-area padding-top-middle padding-bottom-middle">
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>予約制限
+                                            </p>
+                                            <p class="font middle">
+                                                最初の国際線出発日の5日前まで
+                                            </p>
+                                        </div>
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>予約変更・経路変更
+                                            </p>
+                                            <p class="font middle">
+                                                往路の第1地区内最初の地点までは不可。
+                                            </p>
+                                            <p class="font middle">
+                                                それ以降の区間は1回のみ可(変更料金20,000円)。キャンセル待ち可。
+                                            </p>
+                                            <p class="font middle">
+                                                ※ただし、すでに予約が入っている便の出発時刻までに変更手続きを行うこと。
+                                            </p>
+                                            <p class="font middle">
+                                               ※変更の結果生じる差額調整は行うこと。
+                                            </p>
+                                            <p class="font middle">
+                                               ※下位予約クラスへの変更は不可・復路日本帰着後の国内乗り継ぎ区間については、出発空港で予約便より前の同一区間便(含むマルチエアポート)に空席がある場合は搭乗可(変更料金は無料)。空席待ち不可。
+                                            </p>
+                                        </div>
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>変更・取消料
+                                            </p>
+                                            <p class="font middle">
+                                                大人 30,000円、小児 22,500円、幼児 無料※別途弊社変更・取消手数料を徴収させて頂きます
+                                            </p>
+                                        </div>
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>小幼児代金
+                                            </p>
+                                            <p class="font middle">
+                                                小児は大人運賃の75%・幼児は大人運賃の10%
+                                            </p>
+                                        </div>
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>必要旅行日数
+                                            </p>
+                                            <p class="font middle">
+                                                2日発・開始
+                                            </p>
+                                        </div>
+                                        <div class="margin-top-small margin-bottom-small">
+                                            <p class="font header6">
+                                                <span class="topix-header-icon-small"></span>有効期間
+                                            </p>
+                                            <p class="font middle">
+                                                3ヶ月発・開始
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            他の航空機はこちら!
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="reccomend-service-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="contents-area" class="cell width95 round-area padding-top-small padding-bottom-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            エコノミークラス
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            正規割引
+                                        </span>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div id="summary-area" class="table width100 padding-top-middle padding-bottom-middle">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width20">
+                                        <img src="../img/no_photo.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width65 inline-left-top">
+                                        <div class="font header4 padding-bottom-large">
+                                            ◯◯ タイプB
+                                        </div>
+                                        <div class="font middle">
+                                            <span class="focus-text font header5">130,000</span>〜<span class="focus-text font header5">160,000</span>円
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="reccomend-service-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="contents-area" class="cell width95 round-area padding-top-small padding-bottom-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            エコノミークラス
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            正規割引
+                                        </span>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div id="summary-area" class="table width100 padding-top-middle padding-bottom-middle">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width20">
+                                        <img src="../img/no_photo.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width65 inline-left-top">
+                                        <div class="font header4 padding-bottom-large">
+                                            ◯◯ タイプC
+                                        </div>
+                                        <div class="font middle">
+                                            <span class="focus-text font header5">130,000</span>〜<span class="focus-text font header5">160,000</span>円
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="reccomend-service-list" class="table width100 margin-top-small margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="contents-area" class="cell width95 round-area padding-top-small padding-bottom-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90">
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            エコノミークラス
+                                        </span>
+                                        <span id="tag-area" class="font small">
+                                            <div class="mark"></div>
+                                            正規割引
+                                        </span>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div id="summary-area" class="table width100 padding-top-middle padding-bottom-middle">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width20">
+                                        <img src="../img/no_photo.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width65 inline-left-top">
+                                        <div class="font header4 padding-bottom-large">
+                                            ◯◯ タイプD
+                                        </div>
+                                        <div class="font middle">
+                                            <span class="focus-text font header5">130,000</span>〜<span class="focus-text font header5">160,000</span>円
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            旅行業約款
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            旅行条件書
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            ご利用案内
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            プライバシー
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            サイトマップ
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            ヘルプ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

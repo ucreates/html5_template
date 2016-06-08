@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>おしごとさがすけん！</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                onMenuListHover("#works");
+                onMenuListHover("#faq");
+                onMenuListHover("#corporate");
+                onMenuListHover("#form");
+                
+                onJobSearchClick("#recent-job-info");
+                onJobSearchClick("#area-job-info");
+                onJobSearchClick("#type-job-info");
+                onJobSearchClick("#focus-job-info1");
+                onJobSearchClick("#focus-job-info2");
+                onJobSearchClick("#focus-job-info3");
+            
+                var onKeyPress = function(ev) {
+                    console.log(ev.keyCode);
+                    var val = $(this).val();
+                    if ((ev.keyCode && ev.keyCode === 13) && undefined !== val) {
+                        location.href = "./job.html"  
+                    }
+                };
+                $("#job-search-text-box").keypress(onKeyPress);
+            
+                function onMenuListHover(id) {
+                    $(id).hover(
+                        function(){ 
+                            $(this).css('background-color', '#eeeeee');
+                        },
+                        function(){
+                            $(this).css('background-color', '#ffffff');
+                        }
+                    );
+                }
+            
+                function onJobSearchClick(id) {
+                    $(id).click(
+                        function() {
+                            location.href = "./job.html"  
+                        }
+                    );
+                }
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 notice-area">
+                <div class="row">
+                    <div class="cell width20">
+                    </div>
+                    <div class="cell width60 font small inline-center notice-area-statement">
+                        求人情報満載！おしごとさがすけん！
+                    </div>
+                    <div class="cell width20">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="index-article">
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents padding-top-small padding-bottom-small inline-center font header7">
+                        <span style="color:#ff0000;font-weight:bold;">8/31更新!</span> ここにしか掲載されていない求人約81%
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 relative contents round-area">
+                        <img src="./img/find_job_top.png" width="100%">
+                        <div class="contact">
+                            <div class="font small">
+                                24時間365日電話対応受付中!
+                            </div>
+                            <div class="font small">
+                                ➿:03-xxxx-xxxx
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_find_job.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="job-search" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <div>
+                            <div id="recent-job-info" class="table width100 round-bottom-area contents">
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle relative">
+                                        <span class="search-recentry-area">
+                                            最近見た求人
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div id="type-job-info" class="cell width50 padding-top-middle padding-bottom-middle select-find-type left">
+                                        <div>
+                                            <img src="./img/work_icon.png" width=20%>
+                                        </div>
+                                        <div>
+                                            職種で探す
+                                        </div>
+                                    </div>
+                                    <div id="area-job-info" class="cell width50 padding-top-middle padding-bottom-middle select-find-type">
+                                        <div>
+                                            <img src="./img/train_icon.png" width=20%>
+                                        </div>
+                                        <div>
+                                            勤務地で探す
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 round-bottom-area search-area">
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle relative">
+                                        <input id="job-search-text-box" type="text" maxlength="10" class="search-box">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_kininaru.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="new-job-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width85 contents padding-bottom-small inline-center">
+                        <div class="indent-left padding-top-small padding-bottom-small">
+                            <span class="focus-statement font header5">新着求人</span>
+                            <span class="font small orange-badge">8/31UP</span>
+                        </div>
+                        <div class="inline-left indent-left font middle">
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>
+                        </div>
+                    </div>
+                    <div class="cell width10 contents more-info-area inline-center">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="new-job-ad" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-bottom-area padding-bottom-small inline-center">
+                        <div>
+                            <div class="table width100 margin-top-small">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="./img/ad_banner.png" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="./img/ad_banner.png" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="./img/ad_banner.png" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="./img/ad_banner.png" width=85%>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_kininaru.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="focus-job-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents inline-left">
+                        <div class="indent-left padding-top-small padding-bottom-small">
+                            <span class="focus-statement font header5">求人特集</span>
+                            <span class="font small orange-badge">8/31UP</span>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle ">
+                        <div id="focus-job-info1" class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/bonus_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        ボーナスが楽しみ!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        正社員×賞与2回の企業特集
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle ">
+                        <div id="focus-job-info2" class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/big_corp_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        家庭も安心!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        大手企業のグループ会社特集
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle padding-bottom-middle">
+                        <div id="focus-job-info3" class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/rest_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        1年の33%が休日!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        年間休日125日以上の企業
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="focus-job-all-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents padding-bottom-small inline-center font header7">
+                        <span class="all-job-into-statement">
+                            <a href="./job.html">
+                                すべての求人特集を見る
+                            </a>
+                        </span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table margin-top-small">
+                <div class="row">                
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_find_job.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="menu" class="table width100">
+                <div class="row">                
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents">
+                        <ul>
+                            <li id="works">
+                                <a href="./job.html" class="custom-list-link">
+                                    おしごとさがすけん！
+                                </a>
+                            </li>
+                            <li id="faq">
+                                <a href="./faq.html" class="custom-list-link">
+                                    きになるいろいろ
+                                </a>
+                            </li>
+                            <li id="corporate">
+                                <a href="./corporate.html" class="custom-list-link">
+                                    サービス概要
+                                </a>
+                            </li>
+                            <li id="form">
+                                <a href="./form.html" class="custom-list-link-no-border">
+                                    お問い合わせはこちら！
+                                </a>
+                            </li>
+                        </ul>                    
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_notice.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents">
+                        <div class="tweet-area">
+                            <p>
+<a class="twitter-timeline" href="https://twitter.com/55_kumamon" data-widget-id="631005408002347008">@55_kumamonさんのツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_movie.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-bottom-area padding-top-middle inline-center">
+                        <iframe width="90%" src="https://www.youtube.com/embed/7VG9CrH_2Sw"></iframe>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 contents round-left-area padding-top-small inline-center">
+                        <img src="./img/privacy_mark.png" width="50%">
+                    </div>
+                    <div class="cell width60 contents inline-left">
+                        <div class="font small">
+                        当サイトに掲載されている求人情報は、全て◯◯県の採用情報です。安心してご応募下さい。◯◯県は個人情報保護の認定を受け、運営しています。
+                        </div>
+                    </div>
+                    <div class="cell width5 contents round-right-area"></div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-large">
+                <div class="row">
+                    <div class="cell topics-area-contents width100 round-top-area relative">
+                        <div class="topics-area-header round-top-area font middle">
+                            コンテンツ
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="font middle topics-area-link" href="./index.html">
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./job.html">
+                                    おしごとさがすけん！
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./faq.html">
+                                    きになるいろいろ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./corporate.html">
+                                    運営概要
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./form.html">
+                                    お問い合わせ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="">
+                                    その他
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell width100 contents copyright font small">
+                        Copyright © 2015 Oshigoto Sagasu Ken ! All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

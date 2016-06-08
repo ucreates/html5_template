@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>飲食店デモサイト トップページ</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                $("<img>").attr("src", "../img/map.png" );
+                $("#location-list-article .location-map").css("background-position","0% -0.3%");
+
+                var onHeaderMenuHover = function () {
+                    $(this).toggleClass("menu");
+                    $(this).toggleClass("menu-hover");
+                    $(this).children("div").toggleClass("menu-item");
+                    $(this).children("div").toggleClass("menu-item-hover");
+                };
+
+                var onHeaderMenuClick = function() {
+                    var id = $(this).attr("id");
+                    var nextUrl = null;
+                    if (-1 !== id.indexOf("home")) {
+                        nextUrl = "../index.html";
+                    } else if (-1 !== id.indexOf("about")) {
+                        nextUrl = "../about.html";
+                    } else if (-1 !== id.indexOf("menu")) {
+                        nextUrl = "../menu/list.html";
+                    } else if (-1 !== id.indexOf("location")) {
+                        nextUrl = "./list.html";
+                    } else if (-1 !== id.indexOf("contact")) {
+                        nextUrl = "../contact.html";
+                    } else {
+                        nextUrl = "../index.html";
+                    }
+                    location.href = nextUrl;
+                };
+            
+                var onMapHover = function() {
+                    var id = $(this).attr("id");
+                    
+                    if (id === undefined) {
+                        return;    
+                    }
+                    
+                    if (-1 !== id.indexOf("tokyo")) {
+                        console.log("kanto");
+                    }
+                };
+                
+                var onMapClick = function() {
+                    var id = $(this).attr("id");
+                    if (id === undefined) {
+                        return;    
+                    }
+                    
+                    if (-1!==id.indexOf("location-list")) {
+                        return;    
+                    }
+                    
+                    var targetId = null;
+                    if (-1 !== id.indexOf("tokyo")) {
+                        targetId = "tokyo-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% -0.3%");
+                    } else if (-1 !== id.indexOf("saitama")) {
+                        targetId = "saitama-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 16.4%");
+                    } else if (-1 !== id.indexOf("kanagawa")) {
+                        targetId = "kanagawa-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 33.15%");
+                    } else if (-1 !== id.indexOf("chiba")) {
+                        targetId = "chiba-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 49.87%");
+                    } else if (-1 !== id.indexOf("ibaraki")) {
+                        targetId = "ibaraki-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 66.55%");
+                    } else if (-1 !== id.indexOf("gumma")) {
+                        targetId = "gumma-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 83.3%");
+                    } else if (-1 !== id.indexOf("tochigi")) {
+                        targetId = "tochigi-location-list";
+                        $("#location-list-article .location-map").css("background-position","0% 100%");
+                    } else {
+                        return;
+                    }
+                    
+                    var translateSpeed = 500;
+                    var target = $("#"+targetId);
+                    if (undefined === target.offset()) {
+                        return;
+                    }
+                    var position = target.offset().top;
+                    $("html, body").animate({scrollTop:position}, translateSpeed, "swing");                    
+                };
+            
+                $('header ul li').hover(
+                    onHeaderMenuHover,
+                    onHeaderMenuHover
+                );
+            
+                $('header ul li').click(
+                    onHeaderMenuClick
+                );
+
+                $('#location-list-article div').hover(
+                    onMapHover,
+                    onMapHover
+                );
+
+                $('#location-list-article div').click(
+                    onMapClick
+                );
+            
+            });            
+        // -->
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="table width100 fixed-menu-area padding-bottom-middle">
+                <div class="row">
+                    <div class="cell contents">
+                        <ul class="menu-list">
+                            <li id="home-button" class="font small menu padding-top-small">
+                                <div class="menu-item item1">HOME</div>
+                            </li>
+                            <li id="about-button" class="font small menu padding-top-small">
+                                <div class="menu-item item2">ABOUT</div>
+                            </li>
+                            <li id="menu-button" class="font small menu padding-top-small">
+                                <div class="menu-item item3">MENU</div>
+                            </li>
+                            <li id="location-button" class="font small menu padding-top-small">
+                                <div class="menu-item item4">LOCATION</div>
+                            </li>
+                            <li id="contact-button" class="font small menu padding-top-small">
+                                <div class="menu-item item5">CONTACT</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="location-list-article">
+            <div class="table width100 padding-top-header padding-bottom-small">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 article-theme-header font header3 padding-top-small padding-bottom-small">
+                        L O C A T I O N
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-large padding-bottom-large">
+                <div class="row">
+                    <div class="cell width20"></div>
+                    <div class="cell width60 location-map">
+                        <div id="tokyo-01"></div>
+                        <div id="tokyo-02"></div>
+                        <div id="tokyo-03"></div>
+                        <div id="tokyo-04"></div>
+                        <div id="tokyo-05"></div>
+                        <div id="tokyo-06"></div>
+                        <div id="saitama-01"></div>
+                        <div id="saitama-02"></div>
+                        <div id="saitama-03"></div>
+                        <div id="saitama-04"></div>
+                        <div id="kanagawa-01"></div>
+                        <div id="kanagawa-02"></div>
+                        <div id="kanagawa-03"></div>
+                        <div id="kanagawa-04"></div>
+                        <div id="kanagawa-05"></div>
+                        <div id="kanagawa-06"></div>
+                        <div id="kanagawa-07"></div>
+                        <div id="chiba-01"></div>
+                        <div id="chiba-02"></div>
+                        <div id="chiba-03"></div>
+                        <div id="chiba-04"></div>
+                        <div id="chiba-05"></div>
+                        <div id="chiba-06"></div>
+                        <div id="chiba-07"></div>
+                        <div id="chiba-08"></div>
+                        <div id="chiba-09"></div>
+                        <div id="chiba-10"></div>
+                        <div id="chiba-11"></div>
+                        <div id="chiba-12"></div>
+                        <div id="chiba-13"></div>
+                        <div id="chiba-14"></div>
+                        <div id="chiba-15"></div>
+                        <div id="chiba-16"></div>
+                        <div id="chiba-17"></div>
+                        <div id="chiba-18"></div>
+                        <div id="chiba-19"></div>
+                        <div id="chiba-20"></div>
+                        <div id="ibaraki-01"></div>
+                        <div id="ibaraki-02"></div>
+                        <div id="ibaraki-03"></div>
+                        <div id="ibaraki-04"></div>
+                        <div id="ibaraki-05"></div>
+                        <div id="ibaraki-06"></div>
+                        <div id="ibaraki-07"></div>
+                        <div id="ibaraki-08"></div>
+                        <div id="ibaraki-09"></div>
+                        <div id="ibaraki-10"></div>
+                        <div id="ibaraki-11"></div>
+                        <div id="ibaraki-12"></div>
+                        <div id="ibaraki-13"></div>
+                        <div id="ibaraki-14"></div>
+                        <div id="ibaraki-15"></div>
+                        <div id="ibaraki-16"></div>
+                        <div id="ibaraki-17"></div>
+                        <div id="gumma-01"></div>
+                        <div id="gumma-02"></div>
+                        <div id="gumma-03"></div>
+                        <div id="gumma-04"></div>
+                        <div id="gumma-05"></div>
+                        <div id="gumma-06"></div>
+                        <div id="gumma-07"></div>
+                        <div id="tochigi-01"></div>
+                        <div id="tochigi-02"></div>
+                        <div id="tochigi-03"></div>
+                    </div>
+                    <div class="cell width20"></div>
+                </div>
+            </div>
+            <div id="tokyo-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            TOKYO/東京
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            新宿店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            広尾店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            池袋店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            丸ノ内店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            渋谷店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            銀座店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="saitama-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            SAITAMA/埼玉
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            大宮店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            朝霞店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            春日部店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            武蔵浦和店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="kanagawa-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            KANAGAWA/神奈川
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            横浜店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            相模原店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            藤沢店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            川崎店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="chiba-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            CHIBA/千葉
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            我孫店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            市川店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            木更津店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="ibaraki-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            IBARAKI/茨城
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            土浦店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            つくば店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="gumma-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            GUMMA/群馬
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            高崎店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="tochigi-location-list" class="table width100 padding-top-small">
+                <div class="row">
+                    <div class="cell width100 article-header-cell">
+                        <div class="font header5 article-header">
+                            TOCHIGI/栃木
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="location-list" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width100">
+                        <ul>
+                            <li>
+                                <div class="table width100">
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                            宇都宮店
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35 font header6">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                            <a href="./detail.html">
+                                                <img class="rounded-img" src="../img/location_menu.png" width="100%">
+                                            </a>
+                                        </div>
+                                        <div class="cell width10"></div>
+                                        <div class="cell width35">
+                                        </div>
+                                        <div class="cell width10"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 padding-top-middle menu-area">
+                <div class="row">
+                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
+                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

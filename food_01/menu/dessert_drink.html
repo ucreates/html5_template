@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>飲食店デモサイト 店舗詳細ページ</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            var onHeaderMenuHover = function () {
+                $(this).toggleClass("menu");
+                $(this).toggleClass("menu-hover");
+                $(this).children("div").toggleClass("menu-item");
+                $(this).children("div").toggleClass("menu-item-hover");
+            };
+            
+            var onHeaderMenuClick = function() {
+                var id = $(this).attr("id");
+                var nextUrl = null;
+                if (-1 !== id.indexOf("home")) {
+                    nextUrl = "../index.html";
+                } else if (-1 !== id.indexOf("about")) {
+                    nextUrl = "../about.html";
+                } else if (-1 !== id.indexOf("menu")) {
+                    nextUrl = "./list.html";
+                } else if (-1 !== id.indexOf("location")) {
+                    nextUrl = "../location/list.html";
+                } else if (-1 !== id.indexOf("contact")) {
+                    nextUrl = "../contact.html";
+                } else {
+                    nextUrl = "../index.html";
+                }
+                location.href = nextUrl;
+            };
+            
+            $(function() {
+                $('header ul li').hover(
+                    onHeaderMenuHover,
+                    onHeaderMenuHover
+                );
+                $('header ul li').click(
+                    onHeaderMenuClick
+                );
+
+            });            
+        // -->
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="table width100 fixed-menu-area padding-bottom-middle">
+                <div class="row">
+                    <div class="cell contents">
+                        <ul class="menu-list">
+                            <li id="home-button" class="font small menu padding-top-small">
+                                <div class="menu-item item1">HOME</div>
+                            </li>
+                            <li id="about-button" class="font small menu padding-top-small">
+                                <div class="menu-item item2">ABOUT</div>
+                            </li>
+                            <li id="menu-button" class="font small menu padding-top-small">
+                                <div class="menu-item item3">MENU</div>
+                            </li>
+                            <li id="location-button" class="font small menu padding-top-small">
+                                <div class="menu-item item4">LOCATION</div>
+                            </li>
+                            <li id="contact-button" class="font small menu padding-top-small">
+                                <div class="menu-item item5">CONTACT</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="menu-article">
+            <div class="table width100 padding-top-header">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 article-theme-header font header3 padding-top-small padding-bottom-small">
+                        D E S S E R T
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        ジャージーヨーグルト
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/dessert_01.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        ¥350
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        岡山県蒜山の自然で育ったジャージー牛が生んだおいしいヨーグルトです。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        シャーベット各種
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/dessert_02.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                       ¥350
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        お好きな味でさっぱりお口なおし。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div id="caution" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font small inline-left">
+                        <ul>
+                            <li>
+                                ※メニュー内容、価格は変更する場合がございます。
+                            </li>
+                            <li>
+                               ※店舗によっては取り扱いしていないメニューがございます。
+                            </li>
+                            <li>
+                               ※表示価格に別途消費税が加算されます。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 padding-top-middle menu-area">
+                <div class="row">
+                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
+                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

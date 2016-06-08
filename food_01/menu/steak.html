@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>飲食店デモサイト 店舗詳細ページ</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            var onHeaderMenuHover = function () {
+                $(this).toggleClass("menu");
+                $(this).toggleClass("menu-hover");
+                $(this).children("div").toggleClass("menu-item");
+                $(this).children("div").toggleClass("menu-item-hover");
+            };
+            
+            var onHeaderMenuClick = function() {
+                var id = $(this).attr("id");
+                var nextUrl = null;
+                if (-1 !== id.indexOf("home")) {
+                    nextUrl = "../index.html";
+                } else if (-1 !== id.indexOf("about")) {
+                    nextUrl = "../about.html";
+                } else if (-1 !== id.indexOf("menu")) {
+                    nextUrl = "./list.html";
+                } else if (-1 !== id.indexOf("location")) {
+                    nextUrl = "../location/list.html";
+                } else if (-1 !== id.indexOf("contact")) {
+                    nextUrl = "../contact.html";
+                } else {
+                    nextUrl = "../index.html";
+                }
+                location.href = nextUrl;
+            };
+            
+            $(function() {
+                $('header ul li').hover(
+                    onHeaderMenuHover,
+                    onHeaderMenuHover
+                );
+                $('header ul li').click(
+                    onHeaderMenuClick
+                );
+
+            });            
+        // -->
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="table width100 fixed-menu-area padding-bottom-middle">
+                <div class="row">
+                    <div class="cell contents">
+                        <ul class="menu-list">
+                            <li id="home-button" class="font small menu padding-top-small">
+                                <div class="menu-item item1">HOME</div>
+                            </li>
+                            <li id="about-button" class="font small menu padding-top-small">
+                                <div class="menu-item item2">ABOUT</div>
+                            </li>
+                            <li id="menu-button" class="font small menu padding-top-small">
+                                <div class="menu-item item3">MENU</div>
+                            </li>
+                            <li id="location-button" class="font small menu padding-top-small">
+                                <div class="menu-item item4">LOCATION</div>
+                            </li>
+                            <li id="contact-button" class="font small menu padding-top-small">
+                                <div class="menu-item item5">CONTACT</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="menu-article">
+            <div class="table width100 padding-top-header">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 article-theme-header font header3 padding-top-small padding-bottom-small">
+                        S T E A K
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        シャトーブリアンステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_01.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        200g・・・¥3,380
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        ヒレの中でも牛一頭からわずかしか取ることのできない、最も高級で貴重な部分を使用しています。肉の中でも脂肪が少なくさっぱりとした味わいで、きめが細かく、非常に柔らかな肉質が特徴のこのお肉を絶妙の焼き加減でお届けします。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        デリシャスレディースステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_02.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        120g・・・¥3,180
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        柔らかい、最高のヒレ肉に世界三大珍味 の一つ、フォアグラ（50g）を合わせました。さっぱりとしたヒレ肉と香りよい濃厚なフォアグラは相性バツグン。自家製のりんごソースや、栄養バランスにも配慮したこだわり野菜を添えて。女性におすすめのステーキです。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        特選ロースステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_03.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        300g・・・¥3,380
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        ◯◯のメニューの中でも、最高位に位置するステーキです。サーロインならではのきめ細かさと最高の霜降りで、こんがり焼いた表面をかみしめると肉汁が溢れ出ます。ダイナミックな中に、旨みを凝縮した繊細な味わいと香りを秘めた、◯◯渾身のステーキです。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        トライステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_04.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        200g・・・¥1,500
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        <p>
+                            辛い味が好きな方に特におすすめするステーキです。お好みに合わせて辛さをご指定いただけます。
+                        </p>
+                        <p>
+                            1）中辛　（2）大辛
+                        </p>
+                        <p>
+                            ◯◯秘蔵のガーリック風味豊かなスパイスでお楽しみください。
+                        </p>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        ガーリックバターステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_05.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        200g・・・¥1,600
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        こんがり焼いたステーキの上にたっぷりとのった◯◯特製ガーリックバター。鉄板で焦げるガーリックバターの匂いは食欲をそそります！◯◯自慢、一番人気のステーキです。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 padding-top-middle">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center">
+                        リブステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="../img/steak_06.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        <p>
+                            320g・・・¥3,180
+                        </p>
+                        <p>
+                            160g・・・¥1,800
+                        </p>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font middle inline-left">
+                        やわらかさ、風味共に抜群の最高のリブをご賞味下さい。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div id="caution" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font small inline-left">
+                        <ul>
+                            <li>
+                                ※メニュー内容、価格は変更する場合がございます。
+                            </li>
+                            <li>
+                               ※店舗によっては取り扱いしていないメニューがございます。
+                            </li>
+                            <li>
+                               ※表示価格に別途消費税が加算されます。
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 padding-top-middle menu-area">
+                <div class="row">
+                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
+                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

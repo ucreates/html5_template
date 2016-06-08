@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="../auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="../img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        
+        <article id="auth-article">
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            サインイン
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="login-form" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-top-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-left padding-top-middle padding-bottom-middle">
+                                        <input type="text" class="input-auth-info-text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 inline-left padding-top-middle padding-bottom-middle">
+                                        <input type="password" class="input-auth-info-text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle">
+                                        <div class="login-button">
+                                            サインイン
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 inline-left font small">
+                                        <div class="support-link inline-right padding-top-small padding-bottom-small">
+                                            ID・パスワードを忘れた方
+                                        </div>
+                                        <div class="support-link inline-right padding-top-small padding-bottom-small">
+                                            はじめてご利用の方 (新規会員登録)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="login-form" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents round-area padding-top-middle">
+                        <div>
+                            <div class="table width100 border">
+                                <div class="row">
+                                    <div class="cell width2-5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 fb-sign-in-area inline-left padding-top-middle padding-bottom-middle" >
+                                        <img src="../img/fb_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width80 fb-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                            FaceBook アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle"></div>                                   
+                                    <div class="cell width10 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="../img/twitter_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 twitter-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width80 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                            Twitter アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle"></div>                                                                            
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5 google-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 google-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="../img/google+_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 google-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width80 google-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                        Google アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5 google-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5 padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="../img/yahoo_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width80 inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area2">                                        
+                                            <div>
+                                                Yahoo Japan IDでログイン
+                                            </div>
+                                            <div class="sns-login-statement-area2-sub-statement">
+                                                Tポイントが貯まります!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5 padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            旅行業約款
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            旅行条件書
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            ご利用案内
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            プライバシー
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            サイトマップ
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            ヘルプ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

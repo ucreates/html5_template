@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>飲食店デモサイト メニューページ</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            var onHeaderMenuHover = function () {
+                $(this).toggleClass("menu");
+                $(this).toggleClass("menu-hover");
+                $(this).children("div").toggleClass("menu-item");
+                $(this).children("div").toggleClass("menu-item-hover");
+            };
+            
+            var onHeaderMenuClick = function() {
+                var id = $(this).attr("id");
+                var nextUrl = null;
+                if (-1 !== id.indexOf("home")) {
+                    nextUrl = "../index.html";
+                } else if (-1 !== id.indexOf("about")) {
+                    nextUrl = "../about.html";
+                } else if (-1 !== id.indexOf("menu")) {
+                    nextUrl = "./list.html";
+                } else if (-1 !== id.indexOf("location")) {
+                    nextUrl = "../location/list.html";
+                } else if (-1 !== id.indexOf("contact")) {
+                    nextUrl = "../contact.html";
+                } else {
+                    nextUrl = "../index.html";
+                }
+                location.href = nextUrl;
+            };
+            
+            $(function() {
+                $('header ul li').hover(
+                    onHeaderMenuHover,
+                    onHeaderMenuHover
+                );
+                $('header ul li').click(
+                    onHeaderMenuClick
+                );
+
+            });            
+        // -->
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="table width100 fixed-menu-area padding-bottom-middle">
+                <div class="row">
+                    <div class="cell contents">
+                        <ul class="menu-list">
+                            <li id="home-button" class="font small menu padding-top-small">
+                                <div class="menu-item item1">HOME</div>
+                            </li>
+                            <li id="about-button" class="font small menu padding-top-small">
+                                <div class="menu-item item2">ABOUT</div>
+                            </li>
+                            <li id="menu-button" class="font small menu padding-top-small">
+                                <div class="menu-item item3">MENU</div>
+                            </li>
+                            <li id="location-button" class="font small menu padding-top-small">
+                                <div class="menu-item item4">LOCATION</div>
+                            </li>
+                            <li id="contact-button" class="font small menu padding-top-small">
+                                <div class="menu-item item5">CONTACT</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="menu-article">
+            <div class="table width100 padding-top-header">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 article-theme-header font header3 padding-top-small padding-bottom-small">
+                        M E N U
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        ステーキ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <a href="./steak.html">
+                            <img class="rounded-img" src="../img/about_steak_menu.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        専用熟成庫で28日間を目安にゆっくりとドライエイジングした「プライムグレード」の牛肉を、900℃のオーブンで焼き上げ熱々の皿に乗せてご提供。ステーキは、サーロインとフィレを一度に楽しめる看板メニューのプライム ステーキ（2 人用・3 人用・4 人用）のほか、サーロイン、フィレ、リブアイをご用意致します。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        ハンバーグ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <a href="./humburg_steak.html">
+                            <img class="rounded-img" src="../img/about_humburg_steak_menu.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        ハンバーグステーキはこだわりのSPFポークと厳選した牛肉を独自ブレンド。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        シチュー
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <a href="./stew.html">
+                            <img class="rounded-img" src="../img/about_stew_menu.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        自慢のステーキ・ハンバーグとさらにもう一品。おいしさの満足感をフルボリュームでどうぞ。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        前菜・サラダ
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <a href="./sidedish.html">
+                            <img class="rounded-img" src="../img/about_sidedish_menu.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        ステーキ以外のアペタイザーやサイドディッシュも充実。「シーズリング・ベーコン」は、程よく脂ののった厚切りでまさに絶品。ロブスター、サーモン等の本格シーフードの他、ステーキとの相性が抜群な「クリーム・ソテード・スピナッチ」「マッシュポテト」等もおすすめです。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        デザート・ソフトドリンク
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <a href="./dessert_drink.html">
+                            <img class="rounded-img" src="../img/about_dessert_menu.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        ランチタイムにはグランドメニューに加え、◯◯ステーキハウスの魅力を存分にお楽しみ頂けるデザートをご用意しています。
+
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div id="caution" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font small">
+                        <ul style="list-style:none;">
+                            <li>※ランチメニューご提供時間　11：30～14：30ラストオーダー（大阪店 11：00～)</li>
+                            <li>※ディナーメニューからのご注文は終日ご利用頂けます。</li>
+                            <li>※ハッピーアワーはバーエリアのみご利用可能です、御予約は承っておりません。</li>
+                            <li>※内容・金額は変更する場合がございます。予めご了承ください。</li>
+                            <li>※リンク先はPDFとなっております。ご利用の環境によってはPDFの閲覧にAdobe Readerが必要な場合があります。</li>
+                        </ul>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 padding-top-middle menu-area">
+                <div class="row">
+                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
+                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

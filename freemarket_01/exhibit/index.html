@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>フリーマーケットDemoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onHeaderMenuClick = function() {
+                    var id = $(this).attr("id");
+                    var nextUrl = null;
+                    if (id === "login") {
+                        nextUrl = "../auth/login.html";
+                    } else if(id === "search") {
+                        nextUrl = "../search/index.html";
+                    } else if(id === "exhibit") {
+                        nextUrl = "../exhibit/index.html";
+                    } else if(id === "cart") {
+                        nextUrl = "../cart.html";
+                    } else if(id === "search") {
+                        nextUrl = "../search/index.html";
+                    } else if(id === "like") {
+                        nextUrl = "../like/index.html";
+                    }
+                    location.href = nextUrl;
+                };
+                $("header #menu ul li").click(onHeaderMenuClick);
+            
+                var setSliderArea = function (id) {
+                    var wh = window.parent.screen.height * 0.05;
+                    var ph = wh*0.25;
+                    $(id).css("height",wh+"px");
+                    $(id + " ul li").css("padding-top",ph+"px");
+                    $(id + " ul li").css("padding-bottom",ph+"px");
+                };
+                
+                var updateCategoryMenuList = function (id) {
+                    $(id + " ul li").each(function(i,element){
+                        if (i === 0) {
+                            $(element).toggleClass("active");
+                            var id = $(element).attr("id");
+                            var img = null;
+                            if (id === "exhibit") {
+                                img = "../img/item_exhibit_sample_01.png";
+                            } else if (id === "trading") {
+                                img = "../img/item_trade_sample_01.png";
+                            } else if (id === "sold") {
+                                img = "../img/item_sold_sample_01.png";
+                            }
+                            $("#contents-list img").each(function(i,element) {
+                                $(element).attr("src",img);
+                            });
+                        } else {
+                            $(element).removeClass("active"); 
+                        }
+                    });
+
+                    $("#contents-list").hide();
+                    $("#contents-list").fadeIn(500);
+                };
+            
+                var enableClick = true;
+                var onClickSliderContorol = function (event) {
+                    if (false === enableClick) {
+                        return;   
+                    }
+                    enableClick = false;
+                    var id = event.data.id;
+                    var move = event.data.move;
+                    var callback = null;
+                    if (move > 0) {
+                        callback = function () {
+                            var removed = $(id + " ul li:first").remove();
+                            $(id + " ul").append (removed);
+                            $(id + " ul").css({"left" : "0%"});
+                            updateCategoryMenuList(id);
+                            enableClick = true;
+                        };
+                    } else {
+                        var removed = $(id + " ul li:last").remove();
+                        $(id + " ul").prepend (removed);
+                        $(id + " ul").css({"left" : move + "%"});
+                        callback = function () {
+                            $(id + " ul").css({"left" : "0%"});
+                            updateCategoryMenuList(id);
+                            enableClick = true;
+                        };
+                    }
+                    $(id + " ul").animate({"left": "-=" + move + "%"},"slow","swing",callback);
+                };
+
+                setSliderArea("#exhibit-category-list #slider-area");
+                $("#exhibit-category-list #slider-area #left").bind("click",{id:"#exhibit-category-list #slider","move": 33},onClickSliderContorol);
+                $("#exhibit-category-list #slider-area #right").bind("click",{id:"#exhibit-category-list #slider","move": -33},onClickSliderContorol);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 contents round-bottom-left-area inline-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=70%>
+                        </a>
+                    </div>
+                    <div class="cell width15 contents">
+                    </div>
+                    <div id="menu" class="cell contents round-bottom-right-area width65">
+                        <ul>
+                            <li id="login">
+                                <div class="inline-center">
+                                    <img src="../img/member_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Login
+                                </div>
+                            </li>
+                            <li id="search">
+                                <div class="inline-center">
+                                    <img src="../img/search_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Search
+                                </div>
+                            </li>
+                            <li id="exhibit" class="active">
+                                <div class="inline-center">
+                                    <img src="../img/exhibit_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Exhibit
+                                </div>
+                            </li>
+                            <li id="cart">
+                                <div class="inline-center">
+                                    <img src="../img/cart_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Cart
+                                </div>
+                                <div class="amount-badge">0</div>
+                            </li>
+                            <li id="like">
+                                <div class="inline-center">
+                                    <img src="../img/like_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Like
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </header>
+        <article id="exhibit-article">
+            <div id="exhibit-category-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="slider-area" class="cell width95 contents round-area relative">
+                        <div id="slider">
+                            <ul>
+                                <li id="exhibit" class="active">
+                                    EXHIBIT
+                                </li>
+                                <li id="trading">
+                                    TRADING
+                                </li>
+                                <li id="sold">
+                                    SOLD
+                                </li>
+                            </ul>
+                        </div>
+                        <img id="left" src="../img/navigation_left_icon.png">
+                        <img id="right" src="../img/navigation_right_icon.png">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="category-list" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 relative">
+                        <div class="active-category"></div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="contents-list" class="table width100 margin-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="../img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area">
+                        <div>
+                            <div id="exhibit-caution-area" class="table width100 font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-small font header5">
+                                        出品中もしくは落札されたの商品につきまして
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <hr>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-small padding-bottom-middle font small">
+                                        <div class="indent-left">
+                                            <ul>
+                                                <li>
+                                                    出品中の商品の表示期間は出品当日から出品終了日より7日間となります。
+                                                </li>
+                                                <li>
+                                                    値下げ交渉で落札した商品は、最高落札価格が表示されている価格と異なります。商品ページの「落札結果」の価格をご確認ください。
+                                                </li>
+                                                <li>
+                                                    数量が2以上で出品されている商品に関して、一部の個数を即決価格で落札された場合は、オークション終了時間まで「入札中」に表示されます。お取引の連絡などは、入札中からご確認ください。
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area blank-area">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="menu" class="cell width95">
+                        <ul>
+                            <li class="login">
+                                <div>
+                                    ログイン
+                                </div>
+                            </li>
+                            <li class="register">
+                                <div>
+                                    会員登録
+                                </div>
+                            </li>
+                            <li class="purchase-history">
+                                <div>
+                                    履歴
+                                </div>
+                            </li>
+                            <li class="information">
+                                <div>
+                                    ご利用ガイド
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="copyright" class="cell width95 font header7 inline-center padding-top-middle padding-bottom-middle">
+                        COPYRIGHT (C) ◯◯ CO., LTD. ALL RIGHTS RESERVED.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

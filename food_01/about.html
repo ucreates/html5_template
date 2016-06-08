@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>飲食店デモサイト ABOUTページ</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            var onHeaderMenuHover = function () {
+                $(this).toggleClass("menu");
+                $(this).toggleClass("menu-hover");
+                $(this).children("div").toggleClass("menu-item");
+                $(this).children("div").toggleClass("menu-item-hover");
+            };
+            
+            var onHeaderMenuClick = function() {
+                var id = $(this).attr("id");
+                var nextUrl = null;
+                if (-1 !== id.indexOf("home")) {
+                    nextUrl = "./index.html";
+                } else if (-1 !== id.indexOf("about")) {
+                    nextUrl = "./about.html";
+                } else if (-1 !== id.indexOf("menu")) {
+                    nextUrl = "./menu/list.html";
+                } else if (-1 !== id.indexOf("location")) {
+                    nextUrl = "./location/list.html";
+                } else if (-1 !== id.indexOf("contact")) {
+                    nextUrl = "./contact.html";
+                } else {
+                    nextUrl = "./index.html";
+                }
+                location.href = nextUrl;
+            };
+            
+            $(function() {
+                $('header ul li').hover(
+                    onHeaderMenuHover,
+                    onHeaderMenuHover
+                );
+                $('header ul li').click(
+                    onHeaderMenuClick
+                );
+
+            });            
+        // -->
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="table width100 fixed-menu-area padding-bottom-middle">
+                <div class="row">
+                    <div class="cell contents">
+                        <ul class="menu-list">
+                            <li id="home-button" class="font small menu padding-top-small">
+                                <div class="menu-item item1">HOME</div>
+                            </li>
+                            <li id="about-button" class="font small menu padding-top-small">
+                                <div class="menu-item item2">ABOUT</div>
+                            </li>
+                            <li id="menu-button" class="font small menu padding-top-small">
+                                <div class="menu-item item3">MENU</div>
+                            </li>
+                            <li id="location-button" class="font small menu padding-top-small">
+                                <div class="menu-item item4">LOCATION</div>
+                            </li>
+                            <li id="contact-button" class="font small menu padding-top-small">
+                                <div class="menu-item item5">CONTACT</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="about-article">
+            <div class="table width100 padding-top-header">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 article-theme-header font header3 padding-top-small padding-bottom-small">
+                        A B O U T
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        ABOUT US 
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="./img/about_us.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        ◯◯ステーキハウスは、米国名門ステーキハウスで40年以上活躍した◯◯氏が独立して2004年NYで創業。こだわりのステーキの美味しさで瞬く間に繁盛店となりました。現在では、舌の肥えた美食家をも唸らす「極上ステーキハウス」として、米国をはじめ、日本、イングランド、フランス、イタリア、ドイツ、オランダで絶大な人気を誇ります。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        ABOUT BEEF
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="./img/about_beaf.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle ">
+                        特注のマシンを使い、高温でグリルしながら肉の中まで火が通る独自の調理法で仕上げるUSDAプライムビーフは、短時間で焼き上げるので、旨みがまったく逃げない逸品です。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 font header5 inline-center padding-top-middle padding-bottom-middle">
+                        ABOUT LOCATION
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-center">
+                        <img class="rounded-img" src="./img/about_location.png" width=100%>
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width5"></div>
+                    <div class="cell width90 inline-left font middle">
+                        店内はエレガントでお洒落な空間へ格調高いインテリアを配置しました。ラグジュアリーな雰囲気を存分にお楽しみいただきながら、極上ステーキをお楽しみください。
+                    </div>
+                    <div class="cell width5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 padding-top-middle menu-area">
+                <div class="row">
+                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
+                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

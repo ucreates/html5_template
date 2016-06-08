@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>フリーマーケットDemoサイト</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/ui.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var setSliderArea = function (id) {
+                    var wh = window.parent.screen.height * 0.05;
+                    var ph = wh*0.25;
+                    $(id).css("height",wh+"px");
+                    $(id + " ul li").css("padding-top",ph+"px");
+                    $(id + " ul li").css("padding-bottom",ph+"px");
+                };
+                
+                var enableClick = true;
+                var onClickSliderContorol = function (event) {
+                    if (false === enableClick) {
+                        return;   
+                    }
+                    enableClick = false;
+                    var id = event.data.id;
+                    var move = event.data.move;
+                    var callback = null;
+                    if (move > 0) {
+                        callback = function () {
+                            var removed = $(id + " ul li:first").remove();
+                            $(id + " ul").append (removed);
+                            $(id + " ul").css({"left" : "0%"});
+                            enableClick = true;
+                        };
+                    } else {
+                        var removed = $(id + " ul li:last").remove();
+                        $(id + " ul").prepend (removed);
+                        $(id + " ul").css({"left" : move + "%"});
+                        callback = function () {
+                            $(id + " ul").css({"left" : "0%"});
+                            enableClick = true;
+                        };
+                    }
+                    $(id + " ul").animate({"left": "-=" + move + "%"},"slow","swing",callback);
+                };
+            
+                setSliderArea("#category-slider-list #slider-area");
+                $("#category-slider-list #slider-area #left").bind("click",{id:"#category-slider-list #slider","move": 10},onClickSliderContorol);
+                $("#category-slider-list #slider-area #right").bind("click",{id:"#category-slider-list #slider","move": -10},onClickSliderContorol);            
+
+                setSliderArea("#exhibit-category-list #slider-area");
+                $("#exhibit-category-list #slider-area #left").bind("click",{id:"#exhibit-category-list #slider","move": 33},onClickSliderContorol);
+                $("#exhibit-category-list #slider-area #right").bind("click",{id:"#exhibit-category-list #slider","move": -33},onClickSliderContorol);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        配色
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            メニューアイコン:#4e454a
+                        </div>
+                        <div>
+                            コンテンツアイコン:#d3d3d3
+                        </div>
+                        <div>
+                            文字:#4e454a
+                        </div>
+                        <div>
+                            基調色:#00aced
+                        </div>
+                        <div>
+                            背景色:#fffafa
+                        </div>
+                        <div>
+                            ヘッダー/フッターアクティブ#f7f6f5
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        デフォルトテーブル
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            コンテンツ
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ヘッダー
+        <header>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 contents round-bottom-left-area inline-center">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" width=70%>
+                        </a>
+                    </div>
+                    <div class="cell width15 contents">
+                    </div>
+                    <div id="menu" class="cell width65 contents round-bottom-right-area">
+                        <ul>
+                            <li id="login">
+                                <div class="inline-center">
+                                    <img src="./img/member_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Login
+                                </div>
+                            </li>
+                            <li id="search">
+                                <div class="inline-center">
+                                    <img src="./img/search_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Search
+                                </div>
+                            </li>
+                            <li id="exhibit">
+                                <div class="inline-center">
+                                    <img src="./img/exhibit_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Exhibit
+                                </div>
+                            </li>
+                            <li id="cart">
+                                <div class="inline-center">
+                                    <img src="./img/cart_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Cart
+                                </div>
+                                <div class="amount-badge">0</div>
+                            </li>
+                            <li id="like">
+                                <div class="inline-center">
+                                    <img src="./img/like_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Like
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </header>
+        注目のフリマアイテム
+        <article id="index-article">
+            <div id="top-ad" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width60">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        アイテム名
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5 inline-center">
+                                                        <img src="https://im.uniqlo.com/images/jp/pc/img/material/logo_uq_01.gif" width=90%>
+                                                    </div>
+                                                    <div class="cell width5 inline-center">
+                                                        <img src="https://im.uniqlo.com/images/jp/pc/img/material/logo_uq_01.gif" width=90%>
+                                                    </div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                    <div class="cell width5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font header6">
+                                        <div>
+                                            ヘッダー文言01
+                                        </div>
+                                        <div>
+                                            ヘッダー文言02
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small">
+                                        <div>
+                                            詳細文言01
+                                        </div>
+                                        <div>
+                                            詳細文言02
+                                        </div>
+                                        <div>
+                                            詳細文言03
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small inline-center" style="border-top:solid 1px #000000;border-bottom:solid 1px #000000;">
+                                        <div class="font header2">
+                                            詳細文言01
+                                        </div>
+                                        <div class="font header5">
+                                            詳細文言02
+                                        </div>
+                                        <div class="font header2">
+                                            詳細文言03
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font small inline-center">
+                                        販売日補足文言
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width35 inline-center">
+                            <img src="http://strage-on-the-web.net/upload/pix/data/1118a2e726431fef128463e820ef8519.png" width=100%>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カテゴリリスト
+        <article id="index-article">
+            <div id="category-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <ul>
+                            <li class="women">
+                                WOMEN
+                            </li>
+                            <li class="men">
+                                MEN
+                            </li>
+                            <li class="kids">
+                                KIDS
+                            </li>
+                            <li class="baby">
+                                BABY
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カテゴリリスト2(スライドタイプ)
+        <article id="index-article">
+            <div id="category-slider-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="slider-area" class="cell width95 round-area contents relative">
+                        <div id="slider">
+                            <ul>
+                                <li>
+                                    BABY
+                                </li>
+                                <li>
+                                    KIDS
+                                </li>
+                                <li class="active">
+                                    MEN
+                                </li>
+                                <li>
+                                    WOMEN
+                                </li>
+                                <li>
+                                    INTERIOR
+                                </li>
+                                <li>
+                                    GOODS
+                                </li>
+                                <li>
+                                    BEAUTY
+                                </li>
+                                <li>
+                                    HANDMADE
+                                </li>
+                                <li>
+                                    SPORTS
+                                </li>
+                                <li>
+                                    OTHERS
+                                </li>
+                            </ul>
+                        </div>
+                        <img id="left" src="./img/navigation_left_icon.png">
+                        <img id="right" src="./img/navigation_right_icon.png">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カテゴリリスト2(スライドタイプ)吹き出し(トンガリ)
+        <article id="index-article">
+            <div id="category-list" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 relative">
+                        <div class="active-category"></div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        出品リスト(スライドタイプ)
+        <article id="exhibit-article">
+            <div id="exhibit-category-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="slider-area" class="cell width95 contents relative">
+                        <div id="slider">
+                            <ul>
+                                <li>
+                                    category1
+                                </li>
+                                <li>
+                                    category2
+                                </li>
+                                <li>
+                                    category3
+                                </li>
+                            </ul>
+                        </div>
+                        <img id="left" src="./img/navigation_left_icon.png">
+                        <img id="right" src="./img/navigation_right_icon.png">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        出品リスト(スライドタイプ)吹き出し(トンガリ)
+        <article id="exhibit-article">
+            <div id="exhibit-category-list" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 relative">
+                        <div class="active-category"></div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        コンテンツリスト1
+        <article id="index-article">
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line font middle">
+                                        <div>
+                                            コンテンツタイトル1-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル1-2
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル2-1
+                                        </div>
+                                        <div>
+                                            コンテンツタイトル2-2
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル3
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル4
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div>
+                                            コンテンツタイトル5
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div>
+                                            コンテンツタイトル6
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        お知らせ
+        <article id="index-article">
+            <div id="notice-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100 contents round-area">
+                                <div class="row">
+                                    <div class="cell width20 menu-item-image inline-center">
+                                        <img src="./img/notice_01.png">
+                                    </div>
+                                    <div class="cell width80 menu-item inline-left indent-left">
+                                        <div class="font header6">
+                                            2015/09/07
+                                        </div>
+                                        <div class="font middle">
+                                            ◯◯会場
+                                        </div>
+                                        <div class="font middle">
+                                            晴天の中・・・
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 menu-item-image inline-center">
+                                        <img src="./img/notice_02.png">
+                                    </div>
+                                    <div class="cell width80 menu-item inline-left indent-left">
+                                        <div class="font header6">
+                                            2015/09/07
+                                        </div>
+                                        <div class="font middle">
+                                            ◯◯会場
+                                        </div>
+                                        <div class="font middle">
+                                            晴天の中・・・
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 menu-item-image inline-center">
+                                        <img src="./img/notice_03.png">
+                                    </div>
+                                    <div class="cell width80 menu-item inline-left indent-left">
+                                        <div class="font header6">
+                                            2015/09/07
+                                        </div>
+                                        <div class="font middle">
+                                            ◯◯会場
+                                        </div>
+                                        <div class="font middle">
+                                            晴天の中・・・
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        コンテンツリスト3
+        <article id="index-article">
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 menu-item-border-top">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <img src="http://strage-on-the-web.net/upload/pix/data/cc1fdfd0d14f80c39408b436b1ad1eb5.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 inline-center font small">
+                                                        PR文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 menu-item-border-top">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <img src="http://strage-on-the-web.net/upload/pix/data/cc1fdfd0d14f80c39408b436b1ad1eb5.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 inline-center font small">
+                                                        PR文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 menu-item-border-top">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <img src="http://strage-on-the-web.net/upload/pix/data/cc1fdfd0d14f80c39408b436b1ad1eb5.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 inline-center font small">
+                                                        PR文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        コンテンツリスト4
+        <article id="index-article">
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="./img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="./img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width30 item-area">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 relative">
+                                                        <div class="width100 item-name font small inline-center">
+                                                            Item Name
+                                                        </div>
+                                                        <img src="./img/item_men_sample_01.png" width=100%>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle">
+                                                        <div>
+                                                            <div class="table width100">
+                                                                <div class="row">
+                                                                    <div class="cell width2-5"></div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="favorite-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width30 font small">
+                                                                        <span class="comments-icon-area">
+                                                                            0
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width35 font small inline-right">
+                                                                        <span class="price-area">
+                                                                            ¥x,xxx
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="cell width2-5"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カート内注意書き1
+        <article id="cart-article" class="padding-top-large padding-bottom-large" style="background-color:lightgray;">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-caution-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                                        説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カート内注意書き2
+        <article id="cart-article" class="padding-top-large padding-bottom-large" style="background-color:lightgray;">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-caution-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-small font header5">
+                                        説明タイトル
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <hr>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-small padding-bottom-middle">
+                                        説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。説明文言。
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ショップアイテムリスト1
+        <article id="product-detail-article">
+            <div id="product-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents separate-info-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width15 inline-center">
+                                        <img src="./img/product_sample_icon.png">
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width50">
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            GENDER&nbsp;PRODUCT NAME
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            ¥3,900
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            <span class="tag-badge">Tag</span>
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small">
+                                            <ul>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ☆
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cell width10 inline-center">
+                                        <img src="./img/favorite_icon.png" width=90%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        お気に入りリスト
+        <article id="like-index-article">
+            <div id="product-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents separate-info-line">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width15 inline-center">
+                                        <img src="./img/product_sample_icon.png">
+                                    </div>
+                                    <div class="cell width10"></div>
+                                    <div class="cell width50">
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            GENDER&nbsp;PRODUCT NAME
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            ¥3,900
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small font header6">
+                                            <span class="tag-badge">Tag</span>
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-small">
+                                            <ul>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ★
+                                                </li>
+                                                <li>
+                                                    ☆
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="cell width10 inline-center">
+                                        <img src="./img/favorite_icon.png" width=90%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ショップアイテム詳細
+        <article id="product-detail-article">
+            <div id="product" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width20 font header6">
+                                        GENDER
+                                    </div>
+                                    <div class="cell width80 font header6">
+                                        XXXXXXXXXX&nbsp;(XX)
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 font header4">
+                                        ¥X,XXX
+                                    </div>
+                                    <div class="cell width80 font header7">
+                                        +tax
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 font small">
+                                        <div>
+                                            COLOR: xx XXXXXXX
+                                        </div>
+                                        <div>
+                                            商品番号: xxxxxx
+                                        </div>
+                                    </div>
+                                    <div class="cell width50">
+                                        <ul>
+                                            <li>
+                                                ★
+                                            </li>
+                                            <li>
+                                                ★
+                                            </li>
+                                            <li>
+                                                ★
+                                            </li>
+                                            <li>
+                                                ★
+                                            </li>
+                                            <li>
+                                                ☆
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 padding-top-large padding-bottom-large separate-info-line">
+                                <div class="row">
+                                    <div class="cell width100">
+                                        <img src="http://im.uniqlo.com/images/jp/pc/goods/158563/item/15_158563.jpg" width=100%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 separate-info-line">
+                                <div class="row">
+                                    <div class="cell width25 padding-top-middle padding-bottom-middle inline-center">
+                                        <span class="font header5 like-badge">
+                                            いいね!
+                                        </span>
+                                    </div>
+                                    <div class="cell width25 padding-top-middle padding-bottom-middle inline-center">
+                                        <span class="font header5 comment-badge">
+                                            コメント
+                                        </span>
+                                    </div>
+                                    <div class="cell width25 padding-top-middle padding-bottom-middle inline-center">
+                                    </div>
+                                    <div class="cell width10 padding-top-middle padding-bottom-middle inline-center">
+                                        <img class="rounded-img-weak" src="./img/fb_icon.png" height=30%>
+                                    </div>                                
+                                    <div class="cell width10 padding-top-middle padding-bottom-middle inline-center">
+                                        <img class="rounded-img-weak" src="./img/twitter_icon.png" height=30%>
+                                    </div>
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle inline-center">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 separate-info-line">
+                                <div class="row">
+                                    <div class="cell width100">
+                                        <div class="padding-top-small padding-bottom-small">
+                                            size:
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-middle">
+                                            <span class="size-badge">S</span>
+                                            <span class="size-badge">M</span>
+                                            <span class="size-badge">L</span>
+                                            <span class="size-badge">XL</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 separate-info-line">
+                                <div class="row">
+                                    <div class="cell width100">
+                                        <div class="padding-top-small padding-bottom-small">
+                                            number:
+                                        </div>
+                                        <div class="padding-top-small padding-bottom-middle">
+                                            <span class="amount-badge-normal">1</span>
+                                            <span class="amount-badge-normal">+</span>
+                                            <span class="amount-badge-large">-</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle">
+                                        <div class="cart-button">
+                                            カートに入れる
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        カート追加済み商品
+        <article id="cart-article" class="padding-top-large padding-bottom-large">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div id="cart-product-area" class="table width100 round-area font middle">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-middle padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width30">
+                                                        x点&nbsp;¥xxxx
+                                                    </div>
+                                                    <div class="cell width60"></div>
+                                                    <div class="cell width10">
+                                                        <div class="close-button">
+                                                            ×
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-bottom-middle">
+                                        <div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width30 border inline-center">
+                                                        <img src="./img/cart_item_sample.png">
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right">
+                                                            MEN XXXXXX
+                                                        </div>
+                                                        <div class="padding-top-middle inline-right indent-right">
+                                                            ¥x,xxx
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            カラー
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            COLOR NAME
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            サイズ
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            XX
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            股下/裄丈
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border">
+                                                        <div class="inline-right indent-right padding-top-small padding-bottom-small">
+                                                            --
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width30 border">
+                                                        <div class="inline-left indent-left padding-top-small padding-bottom-small">
+                                                            数量
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width70 border padding-top-small padding-bottom-small">
+                                                        <div class="inline-right indent-right">
+                                                            <input type="text" maxlength=1 style="width:10%;">
+                                                            <a class="normal-button">変更</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        検索窓(デフォルト)
+        <article id="search-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 padding-top-small padding-bottom-small contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width70">
+                                        <div class="relative">
+                                            <input type="text" class="search-box">
+                                            <div class="search-botton"></div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width30 font middle outline inline-center">
+                                        キャンセル
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        検索窓(クリック時)
+        <article id="search-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width70">
+                                        <div class="relative">
+                                            <input type="text" class="search-box">
+                                            <div class="search-botton inactive"></div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width30 font middle outline inline-center">
+                                        キャンセル
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        検索件数(全件)
+        <article id="search-result-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents all-result indent-left">
+                         Total:158
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        ページャー
+        <article id="search-result-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-top-small padding-bottom-small inline-center">
+                        <span class="pager-badge font small prev">prev</span>
+                        <span class="pager-badge font small">1</span>
+                        <span class="pager-badge font small">2</span>
+                        <span class="pager-badge font small">3</span>
+                        <span class="pager-badge font small">4</span>
+                        <span class="pager-badge font small">5</span>
+                        <span class="pager-badge font small">…</span>
+                        <span class="pager-badge font small next">next</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        タブ
+        <article id="search-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 inline-center tab-panel-left inactive">
+                                        <div class="font middle outline inactive">
+                                            人気検索ワード
+                                        </div>
+                                        <div class="font small">
+                                            人気検索ワード
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 inline-center tab-panel-right active">
+                                        <div class="font middle outline">
+                                            注目ワード
+                                        </div>
+                                        <div class="font small">
+                                            更新
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 inline-center tab-panel-left active">
+                                        <div class="font middle outline">
+                                            人気検索ワード
+                                        </div>
+                                        <div class="font small">
+                                            人気検索ワード
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 inline-center tab-panel-right inactive">
+                                        <div class="font middle outline inactive">
+                                            注目ワード
+                                        </div>
+                                        <div class="font small">
+                                            更新
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 font header6">
+                                <div class="row">
+                                    <div class="cell width20 padding-top-middle padding-bottom-middle inline-center separate-info-line">
+                                        <span class="ranking-gold-badge">1</span>
+                                    </div>
+                                    <div class="cell width80 padding-top-middle padding-bottom-middle separate-info-line">
+                                        XXXXX
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 padding-top-middle padding-bottom-middle inline-center separate-info-line">
+                                        <span class="ranking-silver-badge">2</span>
+                                    </div>
+                                    <div class="cell width80 padding-top-middle padding-bottom-middle separate-info-line">
+                                        XXXXX
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 padding-top-middle padding-bottom-middle inline-center separate-info-line">
+                                        <span class="ranking-bronze-badge">3</span>
+                                    </div>
+                                    <div class="cell width80 padding-top-middle padding-bottom-middle separate-info-line">
+                                        XXXXX
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 padding-top-middle padding-bottom-middle inline-center separate-info-line">
+                                        <span class="ranking-normal-badge">4</span>
+                                    </div>
+                                    <div class="cell width80 padding-top-middle padding-bottom-middle separate-info-line">
+                                        XXXXX
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width20 padding-top-middle padding-bottom-middle inline-center separate-info-line">
+                                        <span class="ranking-normal-badge">5</span>
+                                    </div>
+                                    <div class="cell width80 padding-top-middle padding-bottom-middle separate-info-line">
+                                        XXXXX
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        認証
+        <article id="auth-article">
+            <div id="login-form" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width10 inline-left">
+                                        <img src="../img/member_menu_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                    <div class="cell width75 inline-left font header3">
+                                        Login
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width90 inline-left padding-top-middle padding-bottom-middle">
+                                        <input type="text" class="input-auth-info-text">
+                                    </div>
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width90 inline-left padding-top-middle padding-bottom-middle">
+                                        <input type="password" class="input-auth-info-text">
+                                    </div>
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width90 padding-top-middle padding-bottom-middle">
+                                        <div class="login-button">
+                                            Login
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell width90 inline-left font small">
+                                        <div class="support-link inline-right padding-top-small padding-bottom-small">
+                                            ID・パスワードを忘れた方
+                                        </div>
+                                        <div class="support-link inline-right padding-top-small padding-bottom-small">
+                                            はじめてご利用の方 (新規会員登録)
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100 border">
+                                <div class="row">
+                                    <div class="cell width5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 fb-sign-in-area inline-left padding-top-middle padding-bottom-middle" >
+                                        <img src="./img/fb_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width75 fb-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                            FaceBook アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 fb-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5 twitter-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="./img/twitter_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 twitter-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width75 twitter-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                            Twitter アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 twitter-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5 google-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 google-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="http://wind-mill.co.jp/iwashiblog/wp-content/uploads/2013/09/b76a370a2f1a0a5017b053a36ed8d591.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 google-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width75 google-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area1">
+                                        Google アカウントでログイン
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 twitter-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5 yahoo-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width10 yahoo-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <img src="http://www.clearlakeautoglass.net/assets/images/yahoo_icon.png" width=100%>
+                                    </div>
+                                    <div class="cell width5 yahoo-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                    <div class="cell width75 yahoo-sign-in-area inline-left padding-top-middle padding-bottom-middle">
+                                        <div class="sns-login-statement-area2">                                        
+                                            <div>
+                                                Yahoo Japan IDでログイン
+                                            </div>
+                                            <div>
+                                                Tポイントが貯まります!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 yahoo-sign-in-area padding-top-middle padding-bottom-middle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        フッター
+        <footer>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area blank-area">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="menu" class="cell width95">
+                        <ul>
+                            <li class="login">
+                                <div>
+                                    ログイン
+                                </div>
+                            </li>
+                            <li class="register">
+                                <div>
+                                    会員登録
+                                </div>
+                            </li>
+                            <li class="purchase-history">
+                                <div>
+                                    履歴
+                                </div>
+                            </li>
+                            <li class="information">
+                                <div>
+                                    ご利用ガイド
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="copyright" class="cell width95 font header7 inline-center padding-top-middle padding-bottom-middle">
+                        COPYRIGHT (C) ◯◯ CO., LTD. ALL RIGHTS RESERVED.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

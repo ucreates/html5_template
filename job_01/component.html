@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>おしごとさがすけん！</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        ヘッダー
+        <header>
+            <div class="table width100 notice-area">
+                <div class="row">
+                    <div class="cell width20">
+                    </div>
+                    <div class="cell width60 font small inline-center notice-area-statement">
+                        header
+                    </div>
+                    <div class="cell width20">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <article id="index-article">
+            コンテンツ
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents padding-top-small padding-bottom-small inline-center font header7">
+                        お知らせ
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <article id="index-article">
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 relative contents round-area">
+                        <img src="./img/find_job_top.png" width="100%">
+                        <div class="contact">
+                            <div class="font small">
+                                文言1
+                            </div>
+                            <div class="font small">
+                                文言2
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        検索コンポーネント
+        <article id="job-article">
+            <div id="search-table">
+                <div class="table width100">
+                    <div class="row">
+                        <div class="cell width2-5"></div>
+                        <div class="cell width95 contents relative">
+                            <div>
+                                <div class="table width100 font small">
+                                    <div class="row">
+                                        <div class="cell width2-5"></div>
+                                        <div class="cell width10 padding-top-small inline-center topix serch-condition-border-left">
+                                            <div>
+                                                <img src="./img/search_icon.png" width=50%>
+                                            </div>
+                                            <div>
+                                                職種
+                                            </div>
+                                        </div>
+                                        <div class="cell width85 padding-top-small padding-middle-small serch-condition-border-right">
+                                            <div class="indent-left">
+                                                <span class="new-badge">設定/変更</span>
+                                            </div>
+                                            <div class="indent-left padding-top-small">
+                                                法人営業
+                                            </div>
+                                        </div>
+                                        <div class="cell width2-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell width2-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell width2-5"></div>
+                        <div class="cell width95 contents relative">
+                            <div>
+                                <div class="table width100 font small">
+                                    <div class="row">
+                                        <div class="cell width2-5"></div>
+                                        <div class="cell width10 padding-top-small inline-center topix serch-condition-border-left">
+                                            <div>
+                                                <img src="./img/search_icon.png" width=50%>
+                                            </div>
+                                            <div>
+                                                勤務地
+                                            </div>
+                                        </div>
+                                        <div class="cell width85 padding-top-small padding-middle-small serch-condition-border-right">
+                                            <div class="indent-left">
+                                                <span class="new-badge">設定/変更</span>
+                                            </div>
+                                            <div class="indent-left padding-top-small">
+                                                東京
+                                            </div>
+                                        </div>
+                                        <div class="cell width2-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell width2-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell width2-5"></div>
+                        <div class="cell width95 contents relative">
+                            <div>
+                                <div class="table width100 font small">
+                                    <div class="row">
+                                        <div class="cell width2-5"></div>
+                                        <div class="cell width10 padding-top-small inline-center topix serch-condition-border-left">
+                                            <div>
+                                                <img src="./img/search_icon.png" width=50%>
+                                            </div>
+                                            <div>
+                                                業種
+                                            </div>
+                                        </div>
+                                        <div class="cell width85 padding-top-small padding-middle-small serch-condition-border-right">
+                                            <div class="indent-left">
+                                                <span class="new-badge">設定/変更</span>
+                                            </div>
+                                            <div class="indent-left padding-top-small">
+                                                ITサービス、メーカー、流通・小売り
+                                            </div>
+                                        </div>
+                                        <div class="cell width2-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell width2-5"></div>
+                    </div>
+                    <div class="row">
+                        <div class="cell width2-5"></div>
+                        <div class="cell width95 contents round-bottom-area padding-bottom-small relative">
+                            <div>
+                                <div class="table width100 font small">
+                                    <div class="row">
+                                        <div class="cell width2-5"></div>
+                                        <div class="cell width95 padding-top-small">
+                                            <div class="width50 search-button inline-center round-area padding-top-small padding-bottom-small">
+                                                この条件で検索
+                                            </div>
+                                        </div>
+                                        <div class="cell width2-5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell width2-5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="row">
+                    <div class="cell width25"></div>
+                    <div id="change-serch-condition" class="cell width50 search-condition-button round-bottom-area font header6 inline-center">
+                            条件の変更
+                    </div>
+                    <div class="cell width25"></div>
+                </div>
+            </div>
+        </article>
+        トピックスヘッダー1
+        <article id="index-article">
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_find_job.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_kininaru.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_kininaru.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_movie.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table margin-top-small">
+                <div class="row">                
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_find_job.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area topix">
+                        <img src="./img/header_notice.png" height="100%">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        トピックスヘッダー2
+        <article id="index-article">
+            <div class="table width100 margin-top-small"> 
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <span class="topix-header-icon-small"></span><span class="font header5">交通費について</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        検索コンポーネント
+        <article id="index-article">
+            <div id="job-search" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 inline-center">
+                        <div>
+                            <div id="recent-job-info" class="table width100 round-bottom-area contents">
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle relative">
+                                        <span class="search-recentry-area">
+                                            最近見た求人
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div id="type-job-info" class="cell width50 padding-top-middle padding-bottom-middle select-find-type left">
+                                        <div>
+                                            <img src="./img/work_icon.png" width=20%>
+                                        </div>
+                                        <div>
+                                            職種で探す
+                                        </div>
+                                    </div>
+                                    <div id="area-job-info" class="cell width50 padding-top-middle padding-bottom-middle select-find-type">
+                                        <div>
+                                            <img src="./img/train_icon.png" width=20%>
+                                        </div>
+                                        <div>
+                                            勤務地で探す
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 round-bottom-area search-area">
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle padding-bottom-middle relative">
+                                        <input id="job-search-text-box" type="text" maxlength="10" class="search-box">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        新着求人
+        <article id="index-article">
+            <div id="new-job-info" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width85 contents padding-bottom-small inline-center">
+                        <div class="indent-left padding-top-small padding-bottom-small">
+                            <span class="focus-statement font header5">新着求人</span>
+                            <span class="font small orange-badge">8/31UP</span>
+                        </div>
+                        <div class="inline-left indent-left font middle">
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>,
+                            <a href="#">企業名</a>
+                        </div>
+                    </div>
+                    <div class="cell width10 contents more-info-area inline-center">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="new-job-ad" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-bottom-area padding-bottom-small inline-center">
+                        <div>
+                            <div class="table width100 margin-top-small">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="http://www.kininaru-k.jp/common/img/logo.gif" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="http://www.kininaru-k.jp/common/img/logo.gif" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="http://www.kininaru-k.jp/common/img/logo.gif" width=85%>
+                                    </div>
+                                    <div class="cell"></div>
+                                    <div class="cell width20 inline-center">
+                                        <img src="http://www.kininaru-k.jp/common/img/logo.gif" width=85%>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        求人特集
+        <article id="index-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents inline-left">
+                        <div class="indent-left padding-top-small padding-bottom-small">
+                            <span class="focus-statement font header5">求人特集</span>
+                            <span class="font small orange-badge">8/31UP</span>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle ">
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/bonus_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        ボーナスが楽しみ!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        正社員×賞与2回の企業特集
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle ">
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/big_corp_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        家庭も安心!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        大手企業のグループ会社特集
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents padding-top-middle padding-bottom-middle">
+                        <div class="table width100">
+                            <div class="row">
+                                <div class="cell width2-5"></div>
+                                <div class="cell width20 job-list-thumbnail-area inline-center">
+                                    <img class="rounded-img-weak" src="./img/rest_icon.png" width=60%>
+                                </div>
+                                <div class="cell width65 job-list-area inline-left">
+                                    <div class="font header7">
+                                        1年の33%が休日!
+                                    </div>
+                                    <div class="font middle header-statement">
+                                        年間休日125日以上の企業
+                                    </div>
+                                </div>
+                                <div class="cell width2-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents padding-bottom-small inline-center font header7">
+                        <span class="all-job-into-statement">
+                            <a href="./job.html">
+                                すべての求人特集を見る
+                            </a>
+                        </span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        youtube動画コンテンツ
+        <article id="index-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-bottom-area padding-top-middle inline-center">
+                        <iframe width="90%" src="https://www.youtube.com/embed/7VG9CrH_2Sw"></iframe>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        メニュー
+        <article id="index-article">
+            <div class="table width100">
+                <div class="row">                
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents">
+                        <ul>
+                            <li id="works">
+                                <a href="./job.html" class="custom-list-link">
+                                    おしごとさがすけん！
+                                </a>
+                            </li>
+                            <li id="faq">
+                                <a href="./faq.html" class="custom-list-link">
+                                    きになるいろいろ
+                                </a>
+                            </li>
+                            <li id="corporate">
+                                <a href="./corporate.html" class="custom-list-link">
+                                    サービス概要
+                                </a>
+                            </li>
+                            <li id="form">
+                                <a href="./form.html" class="custom-list-link-no-border">
+                                    お問い合わせはこちら！
+                                </a>
+                            </li>
+                        </ul>                    
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        Twitter
+        <article id="index-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-bottom-area contents">
+                        <div class="tweet-area">
+                            <p>
+<a class="twitter-timeline" href="https://twitter.com/55_kumamon" data-widget-id="631005408002347008">@55_kumamonさんのツイート</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                                
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        求人情報カード
+        <article id="job-article">
+            <div class="table width100 margin-top-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small">
+                        <span class="new-badge">
+                            NEW
+                        </span>
+                        掲載期間:xx/xx/xx 〜 xx/xx/xx
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <div class="table width100 job-info-header-area round-top-area padding-bottom-small margin-top-small">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font header6 header-statement">
+                                        PR文言1
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font header7">
+                                        会社名
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle padding-top-small padding-bottom-small">
+                                        <span class="employment-type-badge">
+                                            正社員
+                                        </span>
+                                        <span class="employ-condition-beginner">
+                                            職務未経験者OK
+                                        </span>
+                                        <span class="employ-condition-beginner">
+                                            業務未経験者OK
+                                        </span>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100 job-info-area">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 padding-top-small">
+                                        <div class="font header6 indent-left header-statement">
+                                            PR文言2
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width10 padding-top-middle">
+                                                        <div class="inline-center">
+                                                            <img src="./img/work_icon.png" width=50%>
+                                                        </div>
+                                                        <div class="inline-center font small">
+                                                            <p>
+                                                                仕事
+                                                            </p>
+                                                            <p>
+                                                                内容
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width90 font small padding-top-middle" style="text-align:left;vertical-align:top;">
+                                                        仕事内容文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width10 padding-top-middle">
+                                                        <div class="inline-center">
+                                                            <img src="./img/smile_icon.png" width=50%>
+                                                        </div>
+                                                        <div class="inline-center font small">
+                                                            <p>
+                                                                応募
+                                                            </p>
+                                                            <p>
+                                                                資格
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width90 font small padding-top-middle" style="text-align:left;vertical-align:top;">
+                                                        応募資格文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width10 padding-top-middle">
+                                                        <div class="inline-center">
+                                                            <img src="./img/money_icon.png" width=50%>
+                                                        </div>
+                                                        <div class="inline-center font small">
+                                                            <p>
+                                                                給与
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width90 font small padding-top-middle" style="text-align:left;vertical-align:top;">
+                                                        給与文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95">
+                                        <div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width10 padding-top-middle">
+                                                        <div class="inline-center">
+                                                            <img src="./img/train_icon.png" width=50%>
+                                                        </div>
+                                                        <div class="inline-center font small">
+                                                            <p>
+                                                                勤務地
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width90 font small padding-top-middle" style="text-align:left;vertical-align:top;">
+                                                        勤務地文言
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width2-5 person-in-charge-area"></div>
+                                    <div class="cell width95 person-in-charge-area">
+                                        <div>
+                                            <div class="table width100 padding-top-middle padding-bottom-middle">
+                                                <div class="row">
+                                                    <div class="cell width90">
+                                                        <div class="focus-statement font small indent-left">
+                                                            担当:◯◯より
+                                                        </div>
+                                                        <div class="focus-statement-normal font small indent-left">
+                                                            紹介文言1
+                                                        </div>
+                                                    </div>
+                                                    <div class="cell width10 inline-center">
+                                                        <img class="rounded-img" src="./img/answer_icon.png" width=100%>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cell width2-5 person-in-charge-area"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width70 job-footer font header6 round-bottom-left-area inline-center padding-top-middle padding-bottom-middle">
+                                        <span class="job-bookmark-button">きになる!</span>
+                                    </div>
+                                    <div class="cell width30 job-footer-right font header6 round-bottom-right-area inline-center padding-top-middle padding-bottom-middle">
+                                        <span class="job-detail-button">詳細へ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        pager
+        <article id="job-article">
+            <div class="table width100 margin-top-middle margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents padding-top-small padding-bottom-small inline-center font header7">
+                        <span class="search-num-badge">1</span>
+                        <span class="search-num-badge">2</span>
+                        <span class="search-num-badge">3</span>
+                        <span class="search-num-badge">4</span>
+                        <span class="search-num-badge">･･･</span>
+                        <span class="search-num-badge next">次へ</span>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        入力
+        <article id="form-article">
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area contents">
+                        <div>
+                            <div class="table width100 margin-top-small margin-bottom-small">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width95 font middle">
+                                    <form>
+                                        <div>
+                                            <div class="table width100 margin-top-small"> 
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <span class="input-form-header-icon-small"></span><span class="font header5">テキスト</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="width100">
+                                            <input type="text" name="name" class="input-text">
+                                        </div>
+                                        <div class="margin-top-small">
+                                            <div class="table width100 margin-top-small"> 
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <span class="input-form-header-icon-small"></span><span class="font header5">プルダウンメニュー</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <select name="age">
+                                                <option value="young">選択肢1</option>
+                                                <option value="sinior">選択肢2</option>
+                                            </select>
+                                        </div>
+                                        <div class="margin-top-small">
+                                            <div class="table width100 margin-top-small"> 
+                                                <div class="row">
+                                                    <div class="cell width100">
+                                                        <span class="input-form-header-icon-small"></span><span class="font header5">ラジオボタン</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>
+                                                <input type="radio" name="sex" value="male">
+                                                <label class="radio">男</label>
+                                            </span>
+                                            <span>
+                                                <input type="radio" name="sex" value="female">                           
+                                                <label class="radio">女</label>
+                                            </span>
+                                        </div>
+                                        <div class="margin-top-middle inline-center">
+                                            <input type="submit" class="corporate-agreement" value="送信">
+                                        </div>
+                                    </form>
+                                </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        会話
+        <article id="faq-article">
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area padding-top-middle padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width20 indent-left">
+                                        <img src="./img/question_icon.png" width="100%">
+                                    </div>
+                                    <div class="cell width70 balloon-left baloon-left-content indent-left">
+                                        <div class="text-shadow font middle">
+                                            質問
+                                        </div>
+                                    </div>
+                                    <div class="cell width10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 margin-top-small">
+                                <div class="row">
+                                    <div class="cell width10">
+                                    </div>
+                                    <div class="cell width70 indent-right balloon-right baloon-right-content">
+                                        <div class="text-shadow font middle">
+                                            回答
+                                        </div>
+                                    </div>
+                                    <div class="cell width20">
+                                        <img src="./img/answer_icon.png" width="100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        コンテンツ(テーブル内包型)
+        <article>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 contents round-area">
+                        <div>
+                            <div class="table width100 border font middle margin-top-small margin-bottom-small">
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell table-header width20 indent-left border">
+                                        運営元
+                                    </div>
+                                    <div class="cell width60 indent-left border">
+                                        <div>
+                                            ◯◯県
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell table-header width20 indent-left border">
+                                        運営開始日
+                                    </div>
+                                    <div class="cell width60 indent-left border">
+                                        2015年8月1日
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell table-header width20 indent-left border">
+                                        所在地
+                                    </div>
+                                    <div class="cell width60 indent-left border">
+                                        <div>
+                                        〒999-9999
+                                        </div>
+                                        <div>
+                                        M県S市杜王町7番7号
+                                        </div>
+                                        <div>
+                                        Tel:022-xxx-xxx （代表）
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell table-header width20 indent-left border">
+                                        代表者
+                                    </div>
+                                    <div class="cell width60 indent-left border">
+                                        ◯◯△△
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width5"></div>
+                                    <div class="cell table-header width20 indent-left border">
+                                        サービス
+                                    </div>
+                                    <div class="cell width60 indent-left border">
+                                        <div>
+                                        人材斡旋事業
+                                        </div>
+                                        <div>
+                                        プロモーション事業
+                                        </div>
+                                        <div>
+                                        新規事業
+                                        </div>
+                                    </div>
+                                    <div class="cell width5"></div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        コンテンツ(リスト)
+        <article>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents round-top-left-area inline-center padding-top-small">
+                                        <div class="font header7">
+                                            2015.10.7
+                                        </div>
+                                    </div>
+                                    <div class="cell width65 contents round-top-right-area inline-left padding-top-small">
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents inline-center">
+                                        <img src="./img/news_icon.png" width=50%>
+                                    </div>
+                                    <div class="cell width60 contents inline-left">
+                                        <div class="font small">
+                                            あなたにとって必要不可欠な団体でありたい○○○○は、ITがもつ限りない可能性の追求で、
+                                            お客様に愛され信頼される人材サービスを提供することを目標としています。
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 contents"></div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents inline-center padding-top-small">
+                                        <div class="font header7">
+                                            2015.10.7
+                                        </div>
+                                    </div>
+                                    <div class="cell width65 contents inline-left padding-top-small">
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents inline-center">
+                                        <img src="./img/news_icon.png" width=50%>
+                                    </div>
+                                    <div class="cell width60 contents inline-left">
+                                        <div class="font small">
+                                            あなたにとって必要不可欠な団体でありたい○○○○は、ITがもつ限りない可能性の追求で、
+                                            お客様に愛され信頼される人材サービスを提供することを目標としています。
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 contents"></div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents inline-center padding-top-small">
+                                        <div class="font header7">
+                                            2015.10.7
+                                        </div>
+                                    </div>
+                                    <div class="cell width65 contents inline-left padding-top-small">
+                                    </div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width2-5"></div>
+                                    <div class="cell width30 contents round-bottom-left-area padding-bottom-middle inline-center">
+                                        <img src="./img/news_icon.png" width=50%>
+                                    </div>
+                                    <div class="cell width60 contents inline-left padding-bottom-middle">
+                                        <div class="font small">
+                                            あなたにとって必要不可欠な団体でありたい○○○○は、ITがもつ限りない可能性の追求で、
+                                            お客様に愛され信頼される人材サービスを提供することを目標としています。
+                                        </div>
+                                    </div>
+                                    <div class="cell width5 contents round-bottom-right-area"></div>
+                                    <div class="cell width2-5"></div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </article>
+        コンテンツ(注意書き)
+        <article>
+            <div class="table margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width5 contents round-left-area"></div>
+                    <div class="cell width85 contents padding-top-small padding-bottom-small inline-left">
+                        <div class="font header6 padding-top-small padding-bottom-small">
+                            【個人情報保護について】
+                        </div>
+                        <div class="font small">
+                            「JISQ15001個人情報保護マネジメントシステムの要求事項及び個人情報保護に関する法令、規範」に基づき個人情報保護方針を定め、個人情報の適正な利用と管理を図っております。以下の内容をご了解頂いた上で個人情報をご提供下さい。                        
+                        </div>
+                    </div>
+                    <div class="cell width5 contents round-right-area"></div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        フッター
+        <footer>
+            <div class="table margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 contents round-left-area padding-top-small inline-center">
+                        <img src="./img/privacy_mark.png" width="50%">
+                    </div>
+                    <div class="cell width60 contents inline-left">
+                        <div class="font small">
+                        当サイトに掲載されている求人情報は、全て◯◯県の採用情報です。安心してご応募下さい。◯◯県は個人情報保護の認定を受け、運営しています。
+                        </div>
+                    </div>
+                    <div class="cell width5 contents round-right-area"></div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100 margin-top-large">
+                <div class="row">
+                    <div class="cell topics-area-contents width100 round-top-area relative">
+                        <div class="topics-area-header round-top-area font middle">
+                            コンテンツ
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="font middle topics-area-link" href="./index.html">
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./job.html">
+                                    おしごとさがすけん！
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./faq.html">
+                                    きになるいろいろ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./corporate.html">
+                                    運営概要
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="./form.html">
+                                    お問い合わせ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="font middle topics-area-link" href="">
+                                    その他
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cell width100 contents copyright font small">
+                        Copyright © 2015 Oshigoto Sagasu Ken ! All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

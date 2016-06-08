@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>旅行代理店Demoサイト</title>
+        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="./css/liquid-layout.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/image.css">
+        <link rel="stylesheet" href="./css/icon.css">
+        <link rel="stylesheet" href="./css/badge.css">
+        <link rel="stylesheet" href="./css/ui.css">
+        <link rel="stylesheet" href="./css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var searchCategoryIdlist = [
+                    "search-category-domestic-hotel",
+                    "search-category-domestic-tour",
+                    "search-category-airplane",
+                    "search-category-rentacar",
+                    "search-category-travel-plan"
+                ];
+
+                for (var item in searchCategoryIdlist) {
+                    var categoryId = "#" + searchCategoryIdlist[item];
+                    $(categoryId).children(".baloon-triangle").hide();
+                }
+            
+            
+                var onSearchClick = function () {
+                    location.href = "./search/inn.html"        
+                };
+                $(".search-button").click(onSearchClick);
+            
+                var onCategorySearchClick = function () {
+                    var id = $(this).attr("id");
+                    for (var item in searchCategoryIdlist) {
+                        var categoryId = searchCategoryIdlist[item];
+                        if (categoryId === id) {
+                            $(this).children(".baloon-triangle").fadeIn(500);
+                        } else {
+                            categoryId = "#" + categoryId;
+                            $(categoryId).children(".baloon-triangle").hide();
+                        }
+                    }
+                };
+            
+                $("#search-category-domestic-hotel").click(onCategorySearchClick);
+                $("#search-category-domestic-tour").click(onCategorySearchClick);
+                $("#search-category-airplane").click(onCategorySearchClick);
+                $("#search-category-rentacar").click(onCategorySearchClick);
+                $("#search-category-travel-plan").click(onCategorySearchClick);
+
+                var onCategorySearchGoClick = function () {
+                    var link = "./search/inn.html";
+                    if ("block" === $("#search-category-domestic-hotel").children(".baloon-triangle").css("display")) {
+                        link = "./search/inn.html";
+                    } else if ("block" === $("#search-category-domestic-tour").children(".baloon-triangle").css("display")) {
+                        link = "./search/inn.html";
+                    } else if ("block" === $("#search-category-airplane").children(".baloon-triangle").css("display")) {
+                        link = "./search/airplane.html";
+                    } else if ("block" === $("#search-category-rentacar").children(".baloon-triangle").css("display")) {
+                        link = "./search/car.html";
+                    } else if ("block" === $("#search-category-travel-plan").children(".baloon-triangle").css("display")) {
+                        link = "./search/inn.html";
+                    }
+                    
+                    location.href = link;       
+                };
+                $("#category-search-button").click(onCategorySearchGoClick);
+            
+                var onValueServiceSearchClick = function () {
+                    console.log("onValueServiceSearchClick");
+                    var id = $(this).attr("id");
+                    var link = null;
+                    if (id === "value-service-hotel") {
+                        link = "./search/inn.html";
+                    } else if (id === "value-service-airplane") {
+                        link = "./search/airplane.html";
+                    } else if (id === "value-service-rentacar") {
+                        link = "./search/car.html";
+                    }
+                    location.href = link;        
+                };
+                $("#value-service-hotel").click(onValueServiceSearchClick);
+                $("#value-service-airplane").click(onValueServiceSearchClick);
+                $("#value-service-rentacar").click(onValueServiceSearchClick);
+            
+                var onAreaClick = function () {
+                    var id = null;
+                    if($(this).hasClass("hokkaido")) {
+                        id = "#tour-hokkaido";
+                    } else if($(this).hasClass("tohoku")) {
+                        id = "#tour-tohoku";   
+                    } else if($(this).hasClass("kanto")) {
+                        id = "#tour-kanto";   
+                    } else if($(this).hasClass("hokuriku")) {
+                        id = "#tour-hokuriku";   
+                    } else if($(this).hasClass("kyusyu")) {
+                        id = "#tour-kyusyu";   
+                    }
+                    link = "./tour.html" + id;
+                    location.href = link;
+                };
+            
+                $(".link-button.hokkaido").click(onAreaClick);
+                $(".link-button.tohoku").click(onAreaClick);
+                $(".link-button.kanto").click(onAreaClick);
+                $(".link-button.hokuriku").click(onAreaClick);
+                $(".link-button.kyusyu").click(onAreaClick);
+            
+                var onSearchDetailMenuButton = function() {
+                    $("#search-detail-condition").slideToggle(1000);
+                };
+                $("#search-detail-condition").hide();
+                $(".search-detail-menu-close-button").click(onSearchDetailMenuButton);            
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100 header-area">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width55 padding-top-middle padding-bottom-middle inline-left">
+                        <a href="./index.html">
+                            <img src="./img/logo.png" width=100%>
+                        </a>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width40">
+                        <ul>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./mypage/index.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_preserve_confirm_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        予約確認
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./mypage/register.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_register_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        会員登録
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="padding-top-middle padding-bottom-middle">
+                                <a href="./auth/login.html">
+                                    <div class="padding-top-middle padding-bottom-middle">
+                                        <img src="./img/header_menu_login_icon.png" width=70%>
+                                    </div>
+                                    <div class="font small padding-top-small padding-bottom-small">
+                                        サインイン
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>        
+        <article>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            Pick Up !
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        注目の観光プラン
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="focus-travel-plan" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_kyoto.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">京都</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        季節の料理と心地良い水の音で京都を満喫
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_okinawa.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">沖縄</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        世界遺産に登録された那覇市内の遺跡・史跡をめぐる観光バス
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_aomori.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">青森</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                            ねぶたの家ワ・ラッセ
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_tokyo.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">東京</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        新宿高層ビル群の合間を駆け抜けるドライブは圧巻です！
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_toyama.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">富山</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        日本の旬　第126回　杜の賑い 富山2015
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                    <div class="cell width30 padding-bottom-middle">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <img src="./img/tour_kochi.png" width=100%>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle">
+                                        <span class="tag">高知</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width100 padding-top-middle font small">
+                                        <a href="#">
+                                        カツオのたたき体験と昼食プラン
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="header-area" class="cell width95 round-area relative padding-top-small padding-bottom-small">
+                        <div id="header-title-area" class="indent-left">
+                            条件から探す
+                        </div>
+                        <div id="triangle"></div>                        
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        キーワードから探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width75 inline-left">
+                        <input type="text" class="search-text-box">
+                    </div>
+                    <div class="cell width20 inline-center">
+                        <div class="search-button">
+                            Go !
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        カテゴリから探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="baloon-menu" class="table width100 margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <ul>
+                                <li id="search-category-domestic-hotel">
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="./img/menu_hotel_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内宿泊
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                                <li id="search-category-domestic-tour">
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="./img/menu_tour_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            国内ツアー
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                                <li id="search-category-airplane">
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="./img/menu_airplane_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            航空券
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>                                    
+                                </li>
+                                <li id="search-category-rentacar">
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="./img/menu_car_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            レンタカー
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                                <li id="search-category-travel-plan">
+                                    <div class="baloon-area">
+                                        <div>
+                                            <img src="./img/menu_travel_plan_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            観光プラン
+                                        </div>
+                                    </div>
+                                    <div class="baloon-triangle"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="search-detail-menu" class="table width100 margin-top-small margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width100 large-menu padding-top-middle padding-bottom-middle">
+                                        <span class="large-menu-title-badge">宿泊地</span>
+                                        現在地周辺
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge">利用日</span>
+                                        指定なし
+                                    </div>
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge2">泊数</span>
+                                        指定なし
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge2">人数</span>
+                                        指定なし
+                                    </div>
+                                    <div class="cell width50 small-menu padding-top-middle padding-bottom-middle">
+                                        <span class="small-menu-title-badge">部屋数</span>
+                                        指定なし
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 margin-top-small margin-bottom-small">
+                                <div class="row">
+                                    <div class="cell width100">
+                                        <div class="search-detail-title">
+                                            食事、部屋、料金、こだわり条件
+                                            <div class="search-detail-menu-close-button">
+                                                +
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 margin-top-small margin-bottom-small">
+                                <div class="row">
+                                    <div class="cell width100">
+                                        <div id="search-detail-condition">
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width100 large-category-header indent-left">
+                                                        食事
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 padding-top-middle padding-bottom-middle inline-center">
+                                                        <select class="large">
+                                                            <option>食事なし</option>
+                                                            <option>朝食のみ</option>
+                                                            <option>夕食のみ</option>
+                                                            <option>2食付き</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 middle-category-header indent-left border">
+                                                        食事のこだわり条件
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">朝食バイキング
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">夕食バイキング
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">個室食
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">部屋食
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 large-category-header indent-left border">
+                                                        部屋
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">シングル
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">ツイン
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">ダブル
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">トリプル
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">和室
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">和洋室
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">4ベッド
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">洋室
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">スイート
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">特別室
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">メゾネット
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">貸別荘
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">コテージ
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">相部屋
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 middle-category-header indent-left border">
+                                                        部屋のこだわり条件
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">禁煙
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">無線LAN接続
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">ネット接続可能
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">広い(40㎡以上)
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">夜景が見える
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">海が見える部屋
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 large-category-header indent-left border">
+                                                        宿泊料金
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width50 indent-left padding-top-middle padding-bottom-middle">
+                                                        <select>
+                                                            <option>下限</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="cell width50 indent-left padding-top-middle padding-bottom-middle">
+                                                        <select>
+                                                            <option>上限</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100 border">
+                                                <div class="row">
+                                                    <div class="cell width100 large-category-header indent-left border">
+                                                        施設のこだわり条件
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="table width100">
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">ホテル
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">旅館
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">ペンション
+                                                    </div>
+                                                    <div class="cell width50 padding-top-middle padding-bottom-middle indent-left">
+                                                        <input type="checkbox">民宿
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table width100 margin-top-small">
+                                <div class="row">
+                                    <div class="cell width100 inline-center">
+                                        <div id="category-search-button">
+                                            Go !
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        お得なサービスから探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="baloon-menu" class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div>
+                            <ul>
+                                <li id="value-service-hotel" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                             <img src="./img/menu_hotel_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            旅館・ホテル
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="value-service-airplane" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="./img/menu_airplane_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            飛行機
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="value-service-rentacar" class="baloon-area-middle-list">
+                                    <div class="baloon-area-middle">
+                                        <div>
+                                            <img src="./img/menu_car_icon.png" width="50%">
+                                        </div>
+                                        <div class="font small padding-top-large">
+                                            レンタカー
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>            
+            <div id="topix-header-small" class="table width100 margin-top-middle margin-bottom-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font header6">
+                        <span class="topix-header-icon-small"></span>
+                        行きたい場所から探す
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+            <div id="area-search" class="table width100  margin-top-small margin-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-area relative">
+                        <img src="./img/map.png" width=100%>
+                        <div class="link-button hokkaido font small">
+                            北海道
+                        </div>
+                        <div class="link-button tohoku font small">
+                            東北
+                        </div>
+                        <div class="link-button hokuriku font small">
+                            北陸
+                        </div>
+                        <div class="link-button tyubu font small">
+                            中部
+                        </div>
+                        <div class="link-button kanto font small">
+                            関東
+                        </div>
+                        <div class="link-button kansai font small">
+                            関西
+                        </div>
+                        <div class="link-button chugoku font small">
+                            中国
+                        </div>
+                        <div class="link-button shikoku font small">
+                            四国
+                        </div>
+                        <div class="link-button kyusyu font small">
+                            九州
+                        </div>
+                        <div class="link-button okinawa font small">
+                            沖縄
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div id="contents-list" class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width100 contents">
+                        <div>
+                            <div class="table width100">
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            旅行業約款
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            旅行条件書
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            ご利用案内
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            プライバシー
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell width50 menu-item with-center-line inline-left font middle">
+                                        <div class="indent-left">
+                                            サイトマップ
+                                        </div>
+                                    </div>
+                                    <div class="cell width50 menu-item font middle">
+                                        <div class="indent-left">
+                                            ヘルプ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="copyright" class="table width100 padding-top-middle padding-bottom-middle">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 font small inline-center">
+                        <div>
+                            Copyright © LALAVEL Corp. All rights reserved.
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 

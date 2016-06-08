@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <title>フリーマーケットDemoサイト</title>
+        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+        <link rel="stylesheet" href="../css/liquid-layout.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="stylesheet" href="../css/image.css">
+        <link rel="stylesheet" href="../css/icon.css">
+        <link rel="stylesheet" href="../css/badge.css">
+        <link rel="stylesheet" href="../css/ui.css">
+        <link rel="stylesheet" href="../css/contents.css">
+        <script type="text/javascript">
+        <!--
+            $(function() {
+                var onHeaderMenuClick = function() {
+                    var id = $(this).attr("id");
+                    var nextUrl = null;
+                    if (id === "login") {
+                        nextUrl = "../auth/login.html";
+                    } else if(id === "search") {
+                        nextUrl = "../search/index.html";
+                    } else if(id === "exhibit") {
+                        nextUrl = "../exhibit/index.html";
+                    } else if(id === "cart") {
+                        nextUrl = "../cart.html";
+                    } else if(id === "search") {
+                        nextUrl = "../search/index.html";
+                    } else if(id === "like") {
+                        nextUrl = "../like/index.html";
+                    }
+                    location.href = nextUrl;
+                };
+                $("header #menu ul li").click(onHeaderMenuClick);
+            });            
+        // -->
+        </script>           
+    </head>
+    <body>
+        <header>
+            <div class="table width100">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width15 contents round-bottom-left-area inline-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" width=70%>
+                        </a>
+                    </div>
+                    <div class="cell width15 contents">
+                    </div>
+                    <div id="menu" class="cell contents round-bottom-right-area width65">
+                        <ul>
+                            <li id="login">
+                                <div class="inline-center">
+                                    <img src="../img/member_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Login
+                                </div>
+                            </li>
+                            <li id="search">
+                                <div class="inline-center">
+                                    <img src="../img/search_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Search
+                                </div>
+                            </li>
+                            <li id="exhibit">
+                                <div class="inline-center">
+                                    <img src="../img/exhibit_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Exhibit
+                                </div>
+                            </li>
+                            <li id="cart">
+                                <div class="inline-center">
+                                    <img src="../img/cart_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Cart
+                                </div>
+                                <div class="amount-badge">0</div>
+                            </li>
+                            <li id="like" class="active last">
+                                <div class="inline-center">
+                                    <img src="../img/like_menu_icon.png" width=50%>
+                                </div>
+                                <div class="font small">
+                                    Like
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </header>
+        <article id="like-index-article">
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95">
+                        <div id="product-list" class="table width100 contents round-area">
+                            <div class="row">
+                                <div class="cell width100 separate-info-line">
+                                    <div>
+                                        <div class="table width100">
+                                            <div class="row">
+                                                <div class="cell width5"></div>
+                                                <div class="cell width15 inline-center">
+                                                    <a href="../item/detail.html">
+                                                        <img src="../img/product_sample_icon.png">
+                                                    </a>
+                                                </div>
+                                                <div class="cell width10"></div>
+                                                <div class="cell width50">
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        GENDER&nbsp;PRODUCT NAME
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        ¥3,900
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        <span class="tag-badge">Tag</span>
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small">
+                                                        <ul>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ☆
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cell width10 inline-center">
+                                                    <img src="../img/favorite_icon.png" width=90%>
+                                                </div>
+                                                <div class="cell width5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell width100 separate-info-line">
+                                    <div>
+                                        <div class="table width100">
+                                            <div class="row">
+                                                <div class="cell width5"></div>
+                                                <div class="cell width15 inline-center">
+                                                    <a href="../item/detail.html">
+                                                        <img src="../img/product_sample_icon.png">
+                                                    </a>
+                                                </div>
+                                                <div class="cell width10"></div>
+                                                <div class="cell width50">
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        GENDER&nbsp;PRODUCT NAME
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        ¥3,900
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        <span class="tag-badge">Tag</span>
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small">
+                                                        <ul>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ☆
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cell width10 inline-center">
+                                                    <img src="../img/favorite_icon.png" width=90%>
+                                                </div>
+                                                <div class="cell width5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell width100 separate-info-line">
+                                    <div>
+                                        <div class="table width100">
+                                            <div class="row">
+                                                <div class="cell width5"></div>
+                                                <div class="cell width15 inline-center">
+                                                    <a href="../item/detail.html">
+                                                        <img src="../img/product_sample_icon.png">
+                                                    </a>
+                                                </div>
+                                                <div class="cell width10"></div>
+                                                <div class="cell width50">
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        GENDER&nbsp;PRODUCT NAME
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        ¥3,900
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        <span class="tag-badge">Tag</span>
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small">
+                                                        <ul>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ☆
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cell width10 inline-center">
+                                                    <img src="../img/favorite_icon.png" width=90%>
+                                                </div>
+                                                <div class="cell width5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell width100 separate-info-line">
+                                    <div>
+                                        <div class="table width100">
+                                            <div class="row">
+                                                <div class="cell width5"></div>
+                                                <div class="cell width15 inline-center">
+                                                    <a href="../item/detail.html">
+                                                        <img src="../img/product_sample_icon.png">
+                                                    </a>
+                                                </div>
+                                                <div class="cell width10"></div>
+                                                <div class="cell width50">
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        GENDER&nbsp;PRODUCT NAME
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        ¥3,900
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        <span class="tag-badge">Tag</span>
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small">
+                                                        <ul>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ☆
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cell width10 inline-center">
+                                                    <img src="../img/favorite_icon.png" width=90%>
+                                                </div>
+                                                <div class="cell width5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cell width100">
+                                    <div>
+                                        <div class="table width100">
+                                            <div class="row">
+                                                <div class="cell width5"></div>
+                                                <div class="cell width15 inline-center">
+                                                    <a href="../item/detail.html">
+                                                        <img src="../img/product_sample_icon.png">
+                                                    </a>
+                                                </div>
+                                                <div class="cell width10"></div>
+                                                <div class="cell width50">
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        GENDER&nbsp;PRODUCT NAME
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        ¥3,900
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small font header6">
+                                                        <span class="tag-badge">Tag</span>
+                                                    </div>
+                                                    <div class="padding-top-small padding-bottom-small">
+                                                        <ul>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ★
+                                                            </li>
+                                                            <li>
+                                                                ☆
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="cell width10 inline-center">
+                                                    <img src="../img/favorite_icon.png" width=90%>
+                                                </div>
+                                                <div class="cell width5"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="table width100 margin-top-small">
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div class="cell width95 round-top-area blank-area">
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="menu" class="cell width95">
+                        <ul>
+                            <li class="login">
+                                <div>
+                                    ログイン
+                                </div>
+                            </li>
+                            <li class="register">
+                                <div>
+                                    会員登録
+                                </div>
+                            </li>
+                            <li class="purchase-history">
+                                <div>
+                                    履歴
+                                </div>
+                            </li>
+                            <li class="information">
+                                <div>
+                                    ご利用ガイド
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+                <div class="row">
+                    <div class="cell width2-5"></div>
+                    <div id="copyright" class="cell width95 font header7 inline-center padding-top-middle padding-bottom-middle">
+                        COPYRIGHT (C) ◯◯ CO., LTD. ALL RIGHTS RESERVED.
+                    </div>
+                    <div class="cell width2-5"></div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html> 
