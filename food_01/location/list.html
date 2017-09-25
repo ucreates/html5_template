@@ -12,14 +12,12 @@
             $(function() {
                 $("<img>").attr("src", "../img/map.png" );
                 $("#location-list-article .location-map").css("background-position","0% -0.3%");
-
                 var onHeaderMenuHover = function () {
                     $(this).toggleClass("menu");
                     $(this).toggleClass("menu-hover");
                     $(this).children("div").toggleClass("menu-item");
                     $(this).children("div").toggleClass("menu-item-hover");
                 };
-
                 var onHeaderMenuClick = function() {
                     var id = $(this).attr("id");
                     var nextUrl = null;
@@ -104,12 +102,10 @@
                 $('header ul li').click(
                     onHeaderMenuClick
                 );
-
                 $('#location-list-article div').hover(
                     onMapHover,
                     onMapHover
                 );
-
                 $('#location-list-article div').click(
                     onMapClick
                 );

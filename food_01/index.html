@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-        <title>飲食店デモサイト トップページ</title>
-        <link rel="stylesheet" href="./js/woothemes-FlexSlider-83b3cae/flexslider.css">
-        <link rel="stylesheet" href="./css/liquid-layout.css">
-        <link rel="stylesheet" href="./css/contents.css">
-        <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="./js/woothemes-FlexSlider-83b3cae/jquery.flexslider.js"></script>
-        <script type="text/javascript">
+<head>
+  <meta content="HTML Tidy for HTML5 for Mac OS X version 5.2.0" name="generator">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <title>飲食店デモサイト トップページ</title>
+  <link href="./js/woothemes-FlexSlider-83b3cae/flexslider.css" rel="stylesheet">
+  <link href="./css/liquid-layout.css" rel="stylesheet">
+  <link href="./css/contents.css" rel="stylesheet">
+  <script src="./js/jquery-2.1.4.min.js" type="text/javascript">
+  </script>
+  <script src="./js/woothemes-FlexSlider-83b3cae/jquery.flexslider.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
         <!--
             $(function() {
             
@@ -27,7 +30,6 @@
                     $(this).children("div").toggleClass("menu-item");
                     $(this).children("div").toggleClass("menu-item-hover");
                 };
-
                 var onHeaderMenuClick = function() {
                     var id = $(this).attr("id");
                     var nextUrl = null;
@@ -46,7 +48,6 @@
                     }
                     location.href = nextUrl;
                 };
-
                 var onFoodMenuClick = function () {
                     var id = $(this).attr("id");
                     var nextUrl = null;
@@ -67,7 +68,6 @@
                     }
                     location.href = nextUrl;
                 };
-
                 var onContentsMenuClick = function() {
                     var id = $(this).attr("id");
                     var nextUrl = null;
@@ -120,427 +120,375 @@
                 $('#location-contents div').click(
                     onContentsMenuClick
                 );
-
                 $('#location-list div').click(
                     onLocationMenuClick
                 );
             });            
         // -->
-        </script>
-    </head>
-    <body>
-        <header>
-            <div class="table width100 fixed-menu-area padding-bottom-middle">
-                <div class="row">
-                    <div class="cell contents">
-                        <ul class="menu-list">
-                            <li id="home-button" class="font small menu padding-top-small">
-                                <div class="menu-item item1">HOME</div>
-                            </li>
-                            <li id="about-button" class="font small menu padding-top-small">
-                                <div class="menu-item item2">ABOUT</div>
-                            </li>
-                            <li id="menu-button" class="font small menu padding-top-small">
-                                <div class="menu-item item3">MENU</div>
-                            </li>
-                            <li id="location-button" class="font small menu padding-top-small">
-                                <div class="menu-item item4">LOCATION</div>
-                            </li>
-                            <li id="contact-button" class="font small menu padding-top-small">
-                                <div class="menu-item item5">CONTACT</div>
-                            </li>
-                        </ul>
-                    </div>
+  </script>
+</head>
+<body>
+  <header>
+    <div class="table width100 fixed-menu-area padding-bottom-middle">
+      <div class="row">
+        <div class="cell contents">
+          <ul class="menu-list">
+            <li class="font small menu padding-top-small" id="home-button">
+              <div class="menu-item item1">
+                HOME
+              </div>
+            </li>
+            <li class="font small menu padding-top-small" id="about-button">
+              <div class="menu-item item2">
+                ABOUT
+              </div>
+            </li>
+            <li class="font small menu padding-top-small" id="menu-button">
+              <div class="menu-item item3">
+                MENU
+              </div>
+            </li>
+            <li class="font small menu padding-top-small" id="location-button">
+              <div class="menu-item item4">
+                LOCATION
+              </div>
+            </li>
+            <li class="font small menu padding-top-small" id="contact-button">
+              <div class="menu-item item5">
+                CONTACT
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article id="index-article">
+    <div class="table width100 padding-top-header">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90 relative flexslider">
+          <ul class="slides">
+            <li><img class="rounded-img-weak" src="./img/top_01.png" width="100%"></li>
+            <li><img class="rounded-img-weak" src="./img/top_02.png" width="100%"></li>
+            <li><img class="rounded-img-weak" src="./img/top_03.png" width="100%"></li>
+            <li><img class="rounded-img-weak" src="./img/top_04.png" width="100%"></li>
+          </ul>
+          <div class="twitter-icon-area"><img class="rounded-img-weak" src="./img/twitter_icon.png" width="100%"></div>
+          <div class="facebook-icon-area"><img class="rounded-img-weak" src="./img/fb_icon.png" width="100%"></div>
+          <div class="logo-area"><img src="./img/logo.png" width="80%"></div>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 padding-top-small">
+      <div class="row">
+        <div class="cell width100 article-header-cell">
+          <div class="font header5 article-header">
+            M E N U
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table width100" id="food-menu-list">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90">
+          <ul>
+            <li class="padding-top-small" id="steak-menu">
+              <div class="steak-menu-bg">
+                <div class="menu-item-filter">
+                  <div class="font header6 upper-statement">
+                    ステーキ・セットメニュー
+                  </div>
+                  <div class="font small downer-statement">
+                    STEAK&nbsp;&nbsp;&nbsp;SET &nbsp;&nbsp;&nbsp;MENU
+                  </div>
                 </div>
-            </div>
-        </header>
-        <article id="index-article">
-            <div class="table width100 padding-top-header">
-                <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90 relative flexslider">
-                        <ul class="slides" >
-                            <li>
-                                <img class="rounded-img-weak" src="./img/top_01.png" width=100%>
-                            </li>
-                            <li>
-                                <img class="rounded-img-weak" src="./img/top_02.png" width=100%>
-                            </li>
-                            <li>
-                                <img class="rounded-img-weak" src="./img/top_03.png" width=100%>
-                            </li>
-                            <li>
-                                <img class="rounded-img-weak" src="./img/top_04.png" width=100%>
-                            </li>
-                        </ul>
-                        <div class="twitter-icon-area">
-                            <img class="rounded-img-weak" src="./img/twitter_icon.png" width=100%>
-                        </div>
-                        <div class="facebook-icon-area">
-                            <img class="rounded-img-weak" src="./img/fb_icon.png" width=100%>
-                        </div>
-                        <div class="logo-area">
-                            <img src="./img/logo.png" width=80%>
-                        </div>
-                    </div>
-                    <div class="cell width5"></div>
+              </div>
+            </li>
+            <li class="padding-top-small" id="humburg_steak">
+              <div class="humburg-steak-menu-bg">
+                <div class="menu-item-filter">
+                  <div class="font header6 upper-statement">
+                    ハンバーグステーキ
+                  </div>
+                  <div class="font small downer-statement">
+                    HUMBURG&nbsp;&nbsp;&nbsp;STEAK&nbsp;&nbsp;&nbsp;MENU
+                  </div>
                 </div>
-            </div>
-            <div class="table width100 padding-top-small">
-                <div class="row">
-                    <div class="cell width100 article-header-cell">
-                        <div class="font header5 article-header">
-                            M E N U
-                        </div>
-                    </div>
+              </div>
+            </li>
+            <li class="padding-top-small" id="stew">
+              <div class="stew-menu-bg">
+                <div class="menu-item-filter">
+                  <div class="font header6 upper-statement">
+                    シチュー
+                  </div>
+                  <div class="font small downer-statement">
+                    STEW
+                  </div>
                 </div>
-            </div>
-            <div id="food-menu-list" class="table width100">
-                <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90">
-                        <ul>
-                            <li id="steak-menu" class="padding-top-small">
-                                <div class="steak-menu-bg" >
-                                    <div class="menu-item-filter">
-                                        <div class="font header6 upper-statement">
-                                            ステーキ・セットメニュー
-                                        </div>
-                                        <div class="font small downer-statement">
-                                            STEAK&nbsp;&nbsp;&nbsp;SET &nbsp;&nbsp;&nbsp;MENU
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="humburg_steak" class="padding-top-small">
-                                <div class="humburg-steak-menu-bg" >
-                                    <div class="menu-item-filter">
-                                        <div class="font header6 upper-statement">
-                                            ハンバーグステーキ
-                                        </div>
-                                        <div class="font small downer-statement">
-                                            HUMBURG&nbsp;&nbsp;&nbsp;STEAK&nbsp;&nbsp;&nbsp;MENU
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="stew" class="padding-top-small">
-                                <div class="stew-menu-bg">
-                                    <div class="menu-item-filter">
-                                        <div class="font header6 upper-statement">
-                                            シチュー
-                                        </div>
-                                        <div class="font small downer-statement">
-                                            STEW
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="sidedish" class="padding-top-small">
-                                <div class="side-dish-salad-menu-bg" >
-                                    <div class="menu-item-filter">
-                                        <div class="font header6 upper-statement">
-                                            前菜・サラダ
-                                        </div>
-                                        <div class="font small downer-statement">
-                                            SIDE&nbsp;&nbsp;&nbsp;DISH&nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp;SALAD
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li id="dessert-drink" class="padding-top-small">
-                                <div class="dessert-drink-menu-bg">
-                                    <div class="menu-item-filter">
-                                        <div class="font header6 upper-statement">
-                                            デザート・ソフトドリンク
-                                        </div>
-                                        <div class="font small downer-statement">
-                                            DESSERT DRINK
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cell width5"></div>
+              </div>
+            </li>
+            <li class="padding-top-small" id="sidedish">
+              <div class="side-dish-salad-menu-bg">
+                <div class="menu-item-filter">
+                  <div class="font header6 upper-statement">
+                    前菜・サラダ
+                  </div>
+                  <div class="font small downer-statement">
+                    SIDE&nbsp;&nbsp;&nbsp;DISH&nbsp;&nbsp;&nbsp;&amp;&nbsp;&nbsp;&nbsp;SALAD
+                  </div>
                 </div>
-            </div>
-            <div class="table width100 padding-top-small">
-                <div class="row">
-                    <div class="cell width100 article-header-cell">
-                        <div class="font header5 article-header">
-                            L O C A T I O N
-                        </div>
-                    </div>
+              </div>
+            </li>
+            <li class="padding-top-small" id="dessert-drink">
+              <div class="dessert-drink-menu-bg">
+                <div class="menu-item-filter">
+                  <div class="font header6 upper-statement">
+                    デザート・ソフトドリンク
+                  </div>
+                  <div class="font small downer-statement">
+                    DESSERT DRINK
+                  </div>
                 </div>
-            </div>
-            <div id="location-list" class="table width100">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 padding-top-small">
+      <div class="row">
+        <div class="cell width100 article-header-cell">
+          <div class="font header5 article-header">
+            L O C A T I O N
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table width100" id="location-list">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90">
+          <ul>
+            <li class="padding-top-small">
+              <div class="table width100">
                 <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90">
-                        <ul>
-                            <li class="padding-top-small">
-                                <div class="table width100">
-                                    <div class="row">
-                                        <div id="tokyo" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    東京都
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    TOKYO
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell width5"></div>
-                                        <div id="saitama" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    埼玉
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    SAITAMA
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="padding-top-small">
-                                <div class="table width100">
-                                    <div class="row">
-                                        <div id="kanagawa" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    神奈川
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    KANAGAWA
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell width5"></div>
-                                        <div id="ibaraki" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    茨城
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    IBARAKI
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="padding-top-small">
-                                <div class="table width100">
-                                    <div class="row">
-                                        <div id="gumma" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    群馬
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    GUMMA
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell width5"></div>
-                                        <div id="tochigi" class="cell width47-5 location-bg">
-                                            <div class="menu-item-filter">
-                                                <div class="font header6 upper-statement">
-                                                    栃木
-                                                </div>
-                                                <div class="font small downer-statement">
-                                                    TOCHIGI
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                  <div class="cell width47-5 location-bg" id="tokyo">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        東京都
+                      </div>
+                      <div class="font small downer-statement">
+                        TOKYO
+                      </div>
                     </div>
-                    <div class="cell width5"></div>
+                  </div>
+                  <div class="cell width5"></div>
+                  <div class="cell width47-5 location-bg" id="saitama">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        埼玉
+                      </div>
+                      <div class="font small downer-statement">
+                        SAITAMA
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="table width100 padding-top-small">
+              </div>
+            </li>
+            <li class="padding-top-small">
+              <div class="table width100">
                 <div class="row">
-                    <div class="cell width100 article-header-cell">
-                        <div class="font header5 article-header">
-                            I N F O R M A T I O N
-                        </div>
+                  <div class="cell width47-5 location-bg" id="kanagawa">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        神奈川
+                      </div>
+                      <div class="font small downer-statement">
+                        KANAGAWA
+                      </div>
                     </div>
+                  </div>
+                  <div class="cell width5"></div>
+                  <div class="cell width47-5 location-bg" id="ibaraki">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        茨城
+                      </div>
+                      <div class="font small downer-statement">
+                        IBARAKI
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div id="information-list" class="table width100">
+              </div>
+            </li>
+            <li class="padding-top-small">
+              <div class="table width100">
                 <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90">
-                        <ul>
-                            <li>
-                                <span class="navi"></span>
-                                <span class="information-statement font small">
-                                    お知らせ1。本日◯◯を更新しました。
-                                </span>
-                                <span class="information-date font small">
-                                    2015/08/17
-                                </span>
-                            </li>
-                            <li>
-                                <span class="navi"></span>
-                                <span class="information-statement font small">
-                                    お知らせ2。本日◯◯を更新しました。
-                                </span>
-                                <span class="information-date font small">
-                                    2015/08/17
-                                </span>
-                            </li>
-                            <li>
-                                <span class="navi"></span>
-                                <span class="information-statement font small">
-                                    お知らせ3。本日◯◯を更新しました。
-                                </span>
-                                <span class="information-date font small">
-                                    2015/08/17
-                                </span>
-                            </li>
-                            <li>
-                                <span class="navi"></span>
-                                <span class="information-statement font small">
-                                    お知らせ4。本日◯◯を更新しました。
-                                </span>
-                                <span class="information-date font small">
-                                    2015/08/17
-                                </span>
-                            </li>
-                            <li>
-                                <span class="navi"></span>
-                                <span class="information-statement font small">
-                                    お知らせ5。本日◯◯を更新しました。
-                                </span>
-                                <span class="information-date font small">
-                                    2015/08/17
-                                </span>
-                            </li>
-                        </ul>
+                  <div class="cell width47-5 location-bg" id="gumma">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        群馬
+                      </div>
+                      <div class="font small downer-statement">
+                        GUMMA
+                      </div>
                     </div>
-                    <div class="cell width5"></div>
-                </div>
-            </div>
-            <div class="table width100 padding-top-small">
-                <div class="row">
-                    <div class="cell width100 article-header-cell">
-                        <div class="font header5 article-header">
-                            C O N T E N T S
-                        </div>
+                  </div>
+                  <div class="cell width5"></div>
+                  <div class="cell width47-5 location-bg" id="tochigi">
+                    <div class="menu-item-filter">
+                      <div class="font header6 upper-statement">
+                        栃木
+                      </div>
+                      <div class="font small downer-statement">
+                        TOCHIGI
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div id="location-contents" class="table width100 margin-top-small">
-                <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90 menu-ranking">
-                        <div id="menu-ranking" class="table width100 padding-top-middle">
-                            <div class="row">
-                                <div class="cell width5"></div>
-                                <div class="cell width30 inline-center">
-                                    <img class="rounded-img-weak" src="./img/contents_famous_menu_raking.png" width=70%>
-                                </div>
-                                <div class="cell width60">
-                                    <div class="table width100">
-                                        <div class="row">
-                                            <div class="cell width100 font header7 menu-ranking-header-outline">
-                                                人気メニューランキング
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="cell width100 font small">
-                                                店舗別、メニュー別のメニューランキングをご紹介します。
-                                                毎月更新中！
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell width5"></div>
-                            </div>
-                        </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 padding-top-small">
+      <div class="row">
+        <div class="cell width100 article-header-cell">
+          <div class="font header5 article-header">
+            I N F O R M A T I O N
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table width100" id="information-list">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90">
+          <ul>
+            <li><span class="information-statement font small">お知らせ1。本日◯◯を更新しました。</span> <span class="information-date font small">2015/08/17</span></li>
+            <li><span class="information-statement font small">お知らせ2。本日◯◯を更新しました。</span> <span class="information-date font small">2015/08/17</span></li>
+            <li><span class="information-statement font small">お知らせ3。本日◯◯を更新しました。</span> <span class="information-date font small">2015/08/17</span></li>
+            <li><span class="information-statement font small">お知らせ4。本日◯◯を更新しました。</span> <span class="information-date font small">2015/08/17</span></li>
+            <li><span class="information-statement font small">お知らせ5。本日◯◯を更新しました。</span> <span class="information-date font small">2015/08/17</span></li>
+          </ul>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 padding-top-small">
+      <div class="row">
+        <div class="cell width100 article-header-cell">
+          <div class="font header5 article-header">
+            C O N T E N T S
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="table width100 margin-top-small" id="location-contents">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90 menu-ranking">
+          <div class="table width100 padding-top-middle" id="menu-ranking">
+            <div class="row">
+              <div class="cell width5"></div>
+              <div class="cell width30 inline-center"><img class="rounded-img-weak" src="./img/contents_famous_menu_raking.png" width="70%"></div>
+              <div class="cell width60">
+                <div class="table width100">
+                  <div class="row">
+                    <div class="cell width100 font header7 menu-ranking-header-outline">
+                      人気メニューランキング
                     </div>
-                    <div class="cell width5"></div>
-                </div>
-            </div>
-            <div id="location-contents" class="table width100 margin-top-small">
-                <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90 original-menu">
-                        <div id="original-menu" class="table width100 padding-top-middle">
-                            <div class="row">
-                                <div class="cell width5"></div>
-                                <div class="cell width30 inline-center">
-                                    <img class="rounded-img-weak" src="./img/location_original_menu.png"  width=70%>
-                                </div>
-                                <div class="cell width60">
-                                    <div class="table width100">
-                                        <div class="row">
-                                            <div class="cell width100 font header7 original-menu-header-outline">
-                                                各店舗オリジナルメニュー
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="cell width100 font small">
-                                                毎月更新する◯◯各店舗のオリジナルメニューをご紹介します。
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell width5"></div>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="row">
+                    <div class="cell width100 font small">
+                      店舗別、メニュー別のメニューランキングをご紹介します。 毎月更新中！
                     </div>
-                    <div class="cell width5"></div>
+                  </div>
                 </div>
+              </div>
+              <div class="cell width5"></div>
             </div>
-            <div id="location-contents" class="table width100 margin-top-small margin-bottom-small">
-                <div class="row">
-                    <div class="cell width5"></div>
-                    <div class="cell width90 staff-recommend">
-                        <div id="staff-recmmend" class="table width100 padding-top-middle">
-                            <div class="row">
-                                <div class="cell width5"></div>
-                                <div class="cell width30 inline-center">
-                                    <img class="rounded-img-weak" src="./img/staff_recommend_menu.png"  width=70%>
-                                </div>
-                                <div class="cell width60">
-                                    <div class="table width100">
-                                        <div class="row">
-                                            <div class="cell width100 font header7 staff-recommend-header-outline">
-                                                スタッフおすすめメニュー
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="cell width100 font small">
-                                                意外な食べ方やステーキに合うドリンク等、知って得する情報が満載です。
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cell width5"></div>
-                            </div>
-                        </div>
+          </div>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 margin-top-small" id="location-contents">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90 original-menu">
+          <div class="table width100 padding-top-middle" id="original-menu">
+            <div class="row">
+              <div class="cell width5"></div>
+              <div class="cell width30 inline-center"><img class="rounded-img-weak" src="./img/location_original_menu.png" width="70%"></div>
+              <div class="cell width60">
+                <div class="table width100">
+                  <div class="row">
+                    <div class="cell width100 font header7 original-menu-header-outline">
+                      各店舗オリジナルメニュー
                     </div>
-                    <div class="cell width5"></div>
-                </div>
-            </div>
-        </article>
-        <footer>
-            <div class="table width100 padding-top-middle menu-area">
-                <div class="row">
-                    <div id="copy-right" class="cell relative contents font small inline-center padding-top-small padding-bottom-middle">
-                        Copyright © MARU MARU CO.LTD. All Rights Reserved.
+                  </div>
+                  <div class="row">
+                    <div class="cell width100 font small">
+                      毎月更新する◯◯各店舗のオリジナルメニューをご紹介します。
                     </div>
+                  </div>
                 </div>
+              </div>
+              <div class="cell width5"></div>
             </div>
-        </footer>
-    </body>
-</html> 
+          </div>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+    <div class="table width100 margin-top-small margin-bottom-small" id="location-contents">
+      <div class="row">
+        <div class="cell width5"></div>
+        <div class="cell width90 staff-recommend">
+          <div class="table width100 padding-top-middle" id="staff-recmmend">
+            <div class="row">
+              <div class="cell width5"></div>
+              <div class="cell width30 inline-center"><img class="rounded-img-weak" src="./img/staff_recommend_menu.png" width="70%"></div>
+              <div class="cell width60">
+                <div class="table width100">
+                  <div class="row">
+                    <div class="cell width100 font header7 staff-recommend-header-outline">
+                      スタッフおすすめメニュー
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="cell width100 font small">
+                      意外な食べ方やステーキに合うドリンク等、知って得する情報が満載です。
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cell width5"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cell width5"></div>
+      </div>
+    </div>
+  </article>
+  <footer>
+    <div class="table width100 padding-top-middle menu-area">
+      <div class="row">
+        <div class="cell relative contents font small inline-center padding-top-small padding-bottom-middle" id="copy-right">
+          Copyright © MARU MARU CO.LTD. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

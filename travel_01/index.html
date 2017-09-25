@@ -22,7 +22,6 @@
                     "search-category-rentacar",
                     "search-category-travel-plan"
                 ];
-
                 for (var item in searchCategoryIdlist) {
                     var categoryId = "#" + searchCategoryIdlist[item];
                     $(categoryId).children(".baloon-triangle").hide();
@@ -52,7 +51,6 @@
                 $("#search-category-airplane").click(onCategorySearchClick);
                 $("#search-category-rentacar").click(onCategorySearchClick);
                 $("#search-category-travel-plan").click(onCategorySearchClick);
-
                 var onCategorySearchGoClick = function () {
                     var link = "./search/inn.html";
                     if ("block" === $("#search-category-domestic-hotel").children(".baloon-triangle").css("display")) {

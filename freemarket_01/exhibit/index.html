@@ -63,7 +63,6 @@
                             $(element).removeClass("active"); 
                         }
                     });
-
                     $("#contents-list").hide();
                     $("#contents-list").fadeIn(500);
                 };
@@ -97,7 +96,6 @@
                     }
                     $(id + " ul").animate({"left": "-=" + move + "%"},"slow","swing",callback);
                 };
-
                 setSliderArea("#exhibit-category-list #slider-area");
                 $("#exhibit-category-list #slider-area #left").bind("click",{id:"#exhibit-category-list #slider","move": 33},onClickSliderContorol);
                 $("#exhibit-category-list #slider-area #right").bind("click",{id:"#exhibit-category-list #slider","move": -33},onClickSliderContorol);
